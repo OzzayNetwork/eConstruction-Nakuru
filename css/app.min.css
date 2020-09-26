@@ -9661,8 +9661,15 @@ button, input, optgroup, select, textarea {
     border-color: #c1c9d0
 }
 .header, .header__logo>h1>a {
-    color: #FFF
+    color: #fff
 }
+
+.header__logo p{
+    color: white;
+    font-weight: 200;
+    font-size: 12px;
+}
+
 .header {
     height: 72px;
     padding: 0 2rem;
@@ -14204,6 +14211,20 @@ a.badge-white.focus, a.badge-white:focus {
 .header__logo .the-logo{
 	height: 50px;
 }
+
+.header__logo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 4rem;
+    border-right: 1px solid #9696967d;
+    padding-right: 2rem;;
+  }
+
+  .header__logo img{
+      height: 55px;
+      margin-right: 1rem;
+  }
 
 .powerd-container{
 	position: absolute;
