@@ -10215,7 +10215,7 @@ opacity:1
     padding: .85rem .5rem;
     border-radius: 2px
 }
-.navigation>li>a>i {
+.navigation>li>a>i, .navigation__sub ul li i  {
     vertical-align: top;
     font-size: 1.3rem;
     position: relative;
@@ -14713,4 +14713,9 @@ color: white
 	font-size: 33px;
 }
 
+.drop-down-icon{
+    float: right;
+    height: 100%;
+    padding-top: 9px;
+  }
 
