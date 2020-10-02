@@ -10111,7 +10111,7 @@ opacity:1
     width: 270px;
     position: fixed;
     left: 0;
-    padding: 102px 2rem .5rem;
+    padding: 60px 2rem .5rem;
     height: 100%;
     overflow: hidden;
     z-index: 19
@@ -14766,7 +14766,7 @@ color: white
     position: fixed;
     z-index: 1;
     bottom: 10px;
-    left: 10px;
+    left: 320px;
     
     cursor: pointer;
 }
@@ -15218,5 +15218,66 @@ color: white
     font-size: 1.7rem;
 }
 
+/* Attendants Page */
+
+
+
+.map-searcher{
+    position: absolute;
+    z-index: 1;
+    right: 60px;
+    left:300px;
+    /* top: -5px; */
+    top: 5rem;
+    width: 100%;
+}
+
+.map-searcher input, #pac-input{
+    top: 11px !important;
+    z-index: 100;
+    left: auto !important;
+    right: 60px !important;
+    width: auto;
+    /* padding: 1.475rem 0.75rem; */
+    padding-left: 25px;
+    padding-right: 60px;
+    border-radius: 4px;
+   
+    box-sizing: border-box;
+    width: 392px;
+    height: 40px;
+    /* border-bottom: 1px solid transparent; */
+    /* padding: 12px 104px 11px 64px; */
+
+    transition-property: background,box-shadow;
+    transition-duration: 0.3s;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 1px 4px -1px;
+  
+}
+
+.map-searcher button{
+    left: 598px;
+    position: absolute;
+    top: -1px;
+    font-size: 24px;
+    margin-right: 9px;
+    color: #bdbdbd;
+}
+
+.map-searcher button:hover{
+    color: #1976D2;
+}
+
+.map-searcher input:focus, #pac-input:focus{
+    /* border-color: #1976D2; */
+    /* box-shadow: 0 0 0 0.2rem rgba(25,118,210,.25); */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+    border-color: 1px solid #DADCE0;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
 /* Attendants Page */
 
