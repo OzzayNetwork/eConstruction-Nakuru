@@ -14747,11 +14747,11 @@ color: white
 .map-card{
     position: fixed;
     bottom: 10px;
-    left: 10px;
+    left: 300px;
     z-index: 1;
     margin-bottom: 0px;
     z-index: 2;
-    /* margin: 10px; */
+    margin: 10px;
 }
 .map-card .listview__item{
     padding-left: 1.5rem!important;
