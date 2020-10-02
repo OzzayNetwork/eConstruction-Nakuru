@@ -153,7 +153,7 @@
 
         //listen for click on  map
 
-        // the smooth zoom function
+        // the smooth zoom function not in use
             function smoothZoom (map, max, cnt) {
             if (cnt >= max) {
                 return;
@@ -197,7 +197,7 @@
             //reverse geocoding function
             //usses clicked coodinates to get the newly clicked llocation
 
-            map.setCenter(overlay.getPosition());//set map center
+           
             smoothZoom(map,12,map.getZoom());
 
 
@@ -337,7 +337,7 @@
 
             //opens the side bar form
             $('#newPoint').removeClass('left-100').siblings().addClass('left-100');
-            $('.main-map-container .ma-backdrop').removeClass('d-none');
+           
             // alert("ready");
             // $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
             // alert("ready");
@@ -404,7 +404,11 @@
         addMarker({
             coords:{lat:-1.29948, lng:36.8751453},
             iconImage:warning,
-            content:'<p class="d-none">incident|identifiret</p><img class="mb-3" src="demo/img/widgets/photo-1564993719576-7b00be6317cd.jpg" alt=""> <h6> Violent Nairobian</h6> <p class="mb-0 pb-0">Reported By Tonny Jumba</p><strong class="text-info">20 Min Ago</strong>'
+            content:`<p class="d-none">incident|identifiret</p>
+            <img class="mb-3" src="demo/img/widgets/photo-1564993719576-7b00be6317cd.jpg" alt=""> 
+            <h6> Violent Nairobian</h6> 
+            <p class="mb-0 pb-0">Reported By Tonny Jumba</p>
+            <strong class="text-info">20 Min Ago</strong>`
         });
 
          //clamped
