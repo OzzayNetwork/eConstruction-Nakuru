@@ -398,6 +398,10 @@
 
                     if(theGroup=="approved"){
                         alert("approved application");
+
+                        $('#car-info').removeClass('left-100').siblings().addClass('left-100');
+                        $('.main-map-container .ma-backdrop').removeClass('d-none');
+                        $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
                     }
 
                     
