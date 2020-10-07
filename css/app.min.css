@@ -10111,7 +10111,7 @@ opacity:1
     width: 270px;
     position: fixed;
     left: 0;
-    padding: 60px 2rem .5rem;
+    padding: 100px 2rem .5rem;
     height: 100%;
     overflow: hidden;
     z-index: 19
@@ -13590,13 +13590,13 @@ ul.jqtree-tree ul.jqtree_common {
 }
 .sidebar:after{
 	position: absolute;
-	height: 100%;
-	width: 100%;
-	content: "";
-	top: 0;
-	left: 0;
-	background:linear-gradient(to top,#04a310, #01072ac4);
-	z-index: -1;
+    height: 100%;
+    width: 100%;
+    content: "";
+    top: 0;
+    left: 0;
+    background: linear-gradient(to bottom,#00431d, #013819e3);
+    z-index: -1;
 	
 }
 .user__email {
@@ -13616,6 +13616,10 @@ ul.jqtree-tree ul.jqtree_common {
     transition: background-color .3s, color .3s;
     font-weight: 300;
     display: block;
+    /* letter-spacing: 1px; */
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
 /*    letter-spacing: 1px;*/
 }
 .content__title {
@@ -14726,7 +14730,7 @@ color: white
     height: 1.7rem;
     border-radius: 0%;
     height: auto;
-    width: 1.7rem;
+    width: 2.2rem;
     
 }
 .map-key .listview__item{
@@ -14745,13 +14749,13 @@ color: white
     padding-bottom: 0px;
 }
 .map-card{
-    position: fixed;
-    bottom: 10px;
-    left: 300px;
+    position: absolute;
+    bottom: 30px;
+    left: 10px;
     z-index: 1;
     margin-bottom: 0px;
     z-index: 2;
-    margin: 10px;
+    /* margin: 10px;*/
 }
 .map-card .listview__item{
     padding-left: 1.5rem!important;
@@ -14763,11 +14767,11 @@ color: white
 }
 
 .map-key-card{
-    position: fixed;
+    position: absolute;
     z-index: 1;
-    bottom: 10px;
-    left: 320px;
-    
+    bottom: 0px;
+    left: 10px;
+    cursor: pointer;
     cursor: pointer;
 }
 .map-key-card .card-body{
@@ -15152,7 +15156,11 @@ color: white
     /* float: right; */
     position: absolute;
     right: 0px;
-    top: 18px;
+    /* top: 13px; */
+    padding-top: 0px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Attendants Page */
@@ -15218,6 +15226,149 @@ color: white
     font-size: 1.7rem;
 }
 
+.targets-container div{
+	width: 100%;
+}
+.font-12{
+	font-size: 1.2rem !important;
+	font-weight: 600;
+}
+.map-main-container{
+	background: #212327;
+}
+.text-light{
+	font-weight: 300;
+}
+.map-buttons .col:last-child{
+	display: flex;
+    justify-content: flex-end;
+}
+.map-buttons button{
+	background: transparent;
+    padding: 0.5rem 1rem;
+    border: 1px solid #646568;
+    position: relative;
+    font-size: .9em;
+    margin-bottom: 1em;
+    color: white;
+    display: flex;
+    margin-left: 1rem;
+    border-radius: 151px;
+    justify-content: center;
+    align-items: center;
+	cursor: pointer;
+}
+.map-buttons button span{
+	height: 1rem;
+    border-radius: 50%;
+    background-color: #646568;
+    margin-right: 1rem;
+    width: 1rem;
+    display: block;
+}
+.map-buttons #today.active span{
+	background: #45d21a
+}
+.map-buttons #this-month.active span{
+	background: #fdc502
+}
+.map-buttons #financial-year.active span{
+	background: #2e71ff
+}
+
+.map-buttons #this-week.active span{
+	background: #ea00d9
+}
+
+.map-main-container .rev-title-container h1{
+	color: rgba(255,255,255,0.5);
+}
+
+.drop-down-icon{
+    float: right;
+    height: 100%;
+    padding-top: 9px;
+  }
+
+  .h-100vh{
+     
+      min-height: 100vh !important;
+  }
+#the-map-container{
+    /* height: 400px; */
+    min-height: 100vh;
+}
+.the-Data-map{
+    min-height: 65vh;
+}
+
+.pt-68px{
+    padding-top: 68px !important;
+}
+.pl-270px{
+    padding-left: 270px !important;
+}
+
+.live-map-cont{
+    height: calc(100vh - 71px) !important;
+}
+@media only screen and (max-width: 1199.98px){
+    .pl-md-0{
+        padding-left: 0px !important;
+    }
+
+}
+
+
+.map-searcher{
+    position: absolute;
+    z-index: 1;
+    left: 192px !important;
+    /* top: -5px; */
+    top: 10px;
+    
+}
+
+
+.map-searcher button{
+    left: 353px;
+    position: absolute;
+    top: -1px;
+    font-size: 24px;
+    margin-right: 9px;
+    color: #bdbdbd;
+}
+
+.map-searcher button:hover{
+    color: #1976D2;
+}
+
+.map-searcher input:focus, #pac-input:focus{
+    /* border-color: #1976D2; */
+    /* box-shadow: 0 0 0 0.2rem rgba(25,118,210,.25); */
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2), 0 -1px 0px rgba(0,0,0,0.02);
+    border-color: 1px solid #DADCE0;
+}
+
+.text-underline{
+    text-decoration: underline;
+}
+
+.tooltip, b, strong {
+    font-weight: 800;
+}
+/* footer.footer{
+    bottom: 0px;
+    position: fixed;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 88px;
+    margin-top: 88px;
+} */
+
+
 /* Attendants Page */
 
 
@@ -15225,18 +15376,18 @@ color: white
 .map-searcher{
     position: absolute;
     z-index: 1;
-    right: 60px;
-    left:300px;
+    /* right: 60px; */
+    left: -45px !important;
     /* top: -5px; */
-    top: 5rem;
+    /* top: 5rem; */
     width: 100%;
 }
 
 .map-searcher input, #pac-input{
     top: 11px !important;
     z-index: 100;
-    left: auto !important;
-    right: 60px !important;
+    left:200px !important;
+   
     width: auto;
     /* padding: 1.475rem 0.75rem; */
     padding-left: 25px;
