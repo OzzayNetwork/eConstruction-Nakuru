@@ -8,11 +8,12 @@
 		
 		<link rel='icon' href='demo/img/logo-files/nakuru-logo.png' type='image/x-icon'/ >
 	
-		<!--icon files-->
+		<!-- icons -->
+		<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+        <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+        <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+        <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
 
 		<!-- Vendor styles -->
 		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
@@ -216,7 +217,92 @@
                         </a>
                     </li>
                 </ul>
-            </header>
+			</header>
+			
+			<aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                           <div class="avatar-char bg-warning text-black mr-3 font-weight-bold">JM</div>
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
+                        </div>
+                    </div>
+
+                    <ul class="navigation">
+                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
+						
+						 <li class="navigation__sub">
+                            <a href="#"><i class="flaticon-shovel"></i>Construction Permits <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="new-constructions.html">Ongoing Applications</a></li>
+                                <li><a href="rejected-constructions.html">Rejected Applications</a></li>
+                                <li><a href="approved-constructions.html">Approved Applications</a></li>
+                            </ul>
+                        </li>
+						
+						 <li class="navigation__sub d-none">
+                            <a href="#"><i class="flaticon-open-menu"></i>Other services <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="new-amalgation.html">Land Amalgamation</a></li>
+                                <li><a href="new-use.html">Change of use</a></li>
+                                <li><a href="#">Lease Renewal</a></li>
+                                <li><a href="#">Domestic Building Alterationl</a></li>
+                                <li><a href="#">Renovation</a></li>
+                            </ul>
+                        </li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-worker"></i>Construction Professionals <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="active-professionals.html">Active Professionals</a></li>
+                                <li><a href="inactive-professionals.html">Inactive Professionals</a></li>
+                                <li><a href="new-professionals.html">New Requests</a></li>
+                                <li><a href="rejected-professionals.html">Rejected Applications</a></li>
+                            </ul>
+                        </li>
+						 <li class="navigation__active"><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="flaticon-police"></i>Enforcers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="all-enforcers.html">Active Enforcers</a></li>
+                                <li><a href="new-enforcer.html">New Enforcers</a></li>
+                                <li><a href="inactive-enforcers.html">Inactive Enforcers</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-accounts-alt"></i>System Officers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="all-officers.html">Active Officers</a></li>
+                                <li><a href="new-user.html">New Officers</a></li>
+                                <li><a href="inactive-officers.html">Inactive Officers</a></li>
+
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="mdi mdi-map-marker"></i>Map<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="nakuruMap.html"><i class="mdi mdi-map-marker-check"></i> Data Map</a></li>
+                                <li><a href="map.html"><i class="mdi mdi-map-clock"></i> Live Map</a></li>
+                            </ul>
+						</li>
+						
+                         <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                    </ul>
+                </div>
+            </aside>
             
             <section class="content custom-table-container">
 				<!--decline application-->

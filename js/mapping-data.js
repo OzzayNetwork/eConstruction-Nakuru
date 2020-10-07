@@ -11,19 +11,10 @@
             $(this).parent().parent().addClass('left-100');
             $('.ma-backdrop').addClass('d-none');
             // marker.setAnimation(null);
+            removeMarkers();
         });
 
-        //make the marker bounce
-        function toggleBounce(marker) {
-            if (marker.getAnimation() !== null) {
-              marker.setAnimation(null);
-            } else {
-              marker.setAnimation(google.maps.Animation.BOUNCE);
-              setTimeout(function(){
-                  marker.setAnimation(null);
-              },750);
-            }
-          }
+        
 
          //incident icon
          var warning = {
@@ -126,12 +117,14 @@
 
         //the map options
         var options={
-            zoom:12,
+            zoom:15,
             center:{lat:-1.2921,lng:36.8219}
         }
+       
 
         //new map
         var map=new google.maps.Map(document.getElementById('map'), options);
+        
 
         /*
 
@@ -151,9 +144,11 @@
         });
         */
 
+       var gmarkers = [];
+
         //listen for click on  map
 
-        // the smooth zoom function
+        // the smooth zoom function not in use
             function smoothZoom (map, max, cnt) {
             if (cnt >= max) {
                 return;
@@ -197,133 +192,13 @@
             //reverse geocoding function
             //usses clicked coodinates to get the newly clicked llocation
 
-            map.setCenter(overlay.getPosition());//set map center
+           
             smoothZoom(map,12,map.getZoom());
 
 
             map.setCenter(new google.maps.LatLng( Latitude, longitude));
 
-            reverseGeocoding();
-
-            function reverseGeocoding(){
-                const KEY="AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas";
-            const LAT=-1.270102;
-            const LNG=36.8589333;
-            let url=`https://maps.googleapis.com/maps/api/geocode/json?latlng=${Latitude},${longitude}&key=${KEY}`;
-            fetch(url)
-            .then(response=> response.json())
-            .then(data=>{
-                var reverseResultsOutput= '<ul class="list-group">';
-                console.log(data);
-                var numOfResults=data.results.length;
-        
-                var County;
-                var County;
-                var subCounty;
-                var street;
-                var address;
-                var ward;
-                var province;
-                var constituency;
-        
-                for(var num=0;num < numOfResults; num++){
-                    // let parts=data.results[i].address_components;
-                   
-                    // alert(num);
-                    let parts=data.results[num].address_components;
-                    parts.forEach(part=>{
-                            if(part.types.includes("administrative_area_level_2")){
-                            //we found subcounty inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                            subCounty=part.long_name;
-                            
-                        
-                        }
-                            if(part.types.includes("country")){
-                            //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                            
-                            Country=part.long_name;
-                        
-                        }
-        
-                        if(part.types.includes("administrative_area_level_1")){
-                            //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                            County=part.long_name;
-                            
-                        
-                        }
-                        if(part.types.includes("administrative_area_level_2")){
-                            //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                           ward=part.long_name;
-                            
-                        
-                        }
-        
-                        if(part.types.includes("route")){
-                            //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                           street=part.long_name;
-                            
-                        
-                        }
-                        if(part.types.includes("sublocality_level_1")){
-                            //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                           constituency=part.long_name;
-                            
-                        
-                        }
-        
-                    });
-                    
-                    
-                   
-                    }
-                    // alert("ward::"+ward);
-                    // alert("street: "+street);
-                    // alert("constituency: "+constituency);
-                    // alert("subcounty:"+subCounty);
-
-                    $('#newPoint .clicked-ward').text(ward);
-                    $('#newPoint .clicked-street').text(street);
-                    $('#newPoint .clicked-subcounty').text(subCounty);
-        
-        
-               
-                let parts=data.results[0].address_components;
-                reverseResultsOutput+=`
-                    <li class="list-group-item"><strong>Address: </strong> :${data.results[0].formatted_address}</li> 
-                    `;
-                parts.forEach(part=>{
-                    // if(part.types.includes("country")){
-                    //     //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                    //     reverseResultsOutput+=`
-                    //     <ul class="list-group">
-                    //         <li class="list-group-item"><strong>Country:</strong> :${part.long_name}</li>
-                    //     `;
-                       
-                    //     document.getElementById('location-cods').innerHTML=reverseResultsOutput;
-                    // }
-        
-                    if(part.types.includes("administrative_area_level_2")){
-                        //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
-                        reverseResultsOutput+=`
-                      
-                            <li class="list-group-item"><strong>County: </strong> :${part.long_name}</li>
-                        `;
-                       
-                        document.getElementById('location-cods').innerHTML=reverseResultsOutput;
-                    }           
-        
-                
-        
-        
-                    reverseResultsOutput +="</ul>";
-                })
-            })
-            .catch(err => console.warn(err.message));
-            }
-
-
-
-           
+            reverseGeocoding(Latitude,longitude);
            
             // alert(event.latLng);
 
@@ -337,7 +212,7 @@
 
             //opens the side bar form
             $('#newPoint').removeClass('left-100').siblings().addClass('left-100');
-            $('.main-map-container .ma-backdrop').removeClass('d-none');
+           
             // alert("ready");
             // $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
             // alert("ready");
@@ -404,7 +279,11 @@
         addMarker({
             coords:{lat:-1.29948, lng:36.8751453},
             iconImage:warning,
-            content:'<p class="d-none">incident|identifiret</p><img class="mb-3" src="demo/img/widgets/photo-1564993719576-7b00be6317cd.jpg" alt=""> <h6> Violent Nairobian</h6> <p class="mb-0 pb-0">Reported By Tonny Jumba</p><strong class="text-info">20 Min Ago</strong>'
+            content:`<p class="d-none">incident|identifiret</p>
+            <img class="mb-3" src="demo/img/widgets/photo-1564993719576-7b00be6317cd.jpg" alt=""> 
+            <h6> Violent Nairobian</h6> 
+            <p class="mb-0 pb-0">Reported By Tonny Jumba</p>
+            <strong class="text-info">20 Min Ago</strong>`
         });
 
          //clamped
@@ -453,6 +332,11 @@
             // icon:props.iconImage             
         });
 
+        if(!props.content){
+            gmarkers.push(marker);
+
+        }
+
             if(props.iconImage){
                 //set icon image if its there
                 marker.setIcon(props.iconImage);
@@ -495,6 +379,7 @@
                     // alert(theGroup);
 
                     //if else statements to bring out the correct side details depending on the groups category
+                    
 
                     if(theGroup=="car"){
                         //functions related to cars goes here
@@ -556,6 +441,7 @@
                 
             }
         }
+        searchAddress();
 
 
         //geo coding function
@@ -629,5 +515,322 @@
             console.log(response);
         });
     }
-    //reverse geocode
+    var map;
+    var infowindow;
+
+    
+    function searchAddress(){
+
+        
+        var input = document.getElementById("pac-input");
+        var searchBox = new google.maps.places.SearchBox(input);
+        map.controls[google.maps.ControlPosition.TOP_LEFT].push(input); // Bias the SearchBox results towards current map's viewport.
+
+        map.addListener("bounds_changed", function() {
+            searchBox.setBounds(map.getBounds());
+        });
+
+        //marker
+        var markers = []; 
+        // Listen for the event fired when the user selects a prediction and retrieve
+        // more details for that place.
+
+        //this function runs when the search box is clicked
+        $('#pac-input').on('click',function(){
+           
+            $('.map-info-cont').addClass('left-100');
+        });
+
+        //shows the close button on the search box when someone starts to search for a new place
+        $('#pac-input').on('keyup',function(){
+            $('.clear-map i').removeClass('d-none');
+            $('.map-info-cont').addClass('left-100');
+        });
+
+        //this function is fired up when the close button is clicked
+        // it clears the searched icons plus the search input box
+         $('.clear-map').on('click', function(){
+            const places = searchBox.getPlaces();
+            console.log(places);
+            $('.map-info-cont').addClass('left-100');
+            $('#pac-input').val("");
+            $('.clear-map i').addClass('d-none');
+            // Clear out the old markers.
+
+            markers.forEach((marker) => {
+                marker.setMap(null);
+            });
+        });
+
+        searchBox.addListener("places_changed", () => {
+           
+        const places = searchBox.getPlaces();
+
+        if (places.length == 0) {
+        return;
+        } 
+        
+        // Clear out the old markers.
+        markers.forEach((marker) => {
+        marker.setMap(null);
+
+        
+        
+        });
+        markers = []; 
+
+        
+        // For each place, get the icon, name and location.
+        var bounds = new google.maps.LatLngBounds();
+        
+        places.forEach(function(place) {
+        if (!place.geometry) {
+            console.log("Returned place contains no geometry");
+            return;
+        }
+
+        //the icons attributes for search results
+        const icon = {
+           // url: place.icon,//adds unique marker depending on search results
+            size: new google.maps.Size(71, 71),
+            origin: new google.maps.Point(0, 0),
+            anchor: new google.maps.Point(17, 34),
+            scaledSize: new google.maps.Size(25, 25),
+        }; 
+      
+        // Create a marker for each place.
+        var marker=new google.maps.Marker({
+            map:map,
+            title:place.name,
+            position:place.geometry.location,          
+            icon:icon,
+            description:`<strong>`+place.name+`</strong><br><p class="text-info text-underline">Click Icon for more options</p>`
+        })
+        markers.push(marker);
+
+      
+
+        //creating markers for each place
+        // markers.push(
+        
+        //     new google.maps.Marker({
+        //     map,
+        //     icon,
+        //     title: place.name,
+        //     position: place.geometry.location,
+        //     draggable:true,
+            
+        //     })
+            
+        // );
+
+        var infowindow=new google.maps.InfoWindow({
+            content:marker.description
+        });
+
+       
+
+        marker.addListener('mouseout', function(){
+            infowindow.close(map,marker);                        
+
+        });
+
+
+        // add a hover event on the search results markers
+        google.maps.event.addListener(marker, "mouseover", function(e) {
+            infowindow.open(map,marker);  
+            infowindow.setContent(data.description);
+           
+        });
+        toggleBounce(marker);
+
+        //   adding marker click event
+
+        google.maps.event.addListener(marker, "click", function(e) {
+           
+             var thePlace =place.name;
+            var newCoords=e.latLng;
+
+            newCoords=newCoords.toString();
+
+            var Latitude;
+            var longitude;
+            longitude=newCoords.substring(newCoords.lastIndexOf(",") + 1);
+            Latitude=newCoords.substring(0,newCoords.indexOf(','));
+            Latitude=Latitude.substring(Latitude.lastIndexOf("(") + 1);
+            longitude=longitude.substring(0,longitude.indexOf(')'));
+
+            reverseGeocoding(Latitude,longitude);
+            $('#newPoint').removeClass('left-100').siblings().addClass('left-100');
+
+            var thePlaceHolder=$('.listview .selected-point-details');
+
+            thePlaceHolder=`
+            <p class="mb-0"><strong>The Place Name</strong></p>
+            <p class="clicked-place">${thePlace}</p>
+            `;
+            toggleBounce(marker);
+            
+
+            
+        });
+
+        //   marker click event ends here
+
+     
+
+        if (place.geometry.viewport) {
+            // Only geocodes have viewport.
+            bounds.union(place.geometry.viewport);
+        } else {
+            bounds.extend(place.geometry.location);
+        }
+        });
+        map.fitBounds(bounds);
+
+        // console.log(places[0]);
+        // console.log("address components");
+        // console.log(places[0].address_components[0]);
+        // console.log(places[0].geometry.location.lat);
+    });
+      
+        // serching through the map
+    }
+
+    //make the marker bounce
+    function toggleBounce(marker) {
+        if (marker.getAnimation() !== null) {
+          marker.setAnimation(null);
+        } else {
+          marker.setAnimation(google.maps.Animation.BOUNCE);
+          setTimeout(function(){
+              marker.setAnimation(null);
+          },750);
+        }
+      }
+
+      //remove marker function
+      function removeMarkers(){
+        for(i=0; i<gmarkers.length; i++){
+            gmarkers[i].setMap(null);
+        }
+    }
+
+    // reverse geo coding
+    function reverseGeocoding(Latitude,longitude){
+        const KEY="AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas";
+    const LAT=-1.270102;
+    const LNG=36.8589333;
+    let url=`https://maps.googleapis.com/maps/api/geocode/json?latlng=${Latitude},${longitude}&key=${KEY}`;
+    fetch(url)
+    .then(response=> response.json())
+    .then(data=>{
+        var reverseResultsOutput= '<ul class="list-group">';
+        console.log(data);
+        var numOfResults=data.results.length;
+
+        var County;
+        var County;
+        var subCounty;
+        var street;
+        var address;
+        var ward;
+        var province;
+        var constituency;
+        
+        
+        for(var num=0;num < numOfResults; num++){
+            // let parts=data.results[i].address_components;
+            address=data.results[0].formatted_address;
+           
+            // alert(num);
+            let parts=data.results[num].address_components;
+            parts.forEach(part=>{
+                    if(part.types.includes("administrative_area_level_2")){
+                    //we found subcounty inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                    subCounty=part.long_name;
+                    
+                
+                }
+                    if(part.types.includes("country")){
+                    //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                    
+                    Country=part.long_name;
+                
+                }
+
+                if(part.types.includes("administrative_area_level_1")){
+                    //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                    County=part.long_name;
+                    
+                
+                }
+                if(part.types.includes("administrative_area_level_2")){
+                    //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                   ward=part.long_name;
+                    
+                
+                }
+
+                if(part.types.includes("route")){
+                    //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                   street=part.long_name;
+                    
+                
+                }
+                if(part.types.includes("sublocality_level_1")){
+                    //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                   constituency=part.long_name;
+                    
+                
+                }
+
+            });
+            
+            
+           
+            }
+            // alert("ward::"+ward);
+            // alert("street: "+street);
+            // alert("constituency: "+constituency);
+            // alert("subcounty:"+subCounty);
+
+            $('#newPoint .clicked-ward').text(ward);
+            $('#newPoint .clicked-street').text(street);
+            $('#newPoint .clicked-subcounty').text(subCounty);
+            $('#newPoint .clicked-address').text(address);
+
+
+       
+        let parts=data.results[0].address_components;
+        reverseResultsOutput+=`
+            <li class="list-group-item"><strong>Address: </strong> :${data.results[0].formatted_address}</li> 
+            `;
+        parts.forEach(part=>{
+            // if(part.types.includes("country")){
+            //     //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+            //     reverseResultsOutput+=`
+            //     <ul class="list-group">
+            //         <li class="list-group-item"><strong>Country:</strong> :${part.long_name}</li>
+            //     `;
+               
+            //     document.getElementById('location-cods').innerHTML=reverseResultsOutput;
+            // }
+
+            if(part.types.includes("administrative_area_level_2")){
+                //we found country inside the data.results[0].address_components[x].types.zmdi-view-arraydo
+                reverseResultsOutput+=`
+              
+                    <li class="list-group-item"><strong>County: </strong> :${part.long_name}</li>
+                `;
+               
+                document.getElementById('location-cods').innerHTML=reverseResultsOutput;
+            }           
+
+            reverseResultsOutput +="</ul>";
+        })
+    })
+    .catch(err => console.warn(err.message));
+    }
+    
     }

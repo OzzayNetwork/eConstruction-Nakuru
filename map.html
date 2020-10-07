@@ -1,4 +1,4 @@
-*s<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
     
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
@@ -8,7 +8,8 @@
         
         <link rel='icon' href='demo/img/icon_3.png' type='image/x-icon'/ >
     
-        <!--icon files-->
+        <!-- icons -->
+        <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
         <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
         <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
         <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
@@ -220,7 +221,7 @@
                 
             </header>
 
-            <aside class="sidebar">
+             <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
                         <div class="user__info" data-toggle="dropdown">
@@ -290,14 +291,22 @@
                                 <li><a href="inactive-officers.html">Inactive Officers</a></li>
 
                             </ul>
-                        </li>
-                        <li class="navigation__active"><a href="map.html"><i class="flaticon-location"></i>Map</a></li>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="mdi mdi-map-marker"></i>Map<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="nakuruMap.html"><i class="mdi mdi-map-marker-check"></i> Data Map</a></li>
+                                <li><a href="map.html"><i class="mdi mdi-map-clock"></i> Live Map</a></li>
+                            </ul>
+						</li>
+						
                          <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
                     </ul>
                 </div>
             </aside>
 
-            <section class="content main-map-container">
+            <section class="content main-map-container pt-68px pr-0 pl-270px vh-100 pl-md-0">
                 <div class="ma-backdrop d-none"></div>
                 <div class="map-asides">
         
@@ -909,151 +918,116 @@
                     </aside>
                 </div>
         
-                <div class="map-key-card card">
-                    <div class="card-body">
-                        <i class="flaticon-key-3"></i>
+               
+                
+                <div class="">
+                    <div class="position-relative">
+                        <div id="map" class="w-100 mt-1 h-100 live-map-cont"></div>
+
+                        <!-- map serach input box -->
+                        <div class="form-group map-searcher">
+
+                            <input type="text" class="form-control form-control-lg text-black"   placeholder="Search for a location" id="pac-input">
+                            <button title="Clear search results" class="btn btn-transparent border-0 clear-map"><i class="zmdi zmdi-close d-none"></i></button>
+                          </div>
+
+                        <!-- key button -->
+                        <div class="map-key-card card">
+                            <div class="card-body">
+                                <i class="mdi mdi-key-variant"></i>
+                            </div>
+                        </div>
+
+                        <!-- key items -->
+                        <div class="card map-card animated slideInLeft">
+                            <span class="close-map-key"><i class="zmdi zmdi-close"></i></span>
+                            <div class="card-body">
+                                <h4 class="card-title">Map Key</h4>
+                               
+                            </div>
+                            <div class="listview py-4 map-key">
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/declined-application.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>Declined Applications</strong></div>                        
+                                    </div>
+                                </span>
+                
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/ongoing-applications.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>Ongoing Applications</strong></div>                        
+                                    </div>
+                                </span>
+                
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/approved-application.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>Approved Applications</strong></div>                        
+                                    </div>
+                                </span>               
+                                
+                
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/warning.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>Incidents</strong></div>                        
+                                    </div>
+                                </span>
+                
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/active-agent.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>active-agent</strong></div>                        
+                                    </div>
+                                </span>
+                
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/inactive-agent.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>Inactive agents</strong></div>                        
+                                    </div>
+                                </span>
+                
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/parliament.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>City Hall</strong></div>                        
+                                    </div>
+                                </span>
+                
+                               
+                                <span class="listview__item py-0">
+                                    <img src="images/map-assets/flag.svg" class="listview__img" alt="">
+                
+                                    <div class="listview__content d-flex align-items-center">
+                                        <div class="listview__heading"><strong>Service/Collection Point</strong></div>                        
+                                    </div>
+                                </span>
+                
+                                
+                
+                            </div>
+                        </div>
+                    
                     </div>
-                </div>
-                <div class="card map-card animated slideInRight">
-                    <span class="close-map-key"><i class="zmdi zmdi-close"></i></span>
-                    <div class="card-body">
-                        <h4 class="card-title">Map Key</h4>
-                       
-                    </div>
-                    <div class="listview py-4 map-key">
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/compliant-a.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Compliant Cars</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/tobe-clamped-a.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>To be clamped</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/clamped-a.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Clamped</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/to-unclamp.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>To Unclamp</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/warning.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Incidents</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/active-agent.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>active-agent</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/inactive-agent.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Inactive agents</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/parliament.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>City Hall</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/Offstreet.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Street</strong></div>                        
-                            </div>
-                        </span>
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/flag.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Service/Collection Point</strong></div>                        
-                            </div>
-                        </span>
-        
-                        <span class="listview__item py-0">
-                            <img src="images/map-assets/street-parking.svg" class="listview__img" alt="">
-        
-                            <div class="listview__content d-flex align-items-center">
-                                <div class="listview__heading"><strong>Off Street</strong></div>                        
-                            </div>
-                        </span>
-        
-                    </div>
-                </div>
-              <div id="map" class="h-100 w-100 mt-1">
                
               </div>
-                <footer class="footer hidden-xs-down">
+                <footer class="footer hidden-xs-down d-none">
                     <p>Powered by RevenueSure</p>
                 </footer>
             </section>
 
         </main>
 
-        <!-- Older IE warning message -->
-            <!--[if IE]>
-                <div class="ie-warning">
-                    <h1>Warning!!</h1>
-                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
-
-                    <div class="ie-warning__downloads">
-                        <a href="http://www.google.com/chrome">
-                            <img src="img/browsers/chrome.png" alt="">
-                        </a>
-
-                        <a href="https://www.mozilla.org/en-US/firefox/new">
-                            <img src="img/browsers/firefox.png" alt="">
-                        </a>
-
-                        <a href="http://www.opera.com">
-                            <img src="img/browsers/opera.png" alt="">
-                        </a>
-
-                        <a href="https://support.apple.com/downloads/safari">
-                            <img src="img/browsers/safari.png" alt="">
-                        </a>
-
-                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
-                            <img src="img/browsers/edge.png" alt="">
-                        </a>
-
-                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
-                            <img src="img/browsers/ie.png" alt="">
-                        </a>
-                    </div>
-                    <p>Sorry for the inconvenience!</p>
-                </div>
-            <![endif]-->
+        
 
         <!-- Javascript -->
         <!-- Vendors -->
@@ -1127,6 +1101,11 @@
          <script defer
          src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas&callback=initMap">
          </script>
+
+        <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas&callback=initMap&libraries=places&v=weekly"
+        defer>
+        </script>
      
     </body>
 
