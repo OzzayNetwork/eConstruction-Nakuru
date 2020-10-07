@@ -82,25 +82,25 @@
             anchor: new google.maps.Point(0, 0) // anchor
         };
 
-        //compliant cars icon
-        var compliantCar={
-            url: "images/map-assets/compliant-a.svg", // url
+        //Approved applications
+        var approved={
+            url: "images/map-assets/approved-application.svg", // url
             scaledSize: new google.maps.Size(45, 45), // scaled size
             origin: new google.maps.Point(0,0), // origin
             anchor: new google.maps.Point(0, 0) // anchor
         }
 
-         //to be clamped  cars icon
-         var toClamp={
-            url: "images/map-assets/tobe-clamped-a.svg", // url
+         //declined applications
+         var rejected={
+            url: "images/map-assets/declined-application.svg", // url
             scaledSize: new google.maps.Size(45, 45), // scaled size
             origin: new google.maps.Point(0,0), // origin
             anchor: new google.maps.Point(0, 0) // anchor
         }
 
-        //to be unclamped
-        var toUnClamp={
-            url: "images/map-assets/to-unclamp.svg", // url
+        //ongoing applications
+        var ongoing={
+            url: "images/map-assets/ongoing-applications.svg", // url
             scaledSize: new google.maps.Size(45, 45), // scaled size
             origin: new google.maps.Point(0,0), // origin
             anchor: new google.maps.Point(0, 0) // anchor
@@ -224,15 +224,19 @@
          //street coodinates
          addMarker({
             coords:{lat:-1.284319, lng:36.8238173},
-            iconImage:street_parking,
-            content:'<p class="d-none">street|unique identifer</p><h6>Tom Mboya Street</h6> <P><strong>20 parking slots available</strong> Out of <strong>27 parking slots</strong></p>'
+            iconImage:approved,
+            content:`<p class="d-none">approved|identifier</p><h6 class="text-uppercase d-flex align-items-center"><span class="active-agent mr-2"></span>The Haze towers<span></h6>
+            <p><strong>Commercial</strong></p>
+            `
         });
 
-        //compliant car
+        //an approved application
         addMarker({
             coords:{lat:-1.29889, lng:36.8186003},
-            iconImage:compliantCar,
-            content:'<p class="d-none">car|plate num</p><h6 class="text-uppercase d-flex align-items-center"><span class="active-agent mr-2"></span>KAT 211Z<span></h6>'
+            iconImage:approved,
+            content:`<p class="d-none">car|plate num</p><h6 class="text-uppercase d-flex align-items-center"><span class="active-agent mr-2"></span>Sky view Gardens<span></h6>
+            <p><strong>Commercial</strong></p>
+            `
         });
 
         //inactive agent
@@ -256,22 +260,29 @@
             content:'<p class="d-none">agent|plate num</p><h6 class="text-capitalize d-flex align-items-center"><span class="offline-agent mr-2"></span> <span>Alex Wanjala <small><strong>(INACTIVE)</strong></small></span></h6> <p class="pb-0 mb-0">Last seen at <strong>Tom Mboya Street</strong> at 2:06 PM </strong></p><p>Most recent activity: <strong>Queried Car plate Number KBW 2589T at 11:41PM</strong><div class="listview text-align-left text-capitalize pl-0">  <div class="listview__header text-align-left text-capitalize text-left"><strong>23MB data (70%)</strong> Consumed in the <strong>last 13 Days</strong></div> <div class="progress"> <div class="progress-bar progress-bar-warning" style="width: 75%" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div> </div></div></p> '
         });
 
-        //to clamp car
+        //rejected applications
         addMarker({
             coords:{lat:-1.2974586, lng:36.8087993},
-            iconImage:toClamp,
-            content:'<p class="d-none">car|plate num</p><h6 class="text-uppercase d-flex align-items-center"><span class=" mr-2 offline-agent"></span><span>KCV 252Y</span></h6>'
+            iconImage:rejected,
+            content:`<p class="d-none">car|plate num</p>
+            <h6 class="text-uppercase d-flex align-items-center"><span class=" mr-2 offline-agent"></span><span>Kelvin's House</span></h6>
+            <p><strong>Residential</strong></p>
+            
+            `
         });
 
-        //to unclamp car
+        //an ongoing application
         addMarker({
             coords:{lat:-1.29948, lng:36.8151453},
-            iconImage:toUnClamp,
+            iconImage:ongoing,
             content:`<p class="d-none">car|plate num</p>
-            <h6 class="text-uppercase d-flex align-items-center">
-                <span class="unclump-car mr-2"></span>
-                <span>KBZ 2T2M</span>
-            </h6>`
+                <h6 class="text-uppercase d-flex align-items-center">
+                    <span class="unclump-car mr-2"></span>
+                    <span>The Towers</span>
+                </h6>
+                <p><strong>Commercial building</strong></p>
+                
+                `
         });
 
         //incidents
@@ -286,34 +297,39 @@
             <strong class="text-info">20 Min Ago</strong>`
         });
 
-         //clamped
+         //ongoing application
          addMarker({
             coords:{lat:-1.294219, lng:36.806824},
-            iconImage:clamped,
-            content:'<p class="d-none">car|plate num</p><h6  class="text-uppercase d-flex align-items-center"><span class="clamped-car mr-2"></span><span>KBY 252P</span></h6>'
+            iconImage:ongoing,
+            content:`<p class="d-none">car|plate num</p>
+            <h6  class="text-uppercase d-flex align-items-center"><span class="clamped-car mr-2"></span><span>Highway Towers</span></h6>
+            <p><strong>Commercial building</strong></p>
+            `
         });
 
         //city hall
         addMarker({
             coords:{lat:-1.2925606, lng:36.7809636},
             iconImage:hall_icon,
-            content:'<p class="d-none">collectionPoint|identifier</p><h4>city_hall</h4><P><strong>KES 5,230,600</strong> already collected</p>',
+            content:`<p class="d-none">collectionPoint|identifier</p><h4>City Hall</h4><P><strong>KES 5,230,600</strong> already collected</p>`,
             
         });
 
         //sunken
-        addMarker({
-            coords:{lat:-1.2924789,lng:36.8243687},
-            iconImage:offStreet,
-            content:'<p class="d-none">offstreetParking|identifier</p><h6>Sunken (Offstereet Parking)</h6> <P><strong>KES 5,230,600</strong> already collected</p>'
-        });
+        //not applicable
+        // addMarker({
+        //     coords:{lat:-1.2924789,lng:36.8243687},
+        //     iconImage:offStreet,
+        //     content:'<p class="d-none">offstreetParking|identifier</p><h6>Sunken (Offstereet Parking)</h6> <P><strong>KES 5,230,600</strong> already collected</p>'
+        // });
 
          //buss park
-         addMarker({
-            coords:{lat:-1.2867576,lng:36.8344851},
-            iconImage:bus,
-            content: '<p class="d-none">offstreetParking|identifier</p><h6>Bus Park (Offstreet Parking)</h6> <P><strong>KES 3,256,230</strong> already collected</p>'
-        });
+         //not applicable
+        //  addMarker({
+        //     coords:{lat:-1.2867576,lng:36.8344851},
+        //     iconImage:bus,
+        //     content: '<p class="d-none">offstreetParking|identifier</p><h6>Bus Park (Offstreet Parking)</h6> <P><strong>KES 3,256,230</strong> already collected</p>'
+        // });
 
         //service point or collection point
         addMarker({
@@ -379,6 +395,11 @@
                     // alert(theGroup);
 
                     //if else statements to bring out the correct side details depending on the groups category
+
+                    if(theGroup=="approved"){
+                        alert("approved application");
+                    }
+
                     
 
                     if(theGroup=="car"){

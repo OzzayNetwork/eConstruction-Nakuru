@@ -15430,5 +15430,53 @@ color: white
 .text-underline{
     text-decoration: underline;
 }
+
+
+.slick-dots li button::before {
+    color: white;
+}
+.slick-dots li.slick-active button::before {
+    opacity: .75;
+    color: white;
+}
+.offline-agent{
+    display: flex;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color: red;
+}
+
+.active-agent{
+    display: flex;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color:#05c605;
+}
+
+.not-querried-car{
+    display: flex;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color:#4c4c4c;
+}
+
+.clamped-car{
+    display: flex;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color:#2979ff;
+}
+
+.unclump-car{
+    display: flex;
+    border-radius: 50%;
+    height: 12px;
+    width: 12px;
+    background-color:#fbd100;
+}
 /* Attendants Page */
 
