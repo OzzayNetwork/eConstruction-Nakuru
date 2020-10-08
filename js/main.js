@@ -1,6 +1,7 @@
 $(window).on('load', function(){
 	
 	new WOW().init();
+	jQuery('.scrollbar-inner').scrollbar();
 	
 //	custom day time picker
 	$('#daily_date').on('change', function(){
@@ -262,5 +263,6 @@ $(document).ready(function(){
 	$('.close-map-key').on('click', function(){
   $('.map-card').addClass('d-none');
   });
+  
 
   

@@ -15478,5 +15478,18 @@ color: white
     width: 12px;
     background-color:#fbd100;
 }
+
+.permits-asside .listview__content>p{
+    color: black;
+    overflow:show;
+    text-overflow: ellipsis;
+    white-space:normal
+    
+    }
+
+    .permits-asside .listview:not(.listview--block) .listview__item{
+        border-bottom: 1px solid #0000002b;
+
+    }
 /* Attendants Page */
 

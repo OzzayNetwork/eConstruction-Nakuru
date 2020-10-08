@@ -920,7 +920,7 @@
                     </aside>
 
                     <!-- approved details -->
-                    <aside class="map-info-cont animated slideInLeft left-100" id="approved-application">
+                    <aside class="map-info-cont animated slideInLeft left-100 permits-asside" id="approved-application">
         
                         <!-- show this when loading the new data -->
                         <div class="map-loader d-none">
@@ -931,8 +931,7 @@
                             <i class="zmdi zmdi-close close-aside"></i>
                         </div>
                         
-                        <div class="scroll-wrapper scrollbar-inner">
-        
+                        <div class="scrollbar-inner">
                             <!-- street image if any -->
                             <div class="map-cont-img">
                                 <img src="images/non_compliant.jpeg">
@@ -940,8 +939,8 @@
                             <div class="listview">
                                 <div class="listview__item ">
                                     <div class="listview__content">
-                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Total amount paid</div>
-                                        <h4 class="font-weight-bolder mb-0">KES 200</h4>
+                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Applicant</div>
+                                        <h6 class="font-weight-bolder mb-0 text-capitalize">Mr John Doe (Architect)</h6>
                                     </div>
                                 </div>
                             </div>
@@ -955,7 +954,7 @@
             
                             <div class="listview">
                                 <div class="listview__item py-2">                           
-                                    <strong class="text-success">Compliant</strong>
+                                    <strong class="text-success">Approved Application</strong>
                                 </div>
                                 
                             </div>
@@ -972,32 +971,302 @@
         
                                     <tr>
                                         <th class="text-left text-wrap">
-                                            <a class="text-info"><i class="mdi mdi-folder-multiple mx-2 text-info"></i>Project Plan</a>
+                                            <a class="text-info" target="new" href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2 text-info"></i>Project Plan</a>
                                         </th>
                                     </tr>
         
                                     <tr>
                                         <th class="text-left text-wrap">
-                                           <a class="text-info"> <i class="mdi mdi-folder-multiple mx-2"></i> Ownership Documents</a>
+                                           <a class="text-info" target="new" href="images/map-assets/demo-docs/How to Verify Your Land Title Deed is Genuine.png"> <i class="mdi mdi-folder-multiple mx-2"></i> Ownership Documents</a>
                                         </th>
                                     </tr>
         
                                     <tr>
                                         <th class="text-left text-wrap">
-                                            <a class="text-info"><i class="mdi mdi-folder-multiple mx-2"></i> Survey Plan</a>
+                                            <a class="text-info" target="new"  href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2"></i> Survey Plan</a>
                                         </th>
                                     </tr>
                                    
                                 </tbody>
                             </table>
-                            <ul class="list-group">
-                                <li class="list-group-item">Cras justo odio</li>
-                                <li class="list-group-item">Dapibus ac facilisis in</li>
-                                <li class="list-group-item">Morbi leo risus</li>
-                                <li class="list-group-item">Porta ac consectetur ac</li>
-                                <li class="list-group-item">Vestibulum at eros</li>
-                              </ul>
-                            
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Address</strong></div>
+                                        <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Application Date</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Approval Date</strong></div>
+                                        <p>September 10, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content pl-3">
+                                        <div class="listview__heading"><strong>Permit Number</strong></div>
+                                        <p><a href="">No. 15811333</a></p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Approved By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+            
+                        </div>
+        
+                        <div class="map-cont-footer">
+                        </div>
+                    </aside>
+
+                    <!-- ongoing applications -->
+                    <aside class="map-info-cont animated slideInLeft left-100 permits-asside" id="pending-application">
+        
+                        <!-- show this when loading the new data -->
+                        <div class="map-loader d-none">
+                            <div class="lds-ripple"><div></div><div></div></div>
+                        </div>
+                        <div class="map-cont-header">
+                            <h2 class="chat__title">Project Title<small>Project category </small></h2>
+                            <i class="zmdi zmdi-close close-aside"></i>
+                        </div>
+                        
+                        <div class="scrollbar-inner">
+                            <!-- street image if any -->
+                            <div class="map-cont-img">
+                                <img src="images/non_compliant.jpeg">
+                            </div>
+                            <div class="listview">
+                                <div class="listview__item ">
+                                    <div class="listview__content">
+                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Applicant</div>
+                                        <h6 class="font-weight-bolder mb-0 text-capitalize">Mr John Doe (Architect)</h6>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-office-building-marker-outline"></i><span>Current Application status</span></div>
+                                </div>
+                                
+                            </div>
+            
+                            <div class="listview">
+                                <div class="listview__item py-2">                           
+                                    <strong class="text-warning">Pending Application</strong>
+                                </div>
+                                
+                            </div>
+            
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-file-document-multiple-outline"></i><span>Application Documents</span></div>
+                                </div>
+                                
+                            </div>
+                            <table class="table table-sm">
+                               
+                                <tbody>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                            <a class="text-info" target="new" href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2 text-info"></i>Project Plan</a>
+                                        </th>
+                                    </tr>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                           <a class="text-info" target="new" href="images/map-assets/demo-docs/How to Verify Your Land Title Deed is Genuine.png"> <i class="mdi mdi-folder-multiple mx-2"></i> Ownership Documents</a>
+                                        </th>
+                                    </tr>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                            <a class="text-info" target="new"  href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2"></i> Survey Plan</a>
+                                        </th>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Address</strong></div>
+                                        <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Application Date</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Approval Date</strong></div>
+                                        <p>Pending ...</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content pl-3">
+                                        <div class="listview__heading"><strong>Permit Number</strong></div>
+                                        <p><a href="">No. 15811333</a></p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Created By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+            
+                        </div>
+        
+                        <div class="map-cont-footer">
+                        </div>
+                    </aside>
+
+                    <!-- declined applications -->
+                    <!-- ongoing applications -->
+                    <aside class="map-info-cont animated slideInLeft left-100 permits-asside" id="declined-application">
+        
+                        <!-- show this when loading the new data -->
+                        <div class="map-loader d-none">
+                            <div class="lds-ripple"><div></div><div></div></div>
+                        </div>
+                        <div class="map-cont-header">
+                            <h2 class="chat__title">Project Title<small>Project category </small></h2>
+                            <i class="zmdi zmdi-close close-aside"></i>
+                        </div>
+                        
+                        <div class="scrollbar-inner">
+                            <!-- street image if any -->
+                            <div class="map-cont-img">
+                                <img src="images/non_compliant.jpeg">
+                            </div>
+                            <div class="listview">
+                                <div class="listview__item ">
+                                    <div class="listview__content">
+                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Applicant</div>
+                                        <h6 class="font-weight-bolder mb-0 text-capitalize">Mr John Doe (Architect)</h6>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-office-building-marker-outline"></i><span>Current Application status</span></div>
+                                </div>
+                                
+                            </div>
+            
+                            <div class="listview">
+                                <div class="listview__item py-2">                           
+                                    <strong class="text-danger">DeclinedApplication</strong>
+                                </div>
+                                
+                            </div>
+            
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-file-document-multiple-outline"></i><span>Application Documents</span></div>
+                                </div>
+                                
+                            </div>
+                            <table class="table table-sm">
+                               
+                                <tbody>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                            <a class="text-info" target="new" href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2 text-info"></i>Project Plan</a>
+                                        </th>
+                                    </tr>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                           <a class="text-info" target="new" href="images/map-assets/demo-docs/How to Verify Your Land Title Deed is Genuine.png"> <i class="mdi mdi-folder-multiple mx-2"></i> Ownership Documents</a>
+                                        </th>
+                                    </tr>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                            <a class="text-info" target="new"  href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2"></i> Survey Plan</a>
+                                        </th>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Address</strong></div>
+                                        <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Application Date</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Approval Date</strong></div>
+                                        <p>Pending ...</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content pl-3">
+                                        <div class="listview__heading"><strong>Permit Number</strong></div>
+                                        <p><a href="">No. 15811333</a></p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Created By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
             
                         </div>
         

@@ -234,7 +234,7 @@
         addMarker({
             coords:{lat:-1.29889, lng:36.8186003},
             iconImage:approved,
-            content:`<p class="d-none">car|plate num</p><h6 class="text-uppercase d-flex align-items-center"><span class="active-agent mr-2"></span>Sky view Gardens<span></h6>
+            content:`<p class="d-none">approved|identifier</p><h6 class="text-uppercase d-flex align-items-center"><span class="active-agent mr-2"></span>Sky view Gardens<span></h6>
             <p><strong>Commercial</strong></p>
             `
         });
@@ -264,7 +264,7 @@
         addMarker({
             coords:{lat:-1.2974586, lng:36.8087993},
             iconImage:rejected,
-            content:`<p class="d-none">car|plate num</p>
+            content:`<p class="d-none">declined|unique identifier</p>
             <h6 class="text-uppercase d-flex align-items-center"><span class=" mr-2 offline-agent"></span><span>Kelvin's House</span></h6>
             <p><strong>Residential</strong></p>
             
@@ -275,7 +275,7 @@
         addMarker({
             coords:{lat:-1.29948, lng:36.8151453},
             iconImage:ongoing,
-            content:`<p class="d-none">car|plate num</p>
+            content:`<p class="d-none">pending|unique identifier</p>
                 <h6 class="text-uppercase d-flex align-items-center">
                     <span class="unclump-car mr-2"></span>
                     <span>The Towers</span>
@@ -301,7 +301,7 @@
          addMarker({
             coords:{lat:-1.294219, lng:36.806824},
             iconImage:ongoing,
-            content:`<p class="d-none">car|plate num</p>
+            content:`<p class="d-none">pending|unique identifier</p>
             <h6  class="text-uppercase d-flex align-items-center"><span class="clamped-car mr-2"></span><span>Highway Towers</span></h6>
             <p><strong>Commercial building</strong></p>
             `
@@ -375,6 +375,20 @@
                 marker.addListener('click', function(e){
                     toggleBounce(marker);
 
+                    var newCoords=e.latLng;
+                    newCoords=newCoords.toString();
+
+                    var Latitude;
+                    var longitude;
+                    longitude=newCoords.substring(newCoords.lastIndexOf(",") + 1);
+                    Latitude=newCoords.substring(0,newCoords.indexOf(','));
+                    Latitude=Latitude.substring(Latitude.lastIndexOf("(") + 1);
+                    longitude=longitude.substring(0,longitude.indexOf(')'));
+        
+                    reverseGeocoding(Latitude,longitude);
+
+                   
+
                    
                    
                     // alert(iconImage); 
@@ -395,6 +409,21 @@
                     // alert(theGroup);
 
                     //if else statements to bring out the correct side details depending on the groups category
+
+                    if(theGroup=="pending"){
+                      
+                        $('#pending-application').removeClass('left-100').siblings().addClass('left-100');
+                        $('.main-map-container .ma-backdrop').removeClass('d-none');
+                        $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
+                    }
+
+                    if(theGroup=="declined"){
+                      
+                        $('#declined-application').removeClass('left-100').siblings().addClass('left-100');
+                        $('.main-map-container .ma-backdrop').removeClass('d-none');
+                        $(".content, .header").append('<div class="ma-backdrop" data-ma-action="aside-close" data-ma-target=' + e + " />");
+                    }
+
 
                     if(theGroup=="approved"){
                       
@@ -823,6 +852,8 @@
             $('#newPoint .clicked-street').text(street);
             $('#newPoint .clicked-subcounty').text(subCounty);
             $('#newPoint .clicked-address').text(address);
+
+            $('#approved-application .the-clicked-address').text(address);
 
 
        

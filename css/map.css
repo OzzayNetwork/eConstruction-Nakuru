@@ -1002,5 +1002,9 @@
     width: 12px;
     background-color:#fbd100;
 }
+
+.permits-asside .listview__content>p{
+    color: black;
+    }
 /* Attendants Page */
 
