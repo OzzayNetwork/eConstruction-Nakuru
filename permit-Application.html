@@ -1,0 +1,1671 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<script src="include-sidebar-script.js"></script>
+
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:03 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel='icon' href='demo/img/icon_3.png' type='image/x-icon' />
+
+    <!-- Vendor styles -->
+    <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+
+    <!-- icons -->
+    <link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+    <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
+
+    <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+    <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+
+
+
+    <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
+    <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
+    <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
+    <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+    <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+    <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
+    <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
+    <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
+    <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
+    <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+
+    <!-- App styles -->
+    <link rel="stylesheet" href="css/app.min.css">
+    <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body data-ma-theme="green">
+    <main class="main">
+        <div class="page-loader">
+            <div class="page-loader__spinner">
+                <svg viewBox="25 25 50 50">
+                    <circle cx="50" cy="50" r="20" fill="none" stroke-width="2" stroke-miterlimit="10" />
+                </svg>
+            </div>
+            <span class="powerd-container">
+                <img src="demo/img/logo-files/revenue-sure.png">
+                <strong style="font-weight: 800;">A product of Nouveta LTD</strong>
+            </span>
+        </div>
+
+        <header class="header">
+            <div class="navigation-trigger hidden-xl-up" data-ma-action="aside-open" data-ma-target=".sidebar">
+                <div class="navigation-trigger__inner">
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                    <i class="navigation-trigger__line"></i>
+                </div>
+            </div>
+            <div class="header__logo">
+                <img src="demo/img/logo-files/nakuru-logo.png">
+                <h1>
+                    <a href="index.html" class="mb-3">Econstruction Dashboard</a>
+                    <p class="mb-0 text-capitalize">Nakuru city County Government</p>
+                </h1>
+            </div>
+            <form class="search">
+                <div class="search__inner">
+                    <input type="text" class="search__text" placeholder="Search site">
+                    <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
+                </div>
+            </form>
+            
+            <ul class="top-nav">
+                <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
+                
+                <li data-toggle="tooltip" data-original-title="Time logged in" class=" top-nav__notifications p-0 m-0">
+                    <a href="#" data-toggle="dropdown"  class="top-nav__notify min-width-15px" >
+                        <i class="zmdi zmdi-time"></i>
+                    </a>
+                    
+                </li>
+                
+                <li data-toggle="tooltip" data-original-title="Time logged in " class="">
+                    <a href="#" data-toggle="dropdown"  class="" >
+                        3 min
+                    </a>
+                   
+                </li>
+                
+                <li class="ml-5" >
+                    <a href="new-parent.html" data-toggle="tooltip" data-original-title="Tasks completed" >
+                        <i class="flaticon-pulse"></i><span class="mx-3">22</span>
+                    </a>
+                </li>
+            </ul>
+
+            
+        </header>
+
+
+
+        <!-- Side bar -->
+        <aside class="sidebar">
+            <div class="scrollbar-inner">
+                <div class="user">
+                    <div class="user__info" data-toggle="dropdown">
+                       <div class="avatar-char bg-warning text-black mr-3 font-weight-bold">JM</div>
+                        <div>
+                            <div class="user__name">John Mwakili</div>
+                            <div class="user__email">john@gmail.com</div>
+                        </div>
+                    </div>
+
+                    <div class="dropdown-menu">
+                        <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                        <a class="dropdown-item d-none" href="#">Settings</a>
+                        <a class="dropdown-item" href="landing-page.html">Logout</a>
+                    </div>
+                </div>
+
+                <ul class="navigation">
+                    <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
+                    
+                     <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-shovel"></i>Construction Permits <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="permit-Application.html">New Application</a></li>
+                            <li><a href="new-constructions.html">Ongoing Applications</a></li>
+                            <li><a href="rejected-constructions.html">Rejected Applications</a></li>
+                            <li><a href="approved-constructions.html">Approved Applications</a></li>
+                        </ul>
+                    </li>
+                    
+                     <li class="navigation__sub d-none">
+                        <a href="#"><i class="flaticon-open-menu"></i>Other services <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="new-amalgation.html">Land Amalgamation</a></li>
+                            <li><a href="new-use.html">Change of use</a></li>
+                            <li><a href="#">Lease Renewal</a></li>
+                            <li><a href="#">Domestic Building Alterationl</a></li>
+                            <li><a href="#">Renovation</a></li>
+                        </ul>
+                    </li>
+                    
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-worker"></i>Construction Professionals <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="active-professionals.html">Active Professionals</a></li>
+                            <li><a href="inactive-professionals.html">Inactive Professionals</a></li>
+                            <li><a href="new-professionals.html">New Requests</a></li>
+                            <li><a href="rejected-professionals.html">Rejected Applications</a></li>
+                        </ul>
+                    </li>
+                     <li class="navigation__active"><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="flaticon-police"></i>Enforcers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="all-enforcers.html">Active Enforcers</a></li>
+                            <li><a href="new-enforcer.html">New Enforcers</a></li>
+                            <li><a href="inactive-enforcers.html">Inactive Enforcers</a></li>
+
+                        </ul>
+                    </li>
+
+                    <li class="navigation__sub">
+                        <a href="#"><i class="zmdi zmdi-accounts-alt"></i>System Officers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="all-officers.html">Active Officers</a></li>
+                            <li><a href="new-user.html">New Officers</a></li>
+                            <li><a href="inactive-officers.html">Inactive Officers</a></li>
+
+                        </ul>
+                    </li>
+                    
+                    <li class="navigation__sub">
+                        <a href="#"><i class="mdi mdi-map-marker"></i>Map<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                        <ul>
+                            <li><a href="nakuruMap.html"><i class="mdi mdi-map-marker-check"></i> Data Map</a></li>
+                            <li><a href="map.html"><i class="mdi mdi-map-clock"></i> Live Map</a></li>
+                        </ul>
+                    </li>
+                    
+                     <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                </ul>
+            </div>
+        </aside>
+        <section class="content custom-table-container">
+            <header class="content__title px-0 border-0">
+                <div class="row">
+                    <div class="col-md-8 col-sm-12">
+                        <span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Construction Permit Application</h1>
+							</span>
+                        <div class="">
+                            <ol class="breadcrumb border-0">
+                                <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                <li class="breadcrumb-item"><a href="#">Permits</a></li>
+                                <li class="breadcrumb-item active">Permit Application</li>
+                            </ol>
+                        </div>
+                    </div>
+                    <div class="col-4 col-sm-12 col-md-4">
+                        <div class="section-header">
+                            <a href="#" class="btn btn-sm btn-primary" title="">Download registration form</a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- modals -->
+
+            <!-- contractor modals -->
+
+            <div class="modal fade" id="newContractor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Register Contractor</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                          <div class="col-12">
+                              <h6>Fill in the form bellow to register the new contractor</h6>
+                          </div>
+                          <div class="col-12">
+                              <hr>
+                          </div>
+                          <div class="col-12">
+                              <div class="row">
+                                  <div class="col-8">
+                                      <div class="form-group">
+                                          <label><strong>Contractor type</strong></label>
+                                          <select class="form-control form-control-lg">
+                                              <option>-- Select type --</option>
+                                              <option>Individual</option>
+                                              <option>Company</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="row">
+                                <div class="col-6 col-sm-12 col-md-8">
+                                    <div class="form-group">
+                                        <label><strong>Contractor's Number</strong></label>
+                                        <input type="text" class="form-control form-control-lg" placeholder="Enter contractor's No.">
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+
+                          <div class="col-6 col-sm-12 col-md-12">
+                              <div class="form-group">
+                                  <label><strong>Full Names</strong></label>
+                                  <input type="text" class="form-control form-control-lg" placeholder="Enter contractor's Name">
+                              </div>
+                          </div>
+
+                          <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Phone Number</strong></label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Email Address</strong></label>
+                                <input type="email" class="form-control form-control-lg" placeholder="Enter email address">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>P.O Box.</strong></label>
+                                <input type="text" class="form-control form-control-lg" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Town</strong></label>
+                                <select class="form-control form-control-lg">
+                                    <option>-- Select type --</option>
+                                    <option>Individual</option>
+                                    <option>Company</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label><strong>Attachments</strong></label>
+                            <h6>Include attachments that prove legitimacy pf the applicant</h6>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary">Save changes</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- modals -->
+
+            <div class="row">
+
+               
+                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+                    <div class="create-form">
+                        <div class="col-12 p-0">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="mb-3">
+                                        <ul class="nav nav-pills application-nav">
+                                            <li class="nav-item">
+                                                <a class="nav-link active gen-info-link" href="#"><i class="pe-7s-user mr-2"></i>Plot Details</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link occupation-link" href="#"><i class="pe-7s-portfolio mr-2"></i>Project details</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link ben-link" href="#"><i class="pe-7s-users mr-2"></i>Beneficiaries</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link doc-link" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
+                                            </li>
+                                            <li class="nav-item ">
+                                                <a class="nav-link save-link" href="#"><i class="pe-7s-piggy mr-2"></i>Start saving</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <hr>
+
+                                    <form class="membership-form">
+                                        <div class="row clearfix form-gen-information animated fadeInRight">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Plot Details</h4>
+                                                <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Plot's general information</strong></h5>
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Plot Number</strong> <strong class="text-danger">*</strong></label>
+                                                    <p><small>Enter plot number first and press search to check if it is already registered</small></p>
+                                                    <div class="form-inline w-100 d-flex">
+                                                            <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" pattern="^[a-zA-Z]{2,30}$" minlength="2" autofocus placeholder="Enter plot number" required>
+                                                            <button  class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg"><i class="zmdi zmdi-search"></i>Search for Plot</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">                                               
+                                                   <div class="row">
+                                                       <div class="col-md-8 col-sm-12">
+                                                           <label class="mb-0"><strong>Select Location from the Map</strong></label>
+                                                           <p><small>Double click to select a location on the map</small></p>
+                                                       </div>
+                                                       <div class="col-md-4 col-sm-12">
+                                                           <label class="mb-0"><strong>Location details</strong></label>
+                                                           <p><small>Generated from the area selected on the map</small></p>
+                                                       </div>
+
+                                                       <div class="col-md-8 col-sm-12">
+                                                             <div class="main-map-form">
+                                                                 <div class="application-map" id="map"> </div>
+                                                                 <!-- map serach input box -->
+                                                                <div class="form-group map-searcher">
+
+                                                                    <input type="text" class="form-control  form-control-lg   form-control  form-control-lg  -lg text-black"   placeholder="Search for a location" id="pac-input">
+                                                                    <button title="Clear search results" class="btn btn-transparent border-0 clear-map"><i class="zmdi zmdi-close d-none"></i></button>
+                                                                </div>
+                                                           </div> 
+                                                       </div>
+
+                                                       <div class="col-md-4 col-sm-12">
+                                                        <div class="selected-point-details p-4 form-map-locations">
+                                                            <h6>Point Details</h6>
+
+                                                            <p class="mb-0"><strong>Address</strong></p>
+                                                            <p class="clicked-address text-danger">Not selected</p>
+
+                                                            <p class="mb-0"><strong>Ward</strong></p>
+                                                            <p class="clicked-ward text-danger">Not selected</p>
+                 
+                                                            <p class="mb-0"><strong>Street</strong></p>
+                                                            <p class="clicked-street text-danger">Not selected</p>
+                 
+                                                            <p class="mb-0"><strong>Sub County</strong></p>
+                                                            <p class="clicked-subcounty text-danger">Not selected</p>
+
+                                                            <input type="text" name="address" class="form-latitude d-none">
+                                                            <input type="text" name="address" class="form-longitude d-none">
+                                                            <input type="text" name="address" class="form-address d-none">
+                 
+                                                            
+                                                        </div>
+                                                       </div>
+
+                                                   </div> 
+
+                                            </div>
+                                           
+                                            <div class="col-md-4 col-lg-3 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>UPN</strong><strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control form-control  form-control-lg    validate" pattern="^[a-zA-Z']{2,30}$" minlength="2" placeholder="Enter UPN number" required>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-3 col-lg-2 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Area in Hectare</strong><strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control form-control  form-control-lg    validate" pattern="^[0-9a-zA-Z'\s]{2,100}$" minlength="2" placeholder="Enter Area in Ha">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-lg-3 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Value of Land</strong><strong class="text-danger">*</strong></label>
+                                                   <input type="text" class="form-control  form-control-lg  " placeholder="Enter Land's Value in KES">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-lg-2 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Annual Landrate</strong><strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control  form-control-lg  " placeholder="Enter Land rate charges">
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-3 col-lg-2 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Initial Balance</strong><strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control  form-control-lg  " placeholder="Enter initial balance">
+                                                    
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-lg-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Select Land Type</strong>><strong class="text-danger">*</strong></label>
+                                                            <select class="form-control form-control  form-control-lg   ">
+                                                                <option value="0" selected>-- Select land type --</option>
+                                                                <option value="residential">Residential</option>
+                                                                <option value="commercial">Commercial</option>
+                                                                <option value="mixed">Mixed</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Land Use</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    validate"  placeholder="Enter nature of Usage" minlength="2" required>
+                                                        </div>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <hr>
+                                            <div class="col-12">
+                                                <h5 class="mb-4"><strong>Owner's Details</strong></h5>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Type of ownership<strong class="text-danger">*</strong></strong></label>
+                                                    <select name="" id="" title="please select your postal country" class="form-control owner-type form-control-lg  " placeholder="Country">
+														<option value="0">-- Type of Ownership --</option>
+														<option value="individual" selected>Individual</option>
+														<option value="company">Company</option>
+														
+
+													</select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row individual-ownership  d-none animated fade-in-down">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>First Name</strong> <strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    posta-form validate" pattern="^[0-9']{1,100000000000000000}$" minlength="1" required placeholder="Enter the postal address">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Second Name</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" required class="form-control form-control  form-control-lg    validate" pattern="" minlength="1" placeholder="Enter second name">
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>ID Number/Passport</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    city-form"  minlength="1" placeholder="Enter Nat ID or PP Num">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="row company-ownership d-none animated fade-in-down">
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Company Name</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    phone-num validate" placeholder="Enter company's name">
+                                                        </div>
+
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-4">
+                                                        <div class="form-group">
+                                                            <label><strong class="text-capitalize">registration Number</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    phone-num validate" placeholder="Enter registration Number">
+                                                        </div>
+
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            
+                                            <div class="col-md-12">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone Number</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    phone-num validate" pattern="^[0-9']{10,11}$" minlength="9" required placeholder="Enter phone number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Email Address</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="email" class="form-control form-control  form-control-lg    email-input validate" pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$"
+                                                                id="id1" required placeholder="email@email.com">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>KRA Pin</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    email-input validate"  required placeholder="Enter KRA Pin">
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Sub-county</strong><strong class="text-danger">*</strong></label>
+                                                            <select class="form-control form-control  form-control-lg   ">
+                                                                <option value="0" selected>-- Select Sub-county --</option>
+                                                                <option value="residential">subcounty 1</option>
+                                                                <option value="commercial">subcounty 2</option>
+                                                                <option value="mixed">subcounty 3</option>
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Wards</strong><strong class="text-danger">*</strong></label>
+                                                            <select class="form-control form-control  form-control-lg   ">
+                                                                <option value="0" selected>-- Select a ward --</option>
+                                                                <option value="residential">ward 1</option>
+                                                                <option value="commercial">Ward 2</option>
+                                                                <option value="mixed">ward 3</option>
+                                                            </select>
+
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Town</strong><strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control form-control  form-control-lg    email-input validate"  required placeholder="Enter Town">
+
+                                                        </div>
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <a class="btn btn-primary occupation-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
+
+
+                                        </div>
+
+                                        <div class="row clearfix form-occupation animated fadeInRight d-none">
+                                            <div class="col-md-12">
+                                                <h4 class="card-title">Project details</h4>
+                                                <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>General project's details</strong></h5>
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Project's title <span class="text-danger">*</span></strong></label>
+                                                    <input type="text" class="form-control form-control-lg" placeholder="Enter project's title">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Project's Value<span class="text-danger">*</span></strong></label>
+                                                    <input type="text" class="form-control form-control-lg" placeholder="Enter project's value in KES">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Construction Type<strong class="text-danger">*</strong></strong></label>
+                                                    <select title="please select your source of income" class="form-control form-control-lg">
+														<option selected="selected" value="0">-- select construction type --</option>
+														<option  value="commercial">Commercial</option>
+														<option value="residential">Residential</option>
+														
+
+													</select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Project Contractor</strong></h5>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Contractors identification No.<strong class="text-danger">*</strong></strong></label>
+                                                    <p class="text-danger">Enter contractors identification number then search to confirm that they are registered into the system</p>
+                                                    <div class="form-inline w-100 d-flex">
+                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Contractors identification number" required="">
+                                                        <button class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg" data-toggle="modal" data-target="#newContractor"><i class="zmdi zmdi-search"></i>Search For Contractor</button>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row contractors-details d-non">
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Contractors Full Names</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Other Names</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Email address</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Box Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Project Architect</strong></h5>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Architect's identification No.<strong class="text-danger">*</strong></strong></label>
+                                                    <p class="text-danger">Enter architect's identification number then search to confirm that they are registered into the system</p>
+                                                    <div class="form-inline w-100 d-flex">
+                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Architect's identification number" required="">
+                                                        <button class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg"><i class="zmdi zmdi-search"></i>Seacrh for architect</button>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row architects-details d-none animated fade-in-up">
+                                                    <div class="col-md-4 col-lg-4 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Architect's name</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Email address</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Box Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Project's Structural Engineer</strong></h5>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Structural Engineer identification No.<strong class="text-danger">*</strong></strong></label>
+                                                    <p class="text-danger">Enter Engineer's identification number then search to confirm that they are registered into the system</p>
+                                                    <div class="form-inline w-100 d-flex">
+                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Engineer's identification number" required="">
+                                                        <button class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg"><i class="zmdi zmdi-search"></i>Search for Engineer</button>
+                                                    </div>
+
+                                                    
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row engineer-details d-none">
+                                                    <div class="col-md-4 col-lg-4 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong> Engineer's</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Email address</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Box Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                            
+
+                                           
+
+                                            <div class="col-12">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
+                                        </div>
+
+                                        <div class="row clearfix form-ben animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Beneficiaries</h4>
+                                                <h6 class="card-subtitle">Specify atleast <strong class="text-danger">one beneficiary</strong> for each</h6>
+                                                <hr>
+
+                                                <label><strong>Nominees for Deposits/Benefits in the event of Death:</strong></label>
+
+                                                <table class="table table-bordered deposit-ben">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th scope="col">Names</th>
+                                                            <th scope="col">ID/PP/Birth certificate No.</th>
+                                                            <th scope="col">Relationship</th>
+                                                            <th scope="col">DOB</th>
+                                                            <th scope="col" class="">Allocations(%)<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small></th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>1</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg   ben1-relationship required-check" style="width:200px;">
+																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+																<option value="Assistant Chairperson">Assistant Chairperson</option>
+																<option value="Aunt">Aunt</option>
+																<option value="Brother">Brother</option>
+																<option value="Brother In Law">Brother In Law</option>
+																<option value="Business Partner">Business Partner</option>
+																<option value="Chairman">Chairman</option>
+																<option value="Chairperson">Chairperson</option>
+																<option value="Child">Child</option>
+																<option value="Cousin">Cousin</option>
+																<option value="Daughter">Daughter</option>
+																<option value="Deputy Secretary">Deputy Secretary</option>
+																<option value="Father">Father</option>
+																<option value="Father In Law">Father In Law</option>
+																<option value="Fiance">Fiance</option>
+																<option value="Fiancee">Fiancee</option>
+																<option value="Friend">Friend</option>
+																<option value="Guardian">Guardian</option>
+																<option value="Girlfriend">Girlfriend</option>
+																<option value="Grand Daughter">Grand Daughter</option>
+																<option value="Grand Father">Grand Father</option>
+																<option value="Grand Son">Grand Son</option>
+																<option value="Grandchild">Grandchild</option>
+																<option value="Grandmother">Grandmother</option>
+																<option value="Husband">Husband</option>
+																<option value="Member">Member</option>
+																<option value="Mother">Mother</option>
+																<option value="Sister">Sister</option>
+																<option value="Sister in Law">Sister in Law</option>
+																<option value="Son">Son</option>
+																<option value="Wife">Wife</option>
+												
+															</select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <!--																<input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">-->
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker" placeholder="Pick a date" required>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>2</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
+															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+															   <option value="Assistant Chairperson">Assistant Chairperson</option>
+															   <option value="Aunt">Aunt</option>
+															   <option value="Brother">Brother</option>
+															   <option value="Brother In Law">Brother In Law</option>
+															   <option value="Business Partner">Business Partner</option>
+															   <option value="Chairman">Chairman</option>
+															   <option value="Chairperson">Chairperson</option>
+															   <option value="Child">Child</option>
+															   <option value="Cousin">Cousin</option>
+															   <option value="Daughter">Daughter</option>
+															   <option value="Deputy Secretary">Deputy Secretary</option>
+															   <option value="Father">Father</option>
+															   <option value="Father In Law">Father In Law</option>
+															   <option value="Fiance">Fiance</option>
+															   <option value="Fiancee">Fiancee</option>
+															   <option value="Friend">Friend</option>
+															   <option value="Guardian">Guardian</option>
+															   <option value="Girlfriend">Girlfriend</option>
+															   <option value="Grand Daughter">Grand Daughter</option>
+															   <option value="Grand Father">Grand Father</option>
+															   <option value="Grand Son">Grand Son</option>
+															   <option value="Grandchild">Grandchild</option>
+															   <option value="Grandmother">Grandmother</option>
+															   <option value="Husband">Husband</option>
+															   <option value="Member">Member</option>
+															   <option value="Mother">Mother</option>
+															   <option value="Sister">Sister</option>
+															   <option value="Sister in Law">Sister in Law</option>
+															   <option value="Son">Son</option>
+															   <option value="Wife">Wife</option>
+											   
+														   </select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>3</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
+															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+															   <option value="Assistant Chairperson">Assistant Chairperson</option>
+															   <option value="Aunt">Aunt</option>
+															   <option value="Brother">Brother</option>
+															   <option value="Brother In Law">Brother In Law</option>
+															   <option value="Business Partner">Business Partner</option>
+															   <option value="Chairman">Chairman</option>
+															   <option value="Chairperson">Chairperson</option>
+															   <option value="Child">Child</option>
+															   <option value="Cousin">Cousin</option>
+															   <option value="Daughter">Daughter</option>
+															   <option value="Deputy Secretary">Deputy Secretary</option>
+															   <option value="Father">Father</option>
+															   <option value="Father In Law">Father In Law</option>
+															   <option value="Fiance">Fiance</option>
+															   <option value="Fiancee">Fiancee</option>
+															   <option value="Friend">Friend</option>
+															   <option value="Guardian">Guardian</option>
+															   <option value="Girlfriend">Girlfriend</option>
+															   <option value="Grand Daughter">Grand Daughter</option>
+															   <option value="Grand Father">Grand Father</option>
+															   <option value="Grand Son">Grand Son</option>
+															   <option value="Grandchild">Grandchild</option>
+															   <option value="Grandmother">Grandmother</option>
+															   <option value="Husband">Husband</option>
+															   <option value="Member">Member</option>
+															   <option value="Mother">Mother</option>
+															   <option value="Sister">Sister</option>
+															   <option value="Sister in Law">Sister in Law</option>
+															   <option value="Son">Son</option>
+															   <option value="Wife">Wife</option>
+											   
+														   </select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>4</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
+															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+															   <option value="Assistant Chairperson">Assistant Chairperson</option>
+															   <option value="Aunt">Aunt</option>
+															   <option value="Brother">Brother</option>
+															   <option value="Brother In Law">Brother In Law</option>
+															   <option value="Business Partner">Business Partner</option>
+															   <option value="Chairman">Chairman</option>
+															   <option value="Chairperson">Chairperson</option>
+															   <option value="Child">Child</option>
+															   <option value="Cousin">Cousin</option>
+															   <option value="Daughter">Daughter</option>
+															   <option value="Deputy Secretary">Deputy Secretary</option>
+															   <option value="Father">Father</option>
+															   <option value="Father In Law">Father In Law</option>
+															   <option value="Fiance">Fiance</option>
+															   <option value="Fiancee">Fiancee</option>
+															   <option value="Friend">Friend</option>
+															   <option value="Guardian">Guardian</option>
+															   <option value="Girlfriend">Girlfriend</option>
+															   <option value="Grand Daughter">Grand Daughter</option>
+															   <option value="Grand Father">Grand Father</option>
+															   <option value="Grand Son">Grand Son</option>
+															   <option value="Grandchild">Grandchild</option>
+															   <option value="Grandmother">Grandmother</option>
+															   <option value="Husband">Husband</option>
+															   <option value="Member">Member</option>
+															   <option value="Mother">Mother</option>
+															   <option value="Sister">Sister</option>
+															   <option value="Sister in Law">Sister in Law</option>
+															   <option value="Son">Son</option>
+															   <option value="Wife">Wife</option>
+											   
+														   </select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+
+                                                <label class="mt-5"><strong>Nominees for Group Funeral Expense(GFE) Scheme; limited to Spouse, Children & Parents of the Member:</strong></label>
+                                                <table class="table table-bordered funeral-ben">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>#</th>
+                                                            <th scope="col">Names</th>
+                                                            <th scope="col">ID/PP/Birth certificate No.</th>
+                                                            <th scope="col">Relationship</th>
+                                                            <th scope="col">DOB</th>
+                                                            <th scope="col">
+                                                                Allocations(%)
+                                                                <br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small>
+                                                            </th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>1</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg   ben2-relationship required-check" style="width:200px;">
+																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+																<option value="Assistant Chairperson">Assistant Chairperson</option>
+																<option value="Aunt">Aunt</option>
+																<option value="Brother">Brother</option>
+																<option value="Brother In Law">Brother In Law</option>
+																<option value="Business Partner">Business Partner</option>
+																<option value="Chairman">Chairman</option>
+																<option value="Chairperson">Chairperson</option>
+																<option value="Child">Child</option>
+																<option value="Cousin">Cousin</option>
+																<option value="Daughter">Daughter</option>
+																<option value="Deputy Secretary">Deputy Secretary</option>
+																<option value="Father">Father</option>
+																<option value="Father In Law">Father In Law</option>
+																<option value="Fiance">Fiance</option>
+																<option value="Fiancee">Fiancee</option>
+																<option value="Friend">Friend</option>
+																<option value="Guardian">Guardian</option>
+																<option value="Girlfriend">Girlfriend</option>
+																<option value="Grand Daughter">Grand Daughter</option>
+																<option value="Grand Father">Grand Father</option>
+																<option value="Grand Son">Grand Son</option>
+																<option value="Grandchild">Grandchild</option>
+																<option value="Grandmother">Grandmother</option>
+																<option value="Husband">Husband</option>
+																<option value="Member">Member</option>
+																<option value="Mother">Mother</option>
+																<option value="Sister">Sister</option>
+																<option value="Sister in Law">Sister in Law</option>
+																<option value="Son">Son</option>
+																<option value="Wife">Wife</option>
+												
+															</select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <!--																<input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">-->
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker" placeholder="Pick a date" required>
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>2</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
+															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+															   <option value="Assistant Chairperson">Assistant Chairperson</option>
+															   <option value="Aunt">Aunt</option>
+															   <option value="Brother">Brother</option>
+															   <option value="Brother In Law">Brother In Law</option>
+															   <option value="Business Partner">Business Partner</option>
+															   <option value="Chairman">Chairman</option>
+															   <option value="Chairperson">Chairperson</option>
+															   <option value="Child">Child</option>
+															   <option value="Cousin">Cousin</option>
+															   <option value="Daughter">Daughter</option>
+															   <option value="Deputy Secretary">Deputy Secretary</option>
+															   <option value="Father">Father</option>
+															   <option value="Father In Law">Father In Law</option>
+															   <option value="Fiance">Fiance</option>
+															   <option value="Fiancee">Fiancee</option>
+															   <option value="Friend">Friend</option>
+															   <option value="Guardian">Guardian</option>
+															   <option value="Girlfriend">Girlfriend</option>
+															   <option value="Grand Daughter">Grand Daughter</option>
+															   <option value="Grand Father">Grand Father</option>
+															   <option value="Grand Son">Grand Son</option>
+															   <option value="Grandchild">Grandchild</option>
+															   <option value="Grandmother">Grandmother</option>
+															   <option value="Husband">Husband</option>
+															   <option value="Member">Member</option>
+															   <option value="Mother">Mother</option>
+															   <option value="Sister">Sister</option>
+															   <option value="Sister in Law">Sister in Law</option>
+															   <option value="Son">Son</option>
+															   <option value="Wife">Wife</option>
+											   
+														   </select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>3</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
+															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+															   <option value="Assistant Chairperson">Assistant Chairperson</option>
+															   <option value="Aunt">Aunt</option>
+															   <option value="Brother">Brother</option>
+															   <option value="Brother In Law">Brother In Law</option>
+															   <option value="Business Partner">Business Partner</option>
+															   <option value="Chairman">Chairman</option>
+															   <option value="Chairperson">Chairperson</option>
+															   <option value="Child">Child</option>
+															   <option value="Cousin">Cousin</option>
+															   <option value="Daughter">Daughter</option>
+															   <option value="Deputy Secretary">Deputy Secretary</option>
+															   <option value="Father">Father</option>
+															   <option value="Father In Law">Father In Law</option>
+															   <option value="Fiance">Fiance</option>
+															   <option value="Fiancee">Fiancee</option>
+															   <option value="Friend">Friend</option>
+															   <option value="Guardian">Guardian</option>
+															   <option value="Girlfriend">Girlfriend</option>
+															   <option value="Grand Daughter">Grand Daughter</option>
+															   <option value="Grand Father">Grand Father</option>
+															   <option value="Grand Son">Grand Son</option>
+															   <option value="Grandchild">Grandchild</option>
+															   <option value="Grandmother">Grandmother</option>
+															   <option value="Husband">Husband</option>
+															   <option value="Member">Member</option>
+															   <option value="Mother">Mother</option>
+															   <option value="Sister">Sister</option>
+															   <option value="Sister in Law">Sister in Law</option>
+															   <option value="Son">Son</option>
+															   <option value="Wife">Wife</option>
+											   
+														   </select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+                                                        <tr>
+                                                            <th>
+                                                                <strong>4</strong>
+                                                            </th>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
+                                                            </td>
+                                                            <td>
+                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
+															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
+															   <option value="Assistant Chairperson">Assistant Chairperson</option>
+															   <option value="Aunt">Aunt</option>
+															   <option value="Brother">Brother</option>
+															   <option value="Brother In Law">Brother In Law</option>
+															   <option value="Business Partner">Business Partner</option>
+															   <option value="Chairman">Chairman</option>
+															   <option value="Chairperson">Chairperson</option>
+															   <option value="Child">Child</option>
+															   <option value="Cousin">Cousin</option>
+															   <option value="Daughter">Daughter</option>
+															   <option value="Deputy Secretary">Deputy Secretary</option>
+															   <option value="Father">Father</option>
+															   <option value="Father In Law">Father In Law</option>
+															   <option value="Fiance">Fiance</option>
+															   <option value="Fiancee">Fiancee</option>
+															   <option value="Friend">Friend</option>
+															   <option value="Guardian">Guardian</option>
+															   <option value="Girlfriend">Girlfriend</option>
+															   <option value="Grand Daughter">Grand Daughter</option>
+															   <option value="Grand Father">Grand Father</option>
+															   <option value="Grand Son">Grand Son</option>
+															   <option value="Grandchild">Grandchild</option>
+															   <option value="Grandmother">Grandmother</option>
+															   <option value="Husband">Husband</option>
+															   <option value="Member">Member</option>
+															   <option value="Mother">Mother</option>
+															   <option value="Sister">Sister</option>
+															   <option value="Sister in Law">Sister in Law</option>
+															   <option value="Son">Son</option>
+															   <option value="Wife">Wife</option>
+											   
+														   </select>
+                                                            </td>
+                                                            <td>
+                                                                <div class="input-group">
+                                                                    <div class="input-group-prepend">
+                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
+                                                                    </div>
+                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
+                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
+                                                                </div>
+                                                            </td>
+                                                            <td>
+                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
+                                                            </td>
+                                                        </tr>
+
+                                                    </tbody>
+                                                </table>
+
+                                            </div>
+
+                                            <div class="col-12">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary attach-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+                                        </div>
+
+                                        <div class="row clearfix form-attach animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Attachments</h4>
+                                                <h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
+                                                <hr>
+
+                                            </div>
+                                            <label class="col-sm-12 col-md-3 form-attach" for="nat-id">
+												<div class="id-container img-container">
+													<span><img src="demo/img/attachment-docs/identification.svg"></span>
+													<h5>Nat ID card</h5>
+													<p>Only <strong>.PDF files</strong> are accepted</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- national id input box -->
+													<input type="file" accept="application/pdf"  id="nat-id" required class="form-control  form-control-lg   nat-id d-none">
+												</div>
+											</label>
+
+                                            <label class="col-sm-12 col-md-3" for="kra-pin">
+												<div class="kra-container img-container">
+													<span><img src="demo/img/attachment-docs/tax.svg"></span>
+													<h5>KRA pin</h5>
+													<p>Only <strong>.PDF files</strong> are accepted</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- kra pin input -->
+													<input type="file" accept="application/pdf" required id="kra-pin" class="form-control  form-control-lg   kra-pin d-none">
+												</div>
+											</label>
+
+                                            <label class="col-sm-12 col-md-3" for="mpesa-statement">
+												<div class="mpesa-statement-container img-container">
+													<span><img src="demo/img/attachment-docs/mpesa.svg"></span>
+													<h5>Mpesa statement</h5>
+													<p>Only <strong>.PDF files</strong> are accepted</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- mpesa statemetn -->
+													<input type="file" accept="application/pdf" required id="mpesa-statement" class="form-control  form-control-lg   mpesa-statement d-none">
+												</div>
+											</label>
+
+                                            <label class="col-sm-12 col-md-3" for="user-photo">
+												<div class="user-photo-container img-container">
+													<span><img src="demo/img/attachment-docs/portrait.svg"></span>
+													<h5>Attach photo</h5>
+													<p>Only <strong>.PNG, .JPEG, .JPEG and .GIF</strong> are accepted</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- user photo -->
+													<input type="file" required id="user-photo" accept="image/png, .jpeg, .jpg, image/gif" class="form-control  form-control-lg   user-photo d-none">
+												</div>
+											</label>
+
+
+                                            <div class="col-12 mt-5">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary fund-next text-white btn-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
+
+                                        </div>
+
+                                        <div class="row clearfix form-save animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Account savings & Activation</h4>
+                                                <h6 class="card-subtitle">
+                                                    Use this potion to make the first saving and enable account activation
+                                                </h6>
+                                                <hr>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12">
+                                                <div class="form-group">
+                                                    <label>Monthly contribution<strong class="text-danger">*</strong></label>
+                                                    <input type="text" class="form-control  form-control-lg  " placeholder="Monthly remitance" required pattern="^[0-9]{1,10000}$">
+                                                </div>
+                                            </div>
+                                            <div class="col-12 radio-main-container">
+                                                <label><strong>Applicant would wish to activate account through which method?</strong></label>
+
+                                                <div class="radio method-mpesa">
+                                                    <input type="radio" value="mpesa" name="pay-method" id="method-mpesa">
+                                                    <label class="radio__label" for="method-mpesa">Mpesa</label>
+                                                </div>
+
+                                                <div class="radio method-cash">
+                                                    <input type="radio" required name="pay-method" id="method-cash" value="cash">
+                                                    <label class="radio__label" for="method-cash">Cash or cheque</label>
+                                                </div>
+
+                                                <div class="radio method-teller">
+                                                    <input type="radio" required name="pay-method" id="method-teller" value="activate at teller">
+                                                    <label class="radio__label" for="method-teller">Will activate at teller</label>
+                                                </div>
+
+                                                <div class="radio method-own">
+                                                    <input type="radio" required name="pay-method" id="method-own" value="own activation">
+                                                    <label class="radio__label" for="method-own">Will activate at own time</label>
+                                                </div>
+
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12 my-5">
+                                                        <div class="notes">
+                                                            <p>
+                                                                Kindly note the member registration fee is <strong>KES 1,000.</strong> If the applicant will choose to pay more, the additional amount will be credited to his account.
+                                                            </p>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="act-mpesa col-12 animated fadeIn d-none">
+                                                <div class="row">
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Mpesa number (Can be changed)<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control  form-control-lg   must-input mpesa-number" placeholder="Enter Mpesa number">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-3 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Amount<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control  form-control-lg   must-input mpesa-amount" placeholder="Amount to be paid">
+                                                        </div>
+                                                    </div>
+
+
+
+                                                    <div class="col-sm-12 col-md-auto">
+                                                        <div class="form-group">
+                                                            <label class="opacity-0">request<strong class="text-danger">*</strong></label>
+                                                            <button class="btn btn-success d-flex align-items-center" title="click to send payment request">Send payment request <i class="ml-3 arrow_carrot-2right" style="font-size: 20px;" ></i></button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="act-cash col-12 animated fadeIn d-none">
+                                                <div class="row">
+                                                    <div class="col-12">
+                                                        <p><strong>How much money have you received from the applicant</strong></p>
+                                                    </div>
+                                                    <div class="col-md-4 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Amount<strong class="text-danger">*</strong></label>
+                                                            <input type="text" class="form-control  form-control-lg   must-input" placeholder="KSH">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+
+                                            <div class="col-12 mt-5">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <button type="submit" class="btn btn-primary btn-submit">Submit Application<i class="ml-3 zmdi zmdi-mail-reply-all flipx"></i></button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="footer hidden-xs-down">
+                <center>
+                    <a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center>
+                </a>
+                </center>
+                <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+            </footer>
+        </section>
+    </main>
+
+    <!-- Older IE warning message -->
+    <!--[if IE]>
+                <div class="ie-warning">
+                    <h1>Warning!!</h1>
+                    <p>You are using an outdated version of Internet Explorer, please upgrade to any of the following web browsers to access this website.</p>
+
+                    <div class="ie-warning__downloads">
+                        <a href="http://www.google.com/chrome">
+                            <img src="img/browsers/chrome.png" alt="">
+                        </a>
+
+                        <a href="https://www.mozilla.org/en-US/firefox/new">
+                            <img src="img/browsers/firefox.png" alt="">
+                        </a>
+
+                        <a href="http://www.opera.com">
+                            <img src="img/browsers/opera.png" alt="">
+                        </a>
+
+                        <a href="https://support.apple.com/downloads/safari">
+                            <img src="img/browsers/safari.png" alt="">
+                        </a>
+
+                        <a href="https://www.microsoft.com/en-us/windows/microsoft-edge">
+                            <img src="img/browsers/edge.png" alt="">
+                        </a>
+
+                        <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">
+                            <img src="img/browsers/ie.png" alt="">
+                        </a>
+                    </div>
+                    <p>Sorry for the inconvenience!</p>
+                </div>
+            <![endif]-->
+
+    <!-- Javascript -->
+    <!-- Vendors -->
+    <script src="vendors/jquery/jquery.min.js"></script>
+    <script src="vendors/popper.js/popper.min.js"></script>
+    <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+    <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+
+    <script src="vendors/flot/jquery.flot.js"></script>
+    <script src="vendors/flot/jquery.flot.resize.js"></script>
+    <script src="vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+    <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
+    <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
+    <script src="vendors/salvattore/salvattore.min.js"></script>
+    <script src="vendors/sparkline/jquery.sparkline.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/fullcalendar/fullcalendar.min.js"></script>
+
+    <script src="vendors/jquery-mask-plugin/jquery.mask.min.js"></script>
+    <script src="vendors/select2/js/select2.full.min.js"></script>
+    <script src="vendors/dropzone/dropzone.min.js"></script>
+    <script src="vendors/moment/moment.min.js"></script>
+    <script src="vendors/nouislider/nouislider.min.js"></script>
+    <script src="vendors/trumbowyg/trumbowyg.min.js"></script>
+    <script src="vendors/flatpickr/flatpickr.min.js"></script>
+    <script src="vendors/rateyo/jquery.rateyo.min.js"></script>
+    <script src="vendors/jquery-text-counter/textcounter.min.js"></script>
+    <script src="vendors/autosize/autosize.min.js"></script>
+    <script src="vendors/bootstrap-colorpicker/js/bootstrap-colorpicker.min.js"></script>
+
+
+    <!-- Vendors: Data tables -->
+    <script src="vendors/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendors/datatables-buttons/dataTables.buttons.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.print.min.js"></script>
+    <script src="vendors/jszip/jszip.min.js"></script>
+    <script src="vendors/datatables-buttons/buttons.html5.min.js"></script>
+
+    <!-- Charts and maps-->
+    <script src="demo/js/flot-charts/curved-line.js"></script>
+    <script src="demo/js/flot-charts/dynamic.js"></script>
+    <script src="demo/js/flot-charts/line.js"></script>
+    <script src="demo/js/flot-charts/chart-tooltips.js"></script>
+    <script src="demo/js/other-charts.js"></script>
+    <script src="demo/js/jqvmap.js"></script>
+
+    <!--high chart-->
+
+    <script src="vendors/highcharts/highchart.js"></script>
+    <script src="vendors/highcharts/data.js"></script>
+    <script src="vendors/highcharts/drilldown.js"></script>
+    <script src="vendors/highcharts/exporting.js"></script>
+    <script src="vendors/highcharts/export-data.js"></script>
+    <script src="vendors/highcharts/accesibility.js"></script>
+
+    <!--form validation-->
+    <script src="vendors/jq-validation/jquery.validate.min.js"></script>
+    <script src="vendors/jq-validation/additional-methods.min.js"></script>
+
+    <script src="js/highcharts/highcharts-more.js"></script>
+    <!--owl corousel-->
+    <script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+    <!-- App functions and actions -->
+    <script src="js/wow.js"></script>
+    <script src="js/app.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/mapping-data.js"></script>
+
+    <script defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas&callback=initMap">
+    </script>
+
+   <script defer
+   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas&callback=initMap&libraries=places&v=weekly"
+   defer>
+   </script>
+    <script>
+        $('.membership-form').validate();
+    </script>
+
+    <!-- Html include -->
+    <script>
+        includeHTML();
+    </script>
+
+
+</body>
+
+<!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
+
+</html>

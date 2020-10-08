@@ -162,9 +162,12 @@
             }
         }
 
+        
         google.maps.event.addListener(map, 'dblclick',function(event){
+            removeMarkers();
             
             //add marker
+            
             addMarker({coords:event.latLng});
 
            
@@ -377,6 +380,7 @@
 
                     var newCoords=e.latLng;
                     newCoords=newCoords.toString();
+                    // alert(newCoords);
 
                     var Latitude;
                     var longitude;
@@ -596,6 +600,7 @@
 
         //shows the close button on the search box when someone starts to search for a new place
         $('#pac-input').on('keyup',function(){
+            removeMarkers();
             $('.clear-map i').removeClass('d-none');
             $('.map-info-cont').addClass('left-100');
         });
@@ -603,11 +608,19 @@
         //this function is fired up when the close button is clicked
         // it clears the searched icons plus the search input box
          $('.clear-map').on('click', function(){
+
+            $('.form-map-locations .clicked-subcounty').text("Not Selected").addClass('text-danger').removeClass('text-black');
+            $('.form-map-locations .clicked-address').text("Not Selected").addClass('text-danger').removeClass('text-black');
+            $('.form-map-locations .clicked-ward').text("Not Selected").addClass('text-danger').removeClass('text-black');
+            $('.form-map-locations .clicked-street').text("Not Selected").addClass('text-danger').removeClass('text-black');
+
+
             const places = searchBox.getPlaces();
             console.log(places);
             $('.map-info-cont').addClass('left-100');
             $('#pac-input').val("");
             $('.clear-map i').addClass('d-none');
+            removeMarkers();
             // Clear out the old markers.
 
             markers.forEach((marker) => {
@@ -849,11 +862,23 @@
             // alert("subcounty:"+subCounty);
 
             $('#newPoint .clicked-ward').text(ward);
-            $('#newPoint .clicked-street').text(street);
-            $('#newPoint .clicked-subcounty').text(subCounty);
-            $('#newPoint .clicked-address').text(address);
+            $('.form-map-locations .clicked-ward').text(ward).addClass('text-black').removeClass('text-danger');;
 
-            $('#approved-application .the-clicked-address').text(address);
+            $('#newPoint .clicked-street').text(street);
+            $('.form-map-locations .clicked-street').text(street).addClass('text-black').removeClass('text-danger');;
+
+            $('#newPoint .clicked-subcounty').text(subCounty);
+            $('.form-map-locations .clicked-subcounty').text(subCounty).addClass('text-black').removeClass('text-danger');
+
+
+            $('#newPoint .clicked-address').text(address);
+            $('.form-map-locations .clicked-address').text(address).addClass('text-black').removeClass('text-danger');
+            $('.form-map-locations .form-address').val(address);
+
+            $('.form-map-locations .form-latitude').val(Latitude);
+            $('.form-map-locations .form-longitude').val(longitude);
+
+            $('.permits-asside .the-clicked-address').text(address);
 
 
        
@@ -886,6 +911,13 @@
         })
     })
     .catch(err => console.warn(err.message));
+    }
+
+    //remove marker
+    function removeMarkers(){
+        for(i=0; i<gmarkers.length; i++){
+            gmarkers[i].setMap(null);
+        }
     }
     
     }

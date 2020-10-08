@@ -219,6 +219,60 @@ $(window).on('load', function(){
 	
 });
 
+$('.application-nav li').on('click', function(){
+	var theIndex=$(this).index();
+	$('.membership-form>div').eq(theIndex).removeClass('d-none').siblings().addClass('d-none');
+
+});
+
+$('.membership-form .btn-next').on('click', function(){
+	$(this).parent().parent().addClass('d-none').next().removeClass('d-none');
+	var theParent=$(this).parent().parent();
+	var theParentIndex=theParent.index();
+
+	$('.application-nav li').children('a').eq(theParentIndex+1).addClass('active').parent().siblings().children('a').removeClass('active');
+	
+
+});
+
+$('.membership-form .btn-prev').on('click', function(){
+	$(this).parent().parent().addClass('d-none').prev().removeClass('d-none');
+
+	var theParent=$(this).parent().parent();
+	var theParentIndex=theParent.index();
+
+	$('.application-nav li').children('a').eq(theParentIndex-1).addClass('active').parent().siblings().children('a').removeClass('active');
+	
+
+	
+
+});
+
+function ownershipChange(){
+	var theInput=$('.owner-type');
+	var owner=theInput.val();
+
+	if(owner=="company"){
+		$('.company-ownership').removeClass('d-none').siblings().addClass('d-none');
+		
+	}
+
+	else if(owner=="individual"){
+		$('.individual-ownership').removeClass('d-none').siblings().addClass('d-none')
+	}
+	else{
+		$('.individual-ownership').addClass('d-none').siblings().addClass('d-none');
+	}
+}
+ownershipChange();
+
+//changing the ownership type
+$('.owner-type').on('change', function(){
+	ownershipChange();
+	
+
+});
+
 
 //owl initializer
 $(document).ready(function(){

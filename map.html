@@ -364,10 +364,11 @@
                                                 <p><small>Select the category for with this location belongs.</small></p>
                                                 <select class="form-control" id="locationCategory">
                                                     <option>-- Select location category --</option>
-                                                  <option>Parking street</option>
-                                                  <option>Off street parking location</option>
-                                                  <option>Revenue/service point</option>
-                                                  <option>Bus park</option>
+                                                  <option>Service point</option>
+                                                  <option>Revenue Collection point</option>
+                                                  <option>Town hall</option>
+                                                  <option>County Agent</option>
+                                                 
                                                 </select>
                                               </div>
                                          </div>
@@ -926,69 +927,60 @@
                         <div class="map-loader d-none">
                             <div class="lds-ripple"><div></div><div></div></div>
                         </div>
-                        <div class="map-cont-header">
+                        <div class="map-cont-header px-2-2">
                             <h2 class="chat__title">Project Title<small>Project category </small></h2>
                             <i class="zmdi zmdi-close close-aside"></i>
                         </div>
                         
                         <div class="scrollbar-inner">
                             <!-- street image if any -->
-                            <div class="map-cont-img">
+                            <div class="map-cont-img d-none">
                                 <img src="images/non_compliant.jpeg">
                             </div>
                             <div class="listview">
-                                <div class="listview__item ">
+                                <div class="listview__item px-2-2">
                                     <div class="listview__content">
-                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Applicant</div>
-                                        <h6 class="font-weight-bolder mb-0 text-capitalize">Mr John Doe (Architect)</h6>
+                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Project's Value</div>
+                                        <h4 class="font-weight-bolder mb-0 text-capitalize">KES 2,560,000</h4>
                                     </div>
                                 </div>
                             </div>
-            
+
                             <div class="listview bg-primary">
                                 <div class="listview__item py-2">
                                     <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-office-building-marker-outline"></i><span>Current Application status</span></div>
                                 </div>
                                 
                             </div>
+
+                            <!-- application status -->
             
                             <div class="listview">
-                                <div class="listview__item py-2">                           
-                                    <strong class="text-success">Approved Application</strong>
+                                <div class="listview__item py-2 px-2">                           
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong class="text-success">Approved Application</strong></div>
+                                        
+                                    </div>
+                                    
                                 </div>
                                 
                             </div>
-            
+                            <div class="listview__item py-2 px-2">
+    
+                                <div class="listview__content px-3">
+                                    <div class="listview__heading"><strong>Applicant: Kelvin Njuguna</strong></div>
+                                    
+                                </div>
+                            </div>
+
+                            <!-- general application details -->
+
                             <div class="listview bg-primary">
                                 <div class="listview__item py-2">
-                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-file-document-multiple-outline"></i><span>Application Documents</span></div>
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-clipboard-edit-outline"></i><span>General Application Details</span></div>
                                 </div>
                                 
                             </div>
-                            <table class="table table-sm">
-                               
-                                <tbody>
-        
-                                    <tr>
-                                        <th class="text-left text-wrap">
-                                            <a class="text-info" target="new" href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2 text-info"></i>Project Plan</a>
-                                        </th>
-                                    </tr>
-        
-                                    <tr>
-                                        <th class="text-left text-wrap">
-                                           <a class="text-info" target="new" href="images/map-assets/demo-docs/How to Verify Your Land Title Deed is Genuine.png"> <i class="mdi mdi-folder-multiple mx-2"></i> Ownership Documents</a>
-                                        </th>
-                                    </tr>
-        
-                                    <tr>
-                                        <th class="text-left text-wrap">
-                                            <a class="text-info" target="new"  href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2"></i> Survey Plan</a>
-                                        </th>
-                                    </tr>
-                                   
-                                </tbody>
-                            </table>
 
                             <div class="listview listview--hover">
                                 <div class="listview__item py-2 px-2">
@@ -996,6 +988,14 @@
                                     <div class="listview__content px-3">
                                         <div class="listview__heading"><strong>Address</strong></div>
                                         <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Plot Number</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
                                     </div>
                                 </div>
 
@@ -1030,52 +1030,81 @@
     
                                 
                             </div>
-            
-                        </div>
-        
-                        <div class="map-cont-footer">
-                        </div>
-                    </aside>
 
-                    <!-- ongoing applications -->
-                    <aside class="map-info-cont animated slideInLeft left-100 permits-asside" id="pending-application">
-        
-                        <!-- show this when loading the new data -->
-                        <div class="map-loader d-none">
-                            <div class="lds-ripple"><div></div><div></div></div>
-                        </div>
-                        <div class="map-cont-header">
-                            <h2 class="chat__title">Project Title<small>Project category </small></h2>
-                            <i class="zmdi zmdi-close close-aside"></i>
-                        </div>
-                        
-                        <div class="scrollbar-inner">
-                            <!-- street image if any -->
-                            <div class="map-cont-img">
-                                <img src="images/non_compliant.jpeg">
-                            </div>
-                            <div class="listview">
-                                <div class="listview__item ">
-                                    <div class="listview__content">
-                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Applicant</div>
-                                        <h6 class="font-weight-bolder mb-0 text-capitalize">Mr John Doe (Architect)</h6>
-                                    </div>
-                                </div>
-                            </div>
-            
+                            <!-- contractor -->
+
                             <div class="listview bg-primary">
                                 <div class="listview__item py-2">
-                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-office-building-marker-outline"></i><span>Current Application status</span></div>
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-ruler-square"></i><span>Contractor</span></div>
                                 </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Contractor</strong></div>
+                                        <p class="">Tynene Limited</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Box</strong></div>
+                                        <p>PO BOX 12, 00100, NAIROBI</p>
+                                    </div>
+                                </div>    
+                               
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Added By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+                            <!-- projects architect -->
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-floor-plan"></i><span>Architect</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Architect</strong></div>
+                                        <p class="">James Gordon</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Architect's Registration Number</strong></div>
+                                        <p>12345</p>
+                                    </div>
+                                </div>    
+                               
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Added By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
                                 
                             </div>
             
-                            <div class="listview">
-                                <div class="listview__item py-2">                           
-                                    <strong class="text-warning">Pending Application</strong>
-                                </div>
-                                
-                            </div>
+                           
             
                             <div class="listview bg-primary">
                                 <div class="listview__item py-2">
@@ -1108,12 +1137,90 @@
                                 </tbody>
                             </table>
 
+                            
+            
+                        </div>
+        
+                        <div class="map-cont-footer">
+                        </div>
+                    </aside>
+
+                    <!-- ongoing applications -->
+                    <aside class="map-info-cont animated slideInLeft left-100 permits-asside" id="pending-application">
+        
+                        <!-- show this when loading the new data -->
+                        <div class="map-loader d-none">
+                            <div class="lds-ripple"><div></div><div></div></div>
+                        </div>
+                        <div class="map-cont-header px-2-2">
+                            <h2 class="chat__title">Project Title<small>Project category </small></h2>
+                            <i class="zmdi zmdi-close close-aside"></i>
+                        </div>
+                        
+                        <div class="scrollbar-inner">
+                            <!-- street image if any -->
+                            <div class="map-cont-img d-none">
+                                <img src="images/non_compliant.jpeg">
+                            </div>
+                            <div class="listview">
+                                <div class="listview__item px-2-2">
+                                    <div class="listview__content">
+                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Project's Value</div>
+                                        <h4 class="font-weight-bolder mb-0 text-capitalize">KES 2,560,000</h4>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-office-building-marker-outline"></i><span>Current Application status</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <!-- application status -->
+            
+                            <div class="listview">
+                                <div class="listview__item py-2 px-2">                           
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong class="text-warning">Pending Application</strong></div>
+                                        
+                                    </div>
+                                    
+                                </div>
+                                
+                            </div>
+                            <div class="listview__item py-2 px-2">
+    
+                                <div class="listview__content px-3">
+                                    <div class="listview__heading"><strong>Applicant: Kelvin Njuguna</strong></div>
+                                    
+                                </div>
+                            </div>
+
+                            <!-- general application details -->
+
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-clipboard-edit-outline"></i><span>General Application Details</span></div>
+                                </div>
+                                
+                            </div>
+
                             <div class="listview listview--hover">
                                 <div class="listview__item py-2 px-2">
     
                                     <div class="listview__content px-3">
                                         <div class="listview__heading"><strong>Address</strong></div>
                                         <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Plot Number</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
                                     </div>
                                 </div>
 
@@ -1128,7 +1235,7 @@
                                 <div class="listview__item py-2 px-2">
                                     <div class="listview__content px-3">
                                         <div class="listview__heading"><strong>Approval Date</strong></div>
-                                        <p>Pending ...</p>
+                                        <p>September 10, 2020 10:25 PM</p>
                                     </div>
                                 </div>
     
@@ -1141,13 +1248,121 @@
     
                                 <div class="listview__item py-2 px-2">
                                     <div class="listview__content px-3">
-                                        <div class="listview__heading"><strong>Created By</strong></div>
+                                        <div class="listview__heading"><strong>Approved By</strong></div>
                                         <p>Mr Enok Waswa</p>
                                     </div>
                                 </div>
     
                                 
                             </div>
+
+                            <!-- contractor -->
+
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-ruler-square"></i><span>Contractor</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Contractor</strong></div>
+                                        <p class="">Tynene Limited</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Box</strong></div>
+                                        <p>PO BOX 12, 00100, NAIROBI</p>
+                                    </div>
+                                </div>    
+                               
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Added By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+                            <!-- projects architect -->
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-floor-plan"></i><span>Architect</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Architect</strong></div>
+                                        <p class="">James Gordon</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Architect's Registration Number</strong></div>
+                                        <p>12345</p>
+                                    </div>
+                                </div>    
+                               
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Added By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+            
+                           
+            
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-file-document-multiple-outline"></i><span>Application Documents</span></div>
+                                </div>
+                                
+                            </div>
+                            <table class="table table-sm">
+                               
+                                <tbody>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                            <a class="text-info" target="new" href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2 text-info"></i>Project Plan</a>
+                                        </th>
+                                    </tr>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                           <a class="text-info" target="new" href="images/map-assets/demo-docs/How to Verify Your Land Title Deed is Genuine.png"> <i class="mdi mdi-folder-multiple mx-2"></i> Ownership Documents</a>
+                                        </th>
+                                    </tr>
+        
+                                    <tr>
+                                        <th class="text-left text-wrap">
+                                            <a class="text-info" target="new"  href="images/map-assets/demo-docs/survey-plan.png"><i class="mdi mdi-folder-multiple mx-2"></i> Survey Plan</a>
+                                        </th>
+                                    </tr>
+                                   
+                                </tbody>
+                            </table>
+
+                            
             
                         </div>
         
@@ -1163,38 +1378,195 @@
                         <div class="map-loader d-none">
                             <div class="lds-ripple"><div></div><div></div></div>
                         </div>
-                        <div class="map-cont-header">
+                        <div class="map-cont-header px-2-2">
                             <h2 class="chat__title">Project Title<small>Project category </small></h2>
                             <i class="zmdi zmdi-close close-aside"></i>
                         </div>
                         
                         <div class="scrollbar-inner">
                             <!-- street image if any -->
-                            <div class="map-cont-img">
+                            <div class="map-cont-img d-none">
                                 <img src="images/non_compliant.jpeg">
                             </div>
                             <div class="listview">
-                                <div class="listview__item ">
+                                <div class="listview__item px-2-2">
                                     <div class="listview__content">
-                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Applicant</div>
-                                        <h6 class="font-weight-bolder mb-0 text-capitalize">Mr John Doe (Architect)</h6>
+                                        <div class="listview__heading text-uppercase font-weight-bold font-12px">Project's Value</div>
+                                        <h4 class="font-weight-bolder mb-0 text-capitalize">KES 2,560,000</h4>
                                     </div>
                                 </div>
                             </div>
-            
+
                             <div class="listview bg-primary">
                                 <div class="listview__item py-2">
                                     <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-office-building-marker-outline"></i><span>Current Application status</span></div>
                                 </div>
                                 
                             </div>
+
+                            <!-- application status -->
             
                             <div class="listview">
-                                <div class="listview__item py-2">                           
-                                    <strong class="text-danger">DeclinedApplication</strong>
+                                <div class="listview__item py-2 px-2">                           
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong class="text-danger">Declined Application</strong></div>
+                                        
+                                    </div>
+
+                                    
+                                    
+                                    
                                 </div>
                                 
                             </div>
+                            <div class="listview__item py-2 px-2">
+    
+                                <div class="listview__content px-3">
+                                    <div class="listview__heading"><strong>Applicant: Kelvin Njuguna</strong></div>
+                                    
+                                </div>
+                            </div>
+
+                            <div class="listview__item py-2 px-2 badge badge-soft-danger w-100 text-left">
+    
+                                <div class="listview__content px-3">
+                                    <div class="listview__heading MB-2"><strong>Reason</strong></div>
+                                    <p class="the-clicked-address">Te applicant provided false information and should be penalised an ammount not les than KES 5,000,000</p>
+                                </div>
+                            </div>
+
+                            <!-- general application details -->
+
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-clipboard-edit-outline"></i><span>General Application Details</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Address</strong></div>
+                                        <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Plot Number</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Application Date</strong></div>
+                                        <p>April 23, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Approval Date</strong></div>
+                                        <p>September 10, 2020 10:25 PM</p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content pl-3">
+                                        <div class="listview__heading"><strong>Permit Number</strong></div>
+                                        <p><a href="">No. 15811333</a></p>
+                                    </div>
+                                </div>
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Approved By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+                            <!-- contractor -->
+
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-ruler-square"></i><span>Contractor</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Contractor</strong></div>
+                                        <p class="">Tynene Limited</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Box</strong></div>
+                                        <p>PO BOX 12, 00100, NAIROBI</p>
+                                    </div>
+                                </div>    
+                               
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Added By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+
+                            <!-- projects architect -->
+                            <div class="listview bg-primary">
+                                <div class="listview__item py-2">
+                                    <div class="listview__heading text-white map-stat-header"><i class="mdi mdi-floor-plan"></i><span>Architect</span></div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="listview listview--hover">
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Architect</strong></div>
+                                        <p class="">James Gordon</p>
+                                    </div>
+                                </div>
+
+                                <div class="listview__item py-2 px-2">
+    
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Architect's Registration Number</strong></div>
+                                        <p>12345</p>
+                                    </div>
+                                </div>    
+                               
+    
+                                <div class="listview__item py-2 px-2">
+                                    <div class="listview__content px-3">
+                                        <div class="listview__heading"><strong>Added By</strong></div>
+                                        <p>Mr Enok Waswa</p>
+                                    </div>
+                                </div>
+    
+                                
+                            </div>
+            
+                           
             
                             <div class="listview bg-primary">
                                 <div class="listview__item py-2">
@@ -1227,46 +1599,7 @@
                                 </tbody>
                             </table>
 
-                            <div class="listview listview--hover">
-                                <div class="listview__item py-2 px-2">
-    
-                                    <div class="listview__content px-3">
-                                        <div class="listview__heading"><strong>Address</strong></div>
-                                        <p class="the-clicked-address">April 23, 2020 10:25 PM</p>
-                                    </div>
-                                </div>
-
-                                <div class="listview__item py-2 px-2">
-    
-                                    <div class="listview__content px-3">
-                                        <div class="listview__heading"><strong>Application Date</strong></div>
-                                        <p>April 23, 2020 10:25 PM</p>
-                                    </div>
-                                </div>
-    
-                                <div class="listview__item py-2 px-2">
-                                    <div class="listview__content px-3">
-                                        <div class="listview__heading"><strong>Approval Date</strong></div>
-                                        <p>Pending ...</p>
-                                    </div>
-                                </div>
-    
-                                <div class="listview__item py-2 px-2">
-                                    <div class="listview__content pl-3">
-                                        <div class="listview__heading"><strong>Permit Number</strong></div>
-                                        <p><a href="">No. 15811333</a></p>
-                                    </div>
-                                </div>
-    
-                                <div class="listview__item py-2 px-2">
-                                    <div class="listview__content px-3">
-                                        <div class="listview__heading"><strong>Created By</strong></div>
-                                        <p>Mr Enok Waswa</p>
-                                    </div>
-                                </div>
-    
-                                
-                            </div>
+                            
             
                         </div>
         
