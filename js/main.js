@@ -220,7 +220,8 @@ $(window).on('load', function(){
 });
 
 //contractor type
-$('.contractorType').on('change', function(){
+
+function selectContratorType(){
 	var thetype=$('.contractorType').val();
 	if(thetype=="individual"){
 		$('.showPerson').removeClass('d-none');
@@ -230,6 +231,49 @@ $('.contractorType').on('change', function(){
 		$('.showCompany').removeClass('d-none');
 		$('.showPerson').addClass('d-none');
 	}
+}
+
+function selectArchitectType(){
+	var thetype=$('.architectType').val();
+	if(thetype=="individual"){
+		$('.showPerson').removeClass('d-none');
+		$('.showCompany').addClass('d-none');
+	}
+	else if(thetype=="company"){
+		$('.showCompany').removeClass('d-none');
+		$('.showPerson').addClass('d-none');
+	}
+}
+
+function selectEngType(){
+	var thetype=$('.engType').val();
+	if(thetype=="individual"){
+		$('.showPerson').removeClass('d-none');
+		$('.showCompany').addClass('d-none');
+	}
+	else if(thetype=="company"){
+		$('.showCompany').removeClass('d-none');
+		$('.showPerson').addClass('d-none');
+	}
+}
+
+selectArchitectType();
+selectEngType();
+
+selectContratorType();
+
+$('.architectType').on('change', function(){
+	selectArchitectType();
+
+});
+
+$('.engType').on('change', function(){
+	selectEngType();
+
+})
+
+$('.contractorType').on('change', function(){
+	selectContratorType();
 });
 
 $('input.personnel-attachment').on('change', function(){

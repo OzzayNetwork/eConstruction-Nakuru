@@ -254,7 +254,7 @@
                                           <label><strong>Contractor type</strong></label>
                                           <select class="form-control contractorType">
                                               <option value="0">-- Select type --</option>
-                                              <option value="individual">Individual</option>
+                                              <option value="individual" selected>Individual</option>
                                               <option value="company">Company</option>
                                           </select>
                                       </div>
@@ -327,7 +327,7 @@
                                 <label><strong>Town</strong></label>
                                 <select class="form-control">
                                     <option>-- Select type --</option>
-                                    <option>Individual</option>
+                                    <option >Individual</option>
                                     <option>Company</option>
                                 </select>
                             </div>
@@ -336,8 +336,262 @@
                         <div class="col-12">
                             <label><strong>Attachments</strong></label>
                             <h6>Include an attachments that proves legitimacy of the applicant</h6>
-                            <input type="file" class="d-none contractor-Attachment personnel-attachment" id="contractor-attachment">
+                            <input type="file" class="d-none contractor-Attachment personnel-attachment" accept=".png,.pdf,.gif, .jpeg, .jpg" id="contractor-attachment">
                             <label for="contractor-attachment" class="personnel-attachment border-danger">
+                                <span class="mdi mdi-file-document-multiple-outline"></span>
+                                <h6>Attach document</h6>
+                                <p class="small text-danger font-weight-bold">* Not selected *</p>
+                              
+                            </label>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary btn--icon-text"><i class="mdi mdi-check-all"></i> Submit Application</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            <!-- modals -->
+
+            <!-- newArchitect -->
+
+            <div class="modal fade" id="newArchitect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Register Architect</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                          <div class="col-12">
+                              <h6>Fill in the form bellow to register the new archiitect</h6>
+                          </div>
+                          <div class="col-12">
+                              <hr>
+                          </div>
+                          <div class="col-12">
+                              <div class="row">
+                                  <div class="col-8">
+                                      <div class="form-group">
+                                          <label><strong>Architect type</strong></label>
+                                          <select class="form-control architectType">
+                                              <option value="0">-- Select type --</option>
+                                              <option value="individual" selected>Individual</option>
+                                              <option value="company">Company</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="row">
+                                <div class="col-6 col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label><strong>Architect's Number</strong></label>
+                                        <input type="text" class="form-control" placeholder="Enter contractor's No.">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-sm-12 col-md-6">
+                                    <div class="form-group showPerson d-none animate fade-in-down">
+                                        <label><strong>Id number</strong></label>
+                                        <input type="text" class="form-control " placeholder="Enter contractor's ID/PPT No.">
+                                    </div>
+                                    <div class="form-group showCompany d-none fade-in-down">
+                                        <label><strong>KRA Pin</strong></label>
+                                        <input type="text" class="form-control " placeholder="Enter company's KRA Pin">
+                                    </div>
+
+
+                                </div>
+
+                              </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="form-group showPerson d-none animate fade-in-down">
+                                <label><strong>Full Names</strong></label>
+                                <input type="text" class="form-control " placeholder="Enter Full Names">
+                            </div>
+
+                            <div class="form-group showCompany d-none animate fade-in-down">
+                                <label><strong>Company's Name</strong></label>
+                                <input type="text" class="form-control " placeholder="Enter company's Name">
+                            </div>
+
+                          </div>
+
+                         
+
+                          <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Phone Number</strong></label>
+                                <input type="text" class="form-control" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Email Address</strong></label>
+                                <input type="email" class="form-control" placeholder="Enter email address">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>P.O Box.</strong></label>
+                                <input type="text" class="form-control" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Town</strong></label>
+                                <select class="form-control">
+                                    <option>-- Select type --</option>
+                                    <option >Individual</option>
+                                    <option>Company</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label><strong>Attachments</strong></label>
+                            <h6>Include an attachments that proves legitimacy of the applicant</h6>
+                            <input type="file" class="d-none contractor-Attachment personnel-attachment" accept=".png,.pdf,.gif, .jpeg, .jpg" id="architect-attachment">
+                            <label for="architect-attachment" class="personnel-attachment border-danger">
+                                <span class="mdi mdi-file-document-multiple-outline"></span>
+                                <h6>Attach document</h6>
+                                <p class="small text-danger font-weight-bold">* Not selected *</p>
+                              
+                            </label>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="button" class="btn btn-primary btn--icon-text"><i class="mdi mdi-check-all"></i> Submit Application</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- new enginerr -->
+              <div class="modal fade" id="newArchitect" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">Register Structural Engineer</h5>
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body">
+                      <div class="row">
+                          <div class="col-12">
+                              <h6>Fill in the form bellow to register the new Structural Engineer</h6>
+                          </div>
+                          <div class="col-12">
+                              <hr>
+                          </div>
+                          <div class="col-12">
+                              <div class="row">
+                                  <div class="col-8">
+                                      <div class="form-group">
+                                          <label><strong>Structural Engineer type</strong></label>
+                                          <select class="form-control engType">
+                                              <option value="0">-- Select type --</option>
+                                              <option value="individual" selected>Individual</option>
+                                              <option value="company">Company</option>
+                                          </select>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                          <div class="col-12">
+                              <div class="row">
+                                <div class="col-6 col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label><strong>Architect's Number</strong></label>
+                                        <input type="text" class="form-control" placeholder="Enter contractor's No.">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-sm-12 col-md-6">
+                                    <div class="form-group showPerson d-none animate fade-in-down">
+                                        <label><strong>Id number</strong></label>
+                                        <input type="text" class="form-control " placeholder="Enter contractor's ID/PPT No.">
+                                    </div>
+                                    <div class="form-group showCompany d-none fade-in-down">
+                                        <label><strong>KRA Pin</strong></label>
+                                        <input type="text" class="form-control " placeholder="Enter company's KRA Pin">
+                                    </div>
+
+
+                                </div>
+
+                              </div>
+                          </div>
+
+                          <div class="col-12">
+                            <div class="form-group showPerson d-none animate fade-in-down">
+                                <label><strong>Full Names</strong></label>
+                                <input type="text" class="form-control " placeholder="Enter Full Names">
+                            </div>
+
+                            <div class="form-group showCompany d-none animate fade-in-down">
+                                <label><strong>Company's Name</strong></label>
+                                <input type="text" class="form-control " placeholder="Enter company's Name">
+                            </div>
+
+                          </div>
+
+                         
+
+                          <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Phone Number</strong></label>
+                                <input type="text" class="form-control" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Email Address</strong></label>
+                                <input type="email" class="form-control" placeholder="Enter email address">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>P.O Box.</strong></label>
+                                <input type="text" class="form-control" placeholder="Enter phone number">
+                            </div>
+                        </div>
+
+                        <div class="col-6 col-sm-12 col-md-6">
+                            <div class="form-group">
+                                <label><strong>Town</strong></label>
+                                <select class="form-control">
+                                    <option>-- Select type --</option>
+                                    <option >Individual</option>
+                                    <option>Company</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="col-12">
+                            <label><strong>Attachments</strong></label>
+                            <h6>Include an attachments that proves legitimacy of the applicant</h6>
+                            <input type="file" class="d-none contractor-Attachment personnel-attachment" accept=".png,.pdf,.gif, .jpeg, .jpg" id="eng-attachment">
+                            <label for="eng-attachment" class="personnel-attachment border-danger">
                                 <span class="mdi mdi-file-document-multiple-outline"></span>
                                 <h6>Attach document</h6>
                                 <p class="small text-danger font-weight-bold">* Not selected *</p>
