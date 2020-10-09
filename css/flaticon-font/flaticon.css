@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 24/05/2020 19:41
+  	Creation date: 09/10/2020 14:19
   	*/
 
 @font-face {
@@ -25,17 +25,23 @@
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
   font-family: Flaticon;
-        font-size: 20px;
 font-style: normal;
-
 }
 
-.flaticon-law:before { content: "\f100"; }
-.flaticon-approve:before { content: "\f101"; }
+.flaticon-not-permitted:before { content: "\f100"; }
+.flaticon-map:before { content: "\f101"; }
 .flaticon-shovel:before { content: "\f102"; }
-.flaticon-open-menu:before { content: "\f103"; }
-.flaticon-police:before { content: "\f104"; }
-.flaticon-worker:before { content: "\f105"; }
-.flaticon-location:before { content: "\f106"; }
-.flaticon-not-permitted:before { content: "\f107"; }
-.flaticon-null:before { content: "\f108"; }
+.flaticon-shovel-1:before { content: "\f103"; }
+.flaticon-police-badge:before { content: "\f104"; }
+.flaticon-police-badge-1:before { content: "\f105"; }
+.flaticon-approval:before { content: "\f106"; }
+.flaticon-law:before { content: "\f107"; }
+.flaticon-gavel:before { content: "\f108"; }
+.flaticon-worker:before { content: "\f109"; }
+.flaticon-sketch:before { content: "\f10a"; }
+.flaticon-graphic-tool:before { content: "\f10b"; }
+.flaticon-approval-1:before { content: "\f10c"; }
+.flaticon-growth:before { content: "\f10d"; }
+.flaticon-wind:before { content: "\f10e"; }
+.flaticon-report:before { content: "\f10f"; }
+.flaticon-report-1:before { content: "\f110"; }

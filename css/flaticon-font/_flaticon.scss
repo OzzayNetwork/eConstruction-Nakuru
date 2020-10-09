@@ -1,6 +1,6 @@
     /*
     Flaticon icon font: Flaticon
-    Creation date: 24/05/2020 19:41
+    Creation date: 09/10/2020 14:19
     */
 
     @font-face {
@@ -37,22 +37,38 @@
   font-smoothing: antialiased;
     }
 
-    .flaticon-law:before { content: "\f100"; }
-.flaticon-approve:before { content: "\f101"; }
+    .flaticon-not-permitted:before { content: "\f100"; }
+.flaticon-map:before { content: "\f101"; }
 .flaticon-shovel:before { content: "\f102"; }
-.flaticon-open-menu:before { content: "\f103"; }
-.flaticon-police:before { content: "\f104"; }
-.flaticon-worker:before { content: "\f105"; }
-.flaticon-location:before { content: "\f106"; }
-.flaticon-not-permitted:before { content: "\f107"; }
-.flaticon-null:before { content: "\f108"; }
+.flaticon-shovel-1:before { content: "\f103"; }
+.flaticon-police-badge:before { content: "\f104"; }
+.flaticon-police-badge-1:before { content: "\f105"; }
+.flaticon-approval:before { content: "\f106"; }
+.flaticon-law:before { content: "\f107"; }
+.flaticon-gavel:before { content: "\f108"; }
+.flaticon-worker:before { content: "\f109"; }
+.flaticon-sketch:before { content: "\f10a"; }
+.flaticon-graphic-tool:before { content: "\f10b"; }
+.flaticon-approval-1:before { content: "\f10c"; }
+.flaticon-growth:before { content: "\f10d"; }
+.flaticon-wind:before { content: "\f10e"; }
+.flaticon-report:before { content: "\f10f"; }
+.flaticon-report-1:before { content: "\f110"; }
     
-    $font-Flaticon-law: "\f100";
-    $font-Flaticon-approve: "\f101";
+    $font-Flaticon-not-permitted: "\f100";
+    $font-Flaticon-map: "\f101";
     $font-Flaticon-shovel: "\f102";
-    $font-Flaticon-open-menu: "\f103";
-    $font-Flaticon-police: "\f104";
-    $font-Flaticon-worker: "\f105";
-    $font-Flaticon-location: "\f106";
-    $font-Flaticon-not-permitted: "\f107";
-    $font-Flaticon-null: "\f108";
+    $font-Flaticon-shovel-1: "\f103";
+    $font-Flaticon-police-badge: "\f104";
+    $font-Flaticon-police-badge-1: "\f105";
+    $font-Flaticon-approval: "\f106";
+    $font-Flaticon-law: "\f107";
+    $font-Flaticon-gavel: "\f108";
+    $font-Flaticon-worker: "\f109";
+    $font-Flaticon-sketch: "\f10a";
+    $font-Flaticon-graphic-tool: "\f10b";
+    $font-Flaticon-approval-1: "\f10c";
+    $font-Flaticon-growth: "\f10d";
+    $font-Flaticon-wind: "\f10e";
+    $font-Flaticon-report: "\f10f";
+    $font-Flaticon-report-1: "\f110";
