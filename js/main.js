@@ -221,6 +221,19 @@ $(window).on('load', function(){
 
 //contractor type
 
+$('.payment-methods-radios input[name$="pay-method"]').on('change', function(){
+	alert('changed');
+
+	
+	if(theMethod=="mpesa"){
+		$('.act-mpesa').removeClass('d-none');
+	}
+	else{
+		$('.act-mpesa').addClass('d-none');
+	}
+
+})
+
 function selectContratorType(){
 	var thetype=$('.contractorType').val();
 	if(thetype=="individual"){
@@ -286,6 +299,19 @@ $('input.personnel-attachment').on('change', function(){
 	}
 
 });
+
+$('.img-container input').on('change', function(){
+	
+	if($(this).value != ""){
+		$(this).siblings('small').children('strong').html('<i class="mdi mdi-check-all"></i> File selected').removeClass('text-danger').addClass('text-info');
+		$(this).parent().addClass('border-info').removeClass('border-danger');
+	}
+	else{
+
+	}
+
+});
+
 
 $('.application-nav li').on('click', function(){
 	var theIndex=$(this).index();
