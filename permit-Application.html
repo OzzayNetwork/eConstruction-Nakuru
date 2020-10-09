@@ -608,6 +608,8 @@
                   </div>
                 </div>
               </div>
+
+
             <!-- modals -->
 
             <div class="row">
@@ -627,7 +629,7 @@
                                                 <a class="nav-link occupation-link" href="#"><i class="pe-7s-portfolio mr-2"></i>Project details</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link ben-link" href="#"><i class="pe-7s-users mr-2"></i>Beneficiaries</a>
+                                                <a class="nav-link ben-link" href="#"><i class="pe-7s-users mr-2"></i>Attachments</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link doc-link" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
@@ -1133,6 +1135,57 @@
                                                 <a class="btn btn-light btn-border mr-3 btn-outline btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
                                                 <a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
                                             </div>
+
+                                        </div>
+
+                                        <div class="row clearfix form-attach animated fadeInRight d-none">
+                                            <div class="col-12">
+                                                <h4 class="card-title">Attachments</h4>
+                                                <h6 class="card-subtitle">Attach documents related to the project being undertaken.</h6>
+                                                <hr>
+
+                                            </div>
+                                            <label class="col-sm-12 col-md-4 form-attach" for="ownership-doc">
+												<div class="id-container img-container">
+													<span><img src="images/attachment-assets/001-certificate.svg"></span>
+													<h5>Land ownership document</h5>
+													<p>Eg Land's title deed</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- national id input box -->
+													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf"  id="ownership-doc" required class="form-control  form-control-lg   nat-id d-none">
+												</div>
+											</label>
+
+                                            <label class="col-sm-12 col-md-4" for="project-plan">
+												<div class="ownershipDoc img-container">
+													<span><img src="images/attachment-assets/005-plan-1.svg"></span>
+													<h5>Project's Plan</h5>
+													<p>Upload a project's plan</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- kra pin input -->
+													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf" required id="project-plan" class="form-control  form-control-lg  d-none">
+												</div>
+											</label>
+
+                                            <label class="col-sm-12 col-md-4" for="survey-plan">
+												<div class="mpesa-statement-container img-container">
+													<span><img src="images/attachment-assets/006-map.svg"></span>
+													<h5>Survey Plan</h5>
+													<p>Upload survey plan</p>
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- mpesa statemetn -->
+													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf" required id="survey-plan" class="form-control  form-control-lg   mpesa-statement d-none">
+												</div>
+											</label>
+
+                                            
+
+
+                                            <div class="col-12 mt-5">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
+                                                <a class="btn btn-primary fund-next text-white btn-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
 
                                         </div>
 
@@ -1660,65 +1713,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="row clearfix form-attach animated fadeInRight d-none">
-                                            <div class="col-12">
-                                                <h4 class="card-title">Attachments</h4>
-                                                <h6 class="card-subtitle">Attach official documents for the applicant here.</h6>
-                                                <hr>
-
-                                            </div>
-                                            <label class="col-sm-12 col-md-3 form-attach" for="nat-id">
-												<div class="id-container img-container">
-													<span><img src="demo/img/attachment-docs/identification.svg"></span>
-													<h5>Nat ID card</h5>
-													<p>Only <strong>.PDF files</strong> are accepted</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- national id input box -->
-													<input type="file" accept="application/pdf"  id="nat-id" required class="form-control  form-control-lg   nat-id d-none">
-												</div>
-											</label>
-
-                                            <label class="col-sm-12 col-md-3" for="kra-pin">
-												<div class="kra-container img-container">
-													<span><img src="demo/img/attachment-docs/tax.svg"></span>
-													<h5>KRA pin</h5>
-													<p>Only <strong>.PDF files</strong> are accepted</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- kra pin input -->
-													<input type="file" accept="application/pdf" required id="kra-pin" class="form-control  form-control-lg   kra-pin d-none">
-												</div>
-											</label>
-
-                                            <label class="col-sm-12 col-md-3" for="mpesa-statement">
-												<div class="mpesa-statement-container img-container">
-													<span><img src="demo/img/attachment-docs/mpesa.svg"></span>
-													<h5>Mpesa statement</h5>
-													<p>Only <strong>.PDF files</strong> are accepted</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- mpesa statemetn -->
-													<input type="file" accept="application/pdf" required id="mpesa-statement" class="form-control  form-control-lg   mpesa-statement d-none">
-												</div>
-											</label>
-
-                                            <label class="col-sm-12 col-md-3" for="user-photo">
-												<div class="user-photo-container img-container">
-													<span><img src="demo/img/attachment-docs/portrait.svg"></span>
-													<h5>Attach photo</h5>
-													<p>Only <strong>.PNG, .JPEG, .JPEG and .GIF</strong> are accepted</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- user photo -->
-													<input type="file" required id="user-photo" accept="image/png, .jpeg, .jpg, image/gif" class="form-control  form-control-lg   user-photo d-none">
-												</div>
-											</label>
-
-
-                                            <div class="col-12 mt-5">
-                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-                                                <a class="btn btn-primary fund-next text-white btn-next">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-                                            </div>
-
-
-                                        </div>
+                                        
 
                                         <div class="row clearfix form-save animated fadeInRight d-none">
                                             <div class="col-12">

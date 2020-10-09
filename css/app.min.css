@@ -15619,3 +15619,40 @@ color: white
     }
 /* Attendants Page */
 
+.form-attach .img-container, .loan-docs label>div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1.32rem;
+    text-align: center;
+    /* width: 100px; */
+    /* height: 100px; */
+    border: 1px solid gray;
+    border-radius: 4px;
+    flex-flow: column;
+    font-weight: 900;
+    height: 100%;
+    border: 2px solid #b72c3e;
+    background: #f9e9ea;
+    border: 2px solid #E0E0E0;
+    background: #F5F5F5;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    transition: all 0.7s;
+}
+.form-attach img {
+    height: 66px;
+    margin-bottom: 1.2rem;
+}
+
+
+.img-container h5 {
+    font-weight: bold;
+    text-transform: capitalize;
+}
+
+.img-container p {
+    font-size: 12px;
+}
+
