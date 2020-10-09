@@ -7,17 +7,20 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 		
 		<link rel='icon' href='demo/img/logo-files/nakuru-logo.png' type='image/x-icon'/ >
-	
-		<!--icon files-->
+
+		<!-- icons -->
+		<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
-		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_.css">
+        <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
+        <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
+        <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
 
 		<!-- Vendor styles -->
 		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
-		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
-		<link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+        <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
+        <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+        <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
+    
 
         <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
@@ -238,59 +241,73 @@
                     </div>
 
                     <ul class="navigation">
-                        <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
+                        <li class="navigation__active"><a href="index.html"><i class="flaticon-growth"></i>Home</a></li>
 						
 						 <li class="navigation__sub">
-                            <a href="#"><i class="flaticon-shovel"></i>Construction Permits</a>
+                            <a href="#"><i class="flaticon-shovel"></i>Construction Permits <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
-                                <li><a href="new-constructions.html">Ongoing Applications</a></li>
-                                <li><a href="rejected-constructions.html">Rejected Applications</a></li>
-                                <li><a href="approved-constructions.html">Approved Applications</a></li>
-                            </ul>
-                        </li>
-						
-						 <li class="navigation__sub d-none">
-                            <a href="#"><i class="flaticon-open-menu"></i>Other services</a>
-                            <ul>
-                                <li><a href="new-amalgation.html">Land amalgamation</a></li>
-                                <li><a href="new-use.html">Change of use</a></li>
-                                <li><a href="#">Lease Renewal</a></li>
-                                <li><a href="#">Domestic building alterationl</a></li>
-                                <li><a href="#">Renovation</a></li>
+								<li><a href="permit-Application.html"><i class="mdi mdi-sticker-plus"></i> New Application</a></li>
+								<li><a href="approved-constructions.html"><i class="mdi mdi-file-check-outline"></i>Approved Applications</a></li>
+                                <li><a href="new-constructions.html"><i class="mdi mdi-file-document-edit-outline"></i>Ongoing Applications</a></li>
+                                <li><a href="rejected-constructions.html"><i class="mdi mdi-file-cancel-outline"></i>Rejected Applications</a></li>
+                                
                             </ul>
                         </li>
 						
 						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-worker"></i>Construction Professionals</a>
+                            <a href="#"><i class="flaticon-worker"></i>Construction Professionals <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
-                                <li><a href="active-professionals.html">Active professionals</a></li>
-                                <li><a href="inactive-professionals.html">Inactive Professionals</a></li>
-                                <li><a href="new-professionals.html">New Requests</a></li>
-                                <li><a href="rejected-professionals.html">Rejected applications</a></li>
+								<li><a href="professional-application.html"><i class="mdi mdi-account-multiple-plus"></i>New Application</a></li>
+								<li><a href="new-professionals.html"><i class="mdi mdi-account-hard-hat"></i>Ongoing Applications</a></li>
+                                <li><a href="active-professionals.html"><i class="mdi mdi-account-key"></i>Active Professionals</a></li>
+                                <li><a href="inactive-professionals.html"><i class="mdi mdi-account-lock"></i>Inactive Professionals</a></li>
+                                <li><a href="rejected-professionals.html"><i class="mdi mdi-account-multiple-remove"></i>Rejected Applications</a></li>
                             </ul>
-                        </li>
-						 <li class="navigation__active"><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Querriess</a></li>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-report"></i>Reports <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="new-amalgation.html">Permit applications</a></li>
+                                <li><a href="new-use.html">Approved Applications</a></li>
+                                <li><a href="#">Created Bills</a></li>
+                                <li><a href="#">Receipted bills</a></li>
+								<li><a href="#">Partially paid Bills</a></li>
+								<li><a href="#">Unpaid Bills</a></li>
+								<li><a  href="querries.html">Enforcement Queries</a></li>
+                            </ul>
+						</li>
+						
+						 <li class="navigation__active"><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
 
                         <li class="navigation__sub">
-                            <a href="#"><i class="flaticon-police"></i>Enforcers</a>
+                            <a href="#"><i class="flaticon-police-badge-1"></i>Enforcers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
-                                <li><a href="all-enforcers.html">Active enforcers</a></li>
-                                <li><a href="new-enforcer.html">New enforcers</a></li>
-                                <li><a href="inactive-enforcers.html">Inactive enforcers</a></li>
+                                <li><a href="all-enforcers.html">Active Enforcers</a></li>
+                                <li><a href="new-enforcer.html">New Enforcers</a></li>
+                                <li><a href="inactive-enforcers.html">Inactive Enforcers</a></li>
 
                             </ul>
                         </li>
 
                         <li class="navigation__sub">
-                            <a href="#"><i class="zmdi zmdi-accounts-alt"></i>System officers</a>
+                            <a href="#"><i class="zmdi zmdi-accounts-alt"></i>System Officers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
-                                <li><a href="all-officers.html">Active officers</a></li>
-                                <li><a href="new-user.html">New officers</a></li>
-                                <li><a href="inactive-officers.html">Inactive officers</a></li>
+                                <li><a href="all-officers.html">Active Officers</a></li>
+                                <li><a href="new-user.html">New Officers</a></li>
+                                <li><a href="inactive-officers.html">Inactive Officers</a></li>
 
                             </ul>
-                        </li>
-                        <li class="navigation__active"><a href="map.html"><i class="flaticon-location"></i>Map</a></li>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="mdi mdi-map-marker"></i>Map<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="nakuruMap.html"><i class="mdi mdi-map-marker-check"></i> Data Map</a></li>
+                                <li><a href="map.html"><i class="mdi mdi-map-clock"></i> Live Map</a></li>
+                            </ul>
+						</li>
+						
                          <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
                     </ul>
                 </div>
