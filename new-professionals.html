@@ -220,7 +220,7 @@
 
                 
             </header>
-             <aside class="sidebar">
+            <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
                         <div class="user__info" data-toggle="dropdown">
@@ -244,6 +244,7 @@
 						 <li class="navigation__sub">
                             <a href="#"><i class="flaticon-shovel"></i>Construction Permits <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
+								<li><a href="permit-Application.html">New Application</a></li>
                                 <li><a href="new-constructions.html">Ongoing Applications</a></li>
                                 <li><a href="rejected-constructions.html">Rejected Applications</a></li>
                                 <li><a href="approved-constructions.html">Approved Applications</a></li>
@@ -264,9 +265,10 @@
 						<li class="navigation__sub">
                             <a href="#"><i class="flaticon-worker"></i>Construction Professionals <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
+								<li><a href="professional-application.html">New Application</a></li>
+								<li><a href="new-professionals.html">New Requests</a></li>
                                 <li><a href="active-professionals.html">Active Professionals</a></li>
                                 <li><a href="inactive-professionals.html">Inactive Professionals</a></li>
-                                <li><a href="new-professionals.html">New Requests</a></li>
                                 <li><a href="rejected-professionals.html">Rejected Applications</a></li>
                             </ul>
                         </li>
@@ -340,7 +342,7 @@
 					  <div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 						  <div class="modal-header">
-							<h5 class="modal-title" >Endineer Details</h5>
+							<h5 class="modal-title" >Engineer Details</h5>
 							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 							  <span aria-hidden="true">&times;</span>
 							</button>
@@ -375,7 +377,67 @@
 						</div>
 					  </div>
 					</div>
-				<!--eng details-->
+                <!--eng details-->
+                
+                <!--application details-->
+                <div class="modal fade" id="application-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" >Applicant Details</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="contact-header">
+                                        <h5>Personal Details</h5>
+                                        <hr class="mb-0 mt-1">
+                                        </div>
+                                        <small class="text-muted">Full Names</small>
+                                        <p>Akon Strong</p>                            
+                                        <hr>
+                                        <small class="text-muted">Profession</small>
+                                        <p>Architect</p>
+                                        <hr>
+                                        <small class="text-muted">Application For</small>
+                                        <p>Company</p>
+                                        <hr>
+                                        <small class="text-muted">Application Date</small>
+                                        <p>22 Feb 2020</p>
+                                        <hr>
+                                        <small class="text-muted">Qualification Documantation</small>
+                                        <p><a href="nca.pdf" target="_blank" class="">View document</a></p>
+
+
+
+                                        <div class="contact-header mt-5">
+                                            <h5>Contact details</h5>
+                                            <hr class="mb-0 mt-1">
+                                        </div>
+
+                                        <small class="text-muted">Mobile phone number</small>
+                                        <p><a href="tel:0704549859">0704549859</a></p>
+                                        <hr>
+                                        <small class="text-muted">Email address</small>
+                                        <p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
+                                        <hr>   
+                                        <small class="text-muted">Postal Address</small>
+                                        <p>14,00100,GPO Nairobi</p>
+                                        <hr> 
+                            </div>
+                            
+                        <div class="modal-footer">
+                            <a href="#" data-toggle="modal" data-target="#decline-application" data-dismiss="modal" class="btn btn-danger btn-sm btn--icon-text"><i class="zmdi zmdi-block"></i>Reject Application</a>
+                            &nbsp;
+                            <a href="nca.pdf" class="btn btn-success btn-sm btn--icon-text"><i class="mdi mdi-check-all mr-1"></i>Approve</a>
+
+                        </div>
+                        
+                        </div>
+                    </div>
+                    </div>
+                  <!--eng details-->
 				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
@@ -410,6 +472,7 @@
                                                 <th>Postal address</th>
                                                 <th>Application date</th>
                                                 <th>Certification document</th>
+                                                <th>Actions</th>
                                                
 											</tr>
 										</thead>
@@ -422,13 +485,16 @@
 												<td><strong><a href="#!">Personal</a></strong></td>
                                                 <td><strong><a href="tel:0704549859"></a>0704549859</strong></td>
                                                 <td><strong>amos@architects.co.ke</strong></td>
-                                                
                                                 <td><strong>14, 00100, GPO Nairobi</strong></td>
 												<td>12 May 2020</td>
 												<td>
-													<a href="nca.pdf" target="_blank" class="btn btn-sm btn-success">View document</a>
-													
+                                                    <a href="nca.pdf" target="_blank" class="btn btn-sm btn-success">View document</a>
 												</td>
+                                                <td>
+                                                    <a href="nca.pdf" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                    &nbsp;
+                                                    <a href="#" data-toggle="modal" data-target="#application-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                </td>
 												
 											</tr>
 
@@ -443,9 +509,13 @@
                                                 
                                                 <td><strong>14, 00100, GPO Nairobi</strong></td>
                                                 <td>12 May 2020</td>
-                                                <td>
+												<td>
                                                     <a href="nca.pdf" target="_blank" class="btn btn-sm btn-success">View document</a>
-                                                    
+												</td>
+                                                <td>
+                                                    <a href="nca.pdf" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                    &nbsp;
+                                                    <a href="#" data-toggle="modal" data-target="#application-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
                                                 </td>
                                                 
                                             </tr>
@@ -461,9 +531,13 @@
                                                 
                                                 <td><strong>14, 00100, GPO Nairobi</strong></td>
                                                 <td>12 May 2020</td>
-                                                <td>
+												<td>
                                                     <a href="nca.pdf" target="_blank" class="btn btn-sm btn-success">View document</a>
-                                                    
+												</td>
+                                                <td>
+                                                    <a href="nca.pdf" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                    &nbsp;
+                                                    <a href="#" data-toggle="modal" data-target="#application-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
                                                 </td>
                                                 
                                             </tr>
@@ -479,9 +553,13 @@
                                                 
                                                 <td><strong>14, 00100, GPO Nairobi</strong></td>
                                                 <td>12 May 2020</td>
-                                                <td>
+												<td>
                                                     <a href="nca.pdf" target="_blank" class="btn btn-sm btn-success">View document</a>
-                                                    
+												</td>
+                                                <td>
+                                                    <a href="nca.pdf" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                    &nbsp;
+                                                    <a href="#" data-toggle="modal" data-target="#application-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
                                                 </td>
                                                 
                                             </tr>
@@ -497,9 +575,13 @@
                                                 
                                                 <td><strong>14, 00100, GPO Nairobi</strong></td>    
                                                 <td>12 May 2020</td>
-                                                <td>
+												<td>
                                                     <a href="nca.pdf" target="_blank" class="btn btn-sm btn-success">View document</a>
-                                                    
+												</td>
+                                                <td>
+                                                    <a href="nca.pdf" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                    &nbsp;
+                                                    <a href="#" data-toggle="modal" data-target="#application-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
                                                 </td>
                                                 
                                             </tr>
