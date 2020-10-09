@@ -307,36 +307,6 @@
                 </div>
             </aside>
             <section class="content custom-table-container">
-				<!--decline application-->
-					<div class="modal fade" id="decline-application" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="decline-school-title">Decline Application</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<form>
-								<div class="col-lg-12 p-0 col-md-12">
-									<div class=""> 
-										<label class="font-weight-bold">Whats the reson for declining this application?</label>
-										<textarea placeholder="Enter the reason for declining this application"  class="form-control"></textarea>
-									</div>
-								</div>					
-
-							</form>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-danger">Decline Application</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--decline application-->
-				
 				<!--Eng details-->
 					<div class="modal fade" id="eng-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
 					  <div class="modal-dialog modal-dialog-centered" role="document">
@@ -349,29 +319,29 @@
 						  </div>
 						  <div class="modal-body">
 							<div class="contact-header">
-										<h4>Personal Details</h4>
-										<hr class="mb-0 mt-1">
-										</div>
-										<small class="text-muted">Full Names</small>
-										<p>Kelvin Njuguna Ndungu</p>                            
-										<hr>
-										<small class="text-muted">Profession</small>
-										<p>Architect</p>
-										<hr>
-										<small class="text-muted">Joined on</small>
-										<p>22 Feb 2020</p>
+                                <h4>Personal Details</h4>
+                                <hr class="mb-0 mt-1">
+                                </div>
+                                <small class="text-muted">Full Names</small>
+                                <p>Kelvin Njuguna Ndungu</p>                            
+                                <hr>
+                                <small class="text-muted">Profession</small>
+                                <p>Architect</p>
+                                <hr>
+                                <small class="text-muted">Joined on</small>
+                                <p>22 Feb 2020</p>
 
 
-										<div class="contact-header mt-5">
-											<h4>Contact details</h4>
-											<hr class="mb-0 mt-1">
-										</div>
+                                <div class="contact-header mt-5">
+                                    <h4>Contact details</h4>
+                                    <hr class="mb-0 mt-1">
+                                </div>
 
-										<small class="text-muted">Mobile phone number</small>
-										<p><a href="tel:0704549859">0704549859</a></p>
-										<hr>
-										 <small class="text-muted">Email address</small>
-										<p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
+                                <small class="text-muted">Mobile phone number</small>
+                                <p><a href="tel:0704549859">0704549859</a></p>
+                                <hr>
+                                    <small class="text-muted">Email address</small>
+                                <p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
 							  </div>
 						  
 						</div>
@@ -391,17 +361,24 @@
                         </div>
                         <div class="modal-body">
                             <div class="contact-header">
+                                <!-- Changes whether the row is a company or an individual -->
+                                <!-- If Company title becomes Company Details. Pill Changes as well -->
                                         <h5>Personal Details</h5>
                                         <hr class="mb-0 mt-1">
                                         </div>
-                                        <small class="text-muted">Full Names</small>
-                                        <p>Akon Strong</p>                            
+                                        <div class="row">
+                                            <div class="col-6">
+                                                <small class="text-muted">Full Names</small>
+                                                <p>Akon Strong</p>  
+                                            </div>
+                                            <div class="col-6">  
+                                                <p></p>
+                                                <p><span class="badge badge-pill badge-soft-info px-3 float-right">INDIVIDUAL</span></p>
+                                            </div>   
+                                        </div>                     
                                         <hr>
                                         <small class="text-muted">Profession</small>
                                         <p>Architect</p>
-                                        <hr>
-                                        <small class="text-muted">Application For</small>
-                                        <p>Company</p>
                                         <hr>
                                         <small class="text-muted">Application Date</small>
                                         <p>22 Feb 2020</p>
@@ -437,7 +414,39 @@
                         </div>
                     </div>
                     </div>
-                  <!--eng details-->
+                <!--application details-->
+
+                <!--decline application-->
+					<div class="modal fade" id="decline-application" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" data-backdrop="static" data-keyboard="false" aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h5 class="modal-title" id="decline-school-title">Decline Application</h5>
+                              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                              </button>
+                            </div>
+                            <div class="modal-body">
+                              <form>
+                                  <div class="col-lg-12 p-0 col-md-12">
+                                      <div class=""> 
+                                          <label class="font-weight-bold">Whats the reson for declining this application?</label>
+                                          <textarea placeholder="Enter the reason for declining this application"  class="form-control"></textarea>
+                                      </div>
+                                  </div>					
+  
+                              </form>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                              <a href="#" data-toggle="modal" data-target="#application-details" data-dismiss="modal" class="btn btn-danger btn--icon-text"><i class="zmdi zmdi-block mr-1"></i>Decline Application</a>
+  
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                <!--decline application-->
+                  
 				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
