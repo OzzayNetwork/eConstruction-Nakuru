@@ -623,20 +623,18 @@
                                     <div class="mb-3">
                                         <ul class="nav nav-pills application-nav">
                                             <li class="nav-item">
-                                                <a class="nav-link active gen-info-link" href="#"><i class="pe-7s-user mr-2"></i>Plot Details</a>
+                                                <a class="nav-link active gen-info-link" href="#"><i class="mdi mdi-office-building-marker mr-2"></i>Plot Details</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link occupation-link" href="#"><i class="pe-7s-portfolio mr-2"></i>Project details</a>
+                                                <a class="nav-link occupation-link" href="#"><i class="mdi mdi-briefcase-account-outline mr-2"></i>Project details</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link ben-link" href="#"><i class="pe-7s-users mr-2"></i>Attachments</a>
+                                                <a class="nav-link ben-link" href="#"><i class="mdi mdi-attachment mr-2"></i>Attachments</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link doc-link" href="#"><i class="pe-7s-note2 mr-2"></i>Documents</a>
+                                                <a class="nav-link doc-link" href="#"><i class="mdi mdi-receipt mr-2"></i>Billing</a>
                                             </li>
-                                            <li class="nav-item ">
-                                                <a class="nav-link save-link" href="#"><i class="pe-7s-piggy mr-2"></i>Start saving</a>
-                                            </li>
+                                            
                                         </ul>
                                     </div>
                                     <hr>
@@ -1187,608 +1185,110 @@
                                             </div>
 
 
-                                        </div>
-
-                                        <div class="row clearfix form-ben animated fadeInRight d-none">
-                                            <div class="col-12">
-                                                <h4 class="card-title">Beneficiaries</h4>
-                                                <h6 class="card-subtitle">Specify atleast <strong class="text-danger">one beneficiary</strong> for each</h6>
-                                                <hr>
-
-                                                <label><strong>Nominees for Deposits/Benefits in the event of Death:</strong></label>
-
-                                                <table class="table table-bordered deposit-ben">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th scope="col">Names</th>
-                                                            <th scope="col">ID/PP/Birth certificate No.</th>
-                                                            <th scope="col">Relationship</th>
-                                                            <th scope="col">DOB</th>
-                                                            <th scope="col" class="">Allocations(%)<br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small></th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>1</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg   ben1-relationship required-check" style="width:200px;">
-																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-																<option value="Assistant Chairperson">Assistant Chairperson</option>
-																<option value="Aunt">Aunt</option>
-																<option value="Brother">Brother</option>
-																<option value="Brother In Law">Brother In Law</option>
-																<option value="Business Partner">Business Partner</option>
-																<option value="Chairman">Chairman</option>
-																<option value="Chairperson">Chairperson</option>
-																<option value="Child">Child</option>
-																<option value="Cousin">Cousin</option>
-																<option value="Daughter">Daughter</option>
-																<option value="Deputy Secretary">Deputy Secretary</option>
-																<option value="Father">Father</option>
-																<option value="Father In Law">Father In Law</option>
-																<option value="Fiance">Fiance</option>
-																<option value="Fiancee">Fiancee</option>
-																<option value="Friend">Friend</option>
-																<option value="Guardian">Guardian</option>
-																<option value="Girlfriend">Girlfriend</option>
-																<option value="Grand Daughter">Grand Daughter</option>
-																<option value="Grand Father">Grand Father</option>
-																<option value="Grand Son">Grand Son</option>
-																<option value="Grandchild">Grandchild</option>
-																<option value="Grandmother">Grandmother</option>
-																<option value="Husband">Husband</option>
-																<option value="Member">Member</option>
-																<option value="Mother">Mother</option>
-																<option value="Sister">Sister</option>
-																<option value="Sister in Law">Sister in Law</option>
-																<option value="Son">Son</option>
-																<option value="Wife">Wife</option>
-												
-															</select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <!--																<input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">-->
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker" placeholder="Pick a date" required>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>2</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>3</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>4</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
-                                                            </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-
-                                                <label class="mt-5"><strong>Nominees for Group Funeral Expense(GFE) Scheme; limited to Spouse, Children & Parents of the Member:</strong></label>
-                                                <table class="table table-bordered funeral-ben">
-                                                    <thead>
-                                                        <tr>
-                                                            <th>#</th>
-                                                            <th scope="col">Names</th>
-                                                            <th scope="col">ID/PP/Birth certificate No.</th>
-                                                            <th scope="col">Relationship</th>
-                                                            <th scope="col">DOB</th>
-                                                            <th scope="col">
-                                                                Allocations(%)
-                                                                <br><small class="text-danger shares-err d-none"><strong>Shares should not exceede 100%</strong></small>
-                                                            </th>
-                                                        </tr>
-                                                    </thead>
-                                                    <tbody>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>1</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name" pattern="^[a-zA-Z'\s]{2,100}$" minlength="2" required>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number" pattern="^[0-9a-zA-Z'\s]{2,100}$" required>
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg   ben2-relationship required-check" style="width:200px;">
-																<option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-																<option value="Assistant Chairperson">Assistant Chairperson</option>
-																<option value="Aunt">Aunt</option>
-																<option value="Brother">Brother</option>
-																<option value="Brother In Law">Brother In Law</option>
-																<option value="Business Partner">Business Partner</option>
-																<option value="Chairman">Chairman</option>
-																<option value="Chairperson">Chairperson</option>
-																<option value="Child">Child</option>
-																<option value="Cousin">Cousin</option>
-																<option value="Daughter">Daughter</option>
-																<option value="Deputy Secretary">Deputy Secretary</option>
-																<option value="Father">Father</option>
-																<option value="Father In Law">Father In Law</option>
-																<option value="Fiance">Fiance</option>
-																<option value="Fiancee">Fiancee</option>
-																<option value="Friend">Friend</option>
-																<option value="Guardian">Guardian</option>
-																<option value="Girlfriend">Girlfriend</option>
-																<option value="Grand Daughter">Grand Daughter</option>
-																<option value="Grand Father">Grand Father</option>
-																<option value="Grand Son">Grand Son</option>
-																<option value="Grandchild">Grandchild</option>
-																<option value="Grandmother">Grandmother</option>
-																<option value="Husband">Husband</option>
-																<option value="Member">Member</option>
-																<option value="Mother">Mother</option>
-																<option value="Sister">Sister</option>
-																<option value="Sister in Law">Sister in Law</option>
-																<option value="Son">Son</option>
-																<option value="Wife">Wife</option>
-												
-															</select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <!--																<input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">-->
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker" placeholder="Pick a date" required>
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" pattern="^[0-9]{1,}$" max="100" min="1" required placeholder="%">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>2</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>3</strong>
-                                                            </th>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
-                                                            </td>
-                                                        </tr>
-                                                        <tr>
-                                                            <th>
-                                                                <strong>4</strong>
-                                                            </th>   
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Full name">
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg  " placeholder="Enter Number">
-                                                            </td>
-                                                            <td>
-                                                                <select title="please select relationship" class="form-control  form-control-lg  " style="width:200px;">
-															   <option selected="selected" value="--Select Relationship--">--Select Relationship--</option>
-															   <option value="Assistant Chairperson">Assistant Chairperson</option>
-															   <option value="Aunt">Aunt</option>
-															   <option value="Brother">Brother</option>
-															   <option value="Brother In Law">Brother In Law</option>
-															   <option value="Business Partner">Business Partner</option>
-															   <option value="Chairman">Chairman</option>
-															   <option value="Chairperson">Chairperson</option>
-															   <option value="Child">Child</option>
-															   <option value="Cousin">Cousin</option>
-															   <option value="Daughter">Daughter</option>
-															   <option value="Deputy Secretary">Deputy Secretary</option>
-															   <option value="Father">Father</option>
-															   <option value="Father In Law">Father In Law</option>
-															   <option value="Fiance">Fiance</option>
-															   <option value="Fiancee">Fiancee</option>
-															   <option value="Friend">Friend</option>
-															   <option value="Guardian">Guardian</option>
-															   <option value="Girlfriend">Girlfriend</option>
-															   <option value="Grand Daughter">Grand Daughter</option>
-															   <option value="Grand Father">Grand Father</option>
-															   <option value="Grand Son">Grand Son</option>
-															   <option value="Grandchild">Grandchild</option>
-															   <option value="Grandmother">Grandmother</option>
-															   <option value="Husband">Husband</option>
-															   <option value="Member">Member</option>
-															   <option value="Mother">Mother</option>
-															   <option value="Sister">Sister</option>
-															   <option value="Sister in Law">Sister in Law</option>
-															   <option value="Son">Son</option>
-															   <option value="Wife">Wife</option>
-											   
-														   </select>
-                                                            </td>
-                                                            <td>
-                                                                <div class="input-group">
-                                                                    <div class="input-group-prepend">
-                                                                        <span class="input-group-text"><i class="pe-7s-date"></i></span>
-                                                                    </div>
-                                                                    <input type="date" class="form-control  form-control-lg   hidden-md-up" placeholder="Pick a date">
-                                                                    <input type="text" class="form-control  form-control-lg   date-picker hidden-sm-down" placeholder="Pick a date">
-                                                                </div>
-                                                            </td>
-                                                            <td>
-                                                                <input type="text" class="form-control  form-control-lg   shares" placeholder="%">
-                                                            </td>
-                                                        </tr>
-
-                                                    </tbody>
-                                                </table>
-
-                                            </div>
-
-                                            <div class="col-12">
-                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev"><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-                                                <a class="btn btn-primary attach-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-                                            </div>
-                                        </div>
-
-                                        
+                                        </div>                                        
 
                                         <div class="row clearfix form-save animated fadeInRight d-none">
                                             <div class="col-12">
-                                                <h4 class="card-title">Account savings & Activation</h4>
+                                                <h4 class="card-title">Application Billing</h4>
                                                 <h6 class="card-subtitle">
                                                     Use this potion to make the first saving and enable account activation
                                                 </h6>
                                                 <hr>
                                             </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label>Monthly contribution<strong class="text-danger">*</strong></label>
-                                                    <input type="text" class="form-control  form-control-lg  " placeholder="Monthly remitance" required pattern="^[0-9]{1,10000}$">
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Applicant details</strong></h5>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div class="row">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>First Name<strong class="text-danger">*</strong></strong></label>
+                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter applicant's first Name" required >
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Other Names<strong class="text-danger">*</strong></strong></label>
+                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter applicant's other Names" required >
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>ID/PPT<strong class="text-danger">*</strong></strong></label>
+                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter ID or PP Num" required >
+                                                        </div>
+                                                    </div>
+        
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone<strong class="text-danger">*</strong></strong></label>
+                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter Phone Number" required >
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label><strong>Email Address<strong class="text-danger">*</strong></strong></label>
+                                                            <input type="email" class="form-control  form-control-lg  " placeholder="Enter email address" required >
+                                                        </div>
+                                                    </div>
+
                                                 </div>
                                             </div>
-                                            <div class="col-12 radio-main-container">
+
+
+                                           
+                                            <div class="col-sm-12 col-md-6 radio-main-container">
                                                 <label><strong>Applicant would wish to activate account through which method?</strong></label>
 
+                                               <div class="w-100 payment-methods-radios">
                                                 <div class="radio method-mpesa">
                                                     <input type="radio" value="mpesa" name="pay-method" id="method-mpesa">
-                                                    <label class="radio__label" for="method-mpesa">Mpesa</label>
+                                                    <label class="radio__label" for="method-mpesa">Mobile Money</label>
                                                 </div>
 
                                                 <div class="radio method-cash">
-                                                    <input type="radio" required name="pay-method" id="method-cash" value="cash">
-                                                    <label class="radio__label" for="method-cash">Cash or cheque</label>
+                                                    <input type="radio" required name="pay-method"  id="print-bill" value="print_bill" selected >
+                                                    <label class="radio__label" for="print-bill">Print bill</label>
                                                 </div>
+                                               </div>
 
-                                                <div class="radio method-teller">
-                                                    <input type="radio" required name="pay-method" id="method-teller" value="activate at teller">
-                                                    <label class="radio__label" for="method-teller">Will activate at teller</label>
-                                                </div>
-
-                                                <div class="radio method-own">
-                                                    <input type="radio" required name="pay-method" id="method-own" value="own activation">
-                                                    <label class="radio__label" for="method-own">Will activate at own time</label>
-                                                </div>
-
+                                                
                                                 <div class="row">
-                                                    <div class="col-md-6 col-sm-12 my-5">
+                                                    <div class="col-sm-12 my-5">
                                                         <div class="notes">
                                                             <p>
-                                                                Kindly note the member registration fee is <strong>KES 1,000.</strong> If the applicant will choose to pay more, the additional amount will be credited to his account.
+                                                                Kindly note the application fee is <strong>KES 1,000.</strong> Choose to either create a bill or allow the client to make payment now via a <strong>Mobile wallet</strong>
                                                             </p>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="act-mpesa col-12 animated fadeIn d-none">
-                                                <div class="row">
-                                                    <div class="col-md-4 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label>Mpesa number (Can be changed)<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control  form-control-lg   must-input mpesa-number" placeholder="Enter Mpesa number">
+
+                                                <div class="act-mpesa col-sm-12 col-md-12 animated fadeIn d-none">
+                                                    <div class="row">
+                                                        <div class="col-md-8 col-sm-12">
+                                                            <div class="form-group">
+                                                                <label class="mb-0 pb-0"><strong>Phone number</strong><strong class="text-danger">*</strong></label>
+                                                                <p><small>Enter the phone number the client wishes to pay with</small></p>
+                                                                <input type="text" class="form-control  form-control-lg   must-input mpesa-number flex-grow-1" placeholder="Enter Mpesa number">
+                                                            </div>
                                                         </div>
-                                                    </div>
-
-                                                    <div class="col-md-3 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label>Amount<strong class="text-danger">*</strong></label>
-                                                            <input type="text" class="form-control  form-control-lg   must-input mpesa-amount" placeholder="Amount to be paid">
-                                                        </div>
-                                                    </div>
-
-
-
-                                                    <div class="col-sm-12 col-md-auto">
-                                                        <div class="form-group">
-                                                            <label class="opacity-0">request<strong class="text-danger">*</strong></label>
-                                                            <button class="btn btn-success d-flex align-items-center" title="click to send payment request">Send payment request <i class="ml-3 arrow_carrot-2right" style="font-size: 20px;" ></i></button>
-                                                        </div>
+    
+                                                        
+    
+    
+    
+                                                       
                                                     </div>
                                                 </div>
-                                            </div>
 
+                                                
+                                            </div>
+                                           
                                             <div class="act-cash col-12 animated fadeIn d-none">
                                                 <div class="row">
                                                     <div class="col-12">

@@ -15655,4 +15655,8 @@ color: white
 .img-container p {
     font-size: 12px;
 }
+.nav-link {
+    display: block;
+    padding: 0.3rem 1.2rem;
+}
 
