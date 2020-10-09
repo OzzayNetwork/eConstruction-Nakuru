@@ -237,31 +237,36 @@
                                     <div class="card">
                                         <div class="card-body">
                                             <h4 class="card-title">Add construction professional Form</h4>
+                                            <h6 class="card-subtitle mb-0">Fill in the form below to register the new structural engineer</h6>
+                                            <hr>
+
                                             <div class="mb-3">
-                                                <ul class="nav nav-pills application-nav">
-                                                    <li class="nav-item">
-                                                        <a class="nav-link active structural-eng-link" href="#">Structural Engineer</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link architect-link" href="#">Architect</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link contractor-link" href="#">Contractor</a>
-                                                    </li>
-                                                    <li class="nav-item">
-                                                        <a class="nav-link analytical-surv-link" href="#">Analytical Surveyors</a>
-                                                    </li>
-                                                </ul>
+
+                                                <form class="application-radio d-flex justify-content-between">
+                                                    <div>
+                                                        <input type="radio" name="optradio" id="structural-eng-link" onclick="prof_application_form()" che>
+                                                        <label class="radio-inline">Structural Engineer</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="optradio" id="architect-link" onclick="prof_application_form()">
+                                                        <label class="radio-inline">Architect</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="optradio" id="contractor-link" onclick="prof_application_form()">
+                                                        <label class="radio-inline">Contractor</label>
+                                                    </div>
+
+                                                    <div>
+                                                        <input type="radio" name="optradio" id="analytical-surv-link" onclick="prof_application_form()">
+                                                        <label class="radio-inline">Analytical Surveyors</label>
+                                                    </div>
+                                                  </form>
                                             </div>
 
                                             <!-- Structural Eng -->
-                                            <div class="row structural-eng-form">
-                                                <div class="col-12">
-                                                    <h6>Fill in the form below to register the new structural engineer</h6>
-                                                </div>
-                                                <div class="col-12">
-                                                    <hr>
-                                                </div>
+                                            <div class="row structural-eng-form animate slideInRight">
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-8">
@@ -365,13 +370,7 @@
                                             </div>
 
                                             <!-- Architect -->
-                                            <div class="row architect-form">
-                                                <div class="col-12">
-                                                    <h6>Fill in the form below to register the new architect</h6>
-                                                </div>
-                                                <div class="col-12">
-                                                    <hr>
-                                                </div>
+                                            <div class="row architect-form d-none animate slideInRight">
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-8">
@@ -477,13 +476,7 @@
                                             </div>
 
                                             <!-- Contractor -->
-                                            <div class="row contractor-form">
-                                                <div class="col-12">
-                                                    <h6>Fill in the form below to register the new contractor</h6>
-                                                </div>
-                                                <div class="col-12">
-                                                    <hr>
-                                                </div>
+                                            <div class="row contractor-form d-none animate slideInRight">
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-8">
@@ -589,13 +582,7 @@
                                             </div>
 
                                             <!-- Analytical Surveyors -->
-                                            <div class="row analytical-surv-form">
-                                                <div class="col-12">
-                                                    <h6>Fill in the form below to register the new analytical surveyor</h6>
-                                                </div>
-                                                <div class="col-12">
-                                                    <hr>
-                                                </div>
+                                            <div class="row analytical-surv-form d-none animate slideInRight">
                                                 <div class="col-12">
                                                     <div class="row">
                                                         <div class="col-8">

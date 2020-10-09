@@ -386,5 +386,31 @@ $(document).ready(function(){
   $('.map-card').addClass('d-none');
   });
   
+  
+  function prof_application_form(){
+	  if(document.getElementById("structural-eng-link").checked == true){
+		  $('.structural-eng-form').removeClass('d-none');
+		  $('.architect-form').addClass('d-none');
+		  $('.contractor-form').addClass('d-none');
+		  $('.analytical-surv-form').addClass('d-none');
 
+	  } else if(document.getElementById("architect-link").checked == true){
+		$('.structural-eng-form').addClass('d-none');
+		$('.architect-form').removeClass('d-none');
+		$('.contractor-form').addClass('d-none');
+		$('.analytical-surv-form').addClass('d-none');
+
+	  } else if(document.getElementById("contractor-link").checked == true){
+		$('.structural-eng-form').addClass('d-none');
+		$('.architect-form').addClass('d-none');
+		$('.contractor-form').removeClass('d-none');
+		$('.analytical-surv-form').addClass('d-none');
+	} else if(document.getElementById("analytical-surv-link").checked == true){
+		$('.structural-eng-form').addClass('d-none');
+		$('.architect-form').addClass('d-none');
+		$('.contractor-form').addClass('d-none');
+		$('.analytical-surv-form').removeClass('d-none');
+	}
+
+  }
   
