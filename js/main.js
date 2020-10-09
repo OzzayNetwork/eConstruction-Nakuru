@@ -219,6 +219,30 @@ $(window).on('load', function(){
 	
 });
 
+//contractor type
+$('.contractorType').on('change', function(){
+	var thetype=$('.contractorType').val();
+	if(thetype=="individual"){
+		$('.showPerson').removeClass('d-none');
+		$('.showCompany').addClass('d-none');
+	}
+	else if(thetype=="company"){
+		$('.showCompany').removeClass('d-none');
+		$('.showPerson').addClass('d-none');
+	}
+});
+
+$('input.personnel-attachment').on('change', function(){
+	
+	if($(this).value != ""){
+		$(this).siblings('label').removeClass('border-danger').children('p').html('<i class="mdi mdi-check-all"></i> File selected').removeClass('text-danger').addClass('text-success');
+	}
+	else{
+
+	}
+
+});
+
 $('.application-nav li').on('click', function(){
 	var theIndex=$(this).index();
 	$('.membership-form>div').eq(theIndex).removeClass('d-none').siblings().addClass('d-none');

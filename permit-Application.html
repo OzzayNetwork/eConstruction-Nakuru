@@ -219,11 +219,18 @@
                 </div>
             </header>
 
+            <!-- search loader -->
+            <!-- show this when searching for personnel -->
+            <div class="searching-loader d-none">
+                <div class="lds-ripple"><div></div><div></div></div>
+                <h5>Searching for personnel</h5>
+            </div>
+
             <!-- modals -->
 
             <!-- contractor modals -->
 
-            <div class="modal fade" id="newContractor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal fade" id="newContractor" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
@@ -245,10 +252,10 @@
                                   <div class="col-8">
                                       <div class="form-group">
                                           <label><strong>Contractor type</strong></label>
-                                          <select class="form-control form-control-lg">
-                                              <option>-- Select type --</option>
-                                              <option>Individual</option>
-                                              <option>Company</option>
+                                          <select class="form-control contractorType">
+                                              <option value="0">-- Select type --</option>
+                                              <option value="individual">Individual</option>
+                                              <option value="company">Company</option>
                                           </select>
                                       </div>
                                   </div>
@@ -256,47 +263,69 @@
                           </div>
                           <div class="col-12">
                               <div class="row">
-                                <div class="col-6 col-sm-12 col-md-8">
+                                <div class="col-6 col-sm-12 col-md-6">
                                     <div class="form-group">
                                         <label><strong>Contractor's Number</strong></label>
-                                        <input type="text" class="form-control form-control-lg" placeholder="Enter contractor's No.">
+                                        <input type="text" class="form-control" placeholder="Enter contractor's No.">
                                     </div>
                                 </div>
+
+                                <div class="col-6 col-sm-12 col-md-6">
+                                    <div class="form-group showPerson d-none animate fade-in-down">
+                                        <label><strong>Id number</strong></label>
+                                        <input type="text" class="form-control " placeholder="Enter contractor's ID/PPT No.">
+                                    </div>
+                                    <div class="form-group showCompany d-none fade-in-down">
+                                        <label><strong>KRA Pin</strong></label>
+                                        <input type="text" class="form-control " placeholder="Enter company's KRA Pin">
+                                    </div>
+
+
+                                </div>
+
                               </div>
                           </div>
 
-                          <div class="col-6 col-sm-12 col-md-12">
-                              <div class="form-group">
-                                  <label><strong>Full Names</strong></label>
-                                  <input type="text" class="form-control form-control-lg" placeholder="Enter contractor's Name">
-                              </div>
+                          <div class="col-12">
+                            <div class="form-group showPerson d-none animate fade-in-down">
+                                <label><strong>Full Names</strong></label>
+                                <input type="text" class="form-control " placeholder="Enter Full Names">
+                            </div>
+
+                            <div class="form-group showCompany d-none animate fade-in-down">
+                                <label><strong>Company's Name</strong></label>
+                                <input type="text" class="form-control " placeholder="Enter company's Name">
+                            </div>
+
                           </div>
+
+                         
 
                           <div class="col-6 col-sm-12 col-md-6">
                             <div class="form-group">
                                 <label><strong>Phone Number</strong></label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Enter phone number">
+                                <input type="text" class="form-control" placeholder="Enter phone number">
                             </div>
                         </div>
 
                         <div class="col-6 col-sm-12 col-md-6">
                             <div class="form-group">
                                 <label><strong>Email Address</strong></label>
-                                <input type="email" class="form-control form-control-lg" placeholder="Enter email address">
+                                <input type="email" class="form-control" placeholder="Enter email address">
                             </div>
                         </div>
 
                         <div class="col-6 col-sm-12 col-md-6">
                             <div class="form-group">
                                 <label><strong>P.O Box.</strong></label>
-                                <input type="text" class="form-control form-control-lg" placeholder="Enter phone number">
+                                <input type="text" class="form-control" placeholder="Enter phone number">
                             </div>
                         </div>
 
                         <div class="col-6 col-sm-12 col-md-6">
                             <div class="form-group">
                                 <label><strong>Town</strong></label>
-                                <select class="form-control form-control-lg">
+                                <select class="form-control">
                                     <option>-- Select type --</option>
                                     <option>Individual</option>
                                     <option>Company</option>
@@ -306,14 +335,21 @@
 
                         <div class="col-12">
                             <label><strong>Attachments</strong></label>
-                            <h6>Include attachments that prove legitimacy pf the applicant</h6>
+                            <h6>Include an attachments that proves legitimacy of the applicant</h6>
+                            <input type="file" class="d-none contractor-Attachment personnel-attachment" id="contractor-attachment">
+                            <label for="contractor-attachment" class="personnel-attachment border-danger">
+                                <span class="mdi mdi-file-document-multiple-outline"></span>
+                                <h6>Attach document</h6>
+                                <p class="small text-danger font-weight-bold">* Not selected *</p>
+                              
+                            </label>
                         </div>
 
                       </div>
                     </div>
                     <div class="modal-footer">
                       <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      <button type="button" class="btn btn-primary">Save changes</button>
+                      <button type="button" class="btn btn-primary btn--icon-text"><i class="mdi mdi-check-all"></i> Submit Application</button>
                     </div>
                   </div>
                 </div>

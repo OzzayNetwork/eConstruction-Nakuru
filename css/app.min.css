@@ -15517,5 +15517,55 @@ color: white
         border: 1px solid #adb5bd;
         padding-left: 17px;
     }
+
+    .form-control{
+        border: 1px solid #adb5bd; 
+    }
+
+    .personnel-attachment{
+        padding: 0.8rem;
+        font-size: 40px;
+        border: 2px solid #2196F3;
+        color: #2196F3;
+        border-radius: 3px;
+        /* display: flex; */
+        justify-content: center;
+        align-items: center;
+        flex-flow: column;
+        flex-grow: 0;
+        text-align: center;
+        margin-top: 0.8rem;
+        background-color: #E3F2FD;
+    }
+    .personnel-attachment h6{
+        font-weight: bold;;
+    }
+
+    .personnel-attachment small, .personnel-attachment .small{
+        font-size: 12px;
+    }
+
+    .searching-loader{
+        color: white;
+        text-align: white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #000000e8;
+        width: 100%;
+        height: 100vh;
+        margin: 0px;
+        padding: 2rem;
+        position: fixed;
+        z-index: 1000;
+        top: 0;
+        left: 0;
+        flex-flow: column;
+    }
+
+    .searching-loader h5{
+        color: white;
+        margin-top: 2rem;
+    }
 /* Attendants Page */
 
