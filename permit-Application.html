@@ -111,91 +111,96 @@
 
 
         <!-- Side bar -->
-        <aside class="sidebar">
-            <div class="scrollbar-inner">
-                <div class="user">
-                    <div class="user__info" data-toggle="dropdown">
-                       <div class="avatar-char bg-warning text-black mr-3 font-weight-bold">JM</div>
-                        <div>
-                            <div class="user__name">John Mwakili</div>
-                            <div class="user__email">john@gmail.com</div>
+         <aside class="sidebar">
+                <div class="scrollbar-inner">
+                    <div class="user">
+                        <div class="user__info" data-toggle="dropdown">
+                           <div class="avatar-char bg-warning text-black mr-3 font-weight-bold">JM</div>
+                            <div>
+                                <div class="user__name">John Mwakili</div>
+                                <div class="user__email">john@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="dropdown-menu">
+                            <a class="dropdown-item" href="my-profile.html">View Profile</a>
+                            <a class="dropdown-item d-none" href="#">Settings</a>
+                            <a class="dropdown-item" href="landing-page.html">Logout</a>
                         </div>
                     </div>
 
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="my-profile.html">View Profile</a>
-                        <a class="dropdown-item d-none" href="#">Settings</a>
-                        <a class="dropdown-item" href="landing-page.html">Logout</a>
-                    </div>
+                    <ul class="navigation">
+                        <li class="navigation__active"><a href="index.html"><i class="flaticon-growth"></i>Home</a></li>
+						
+						 <li class="navigation__sub">
+                            <a href="#"><i class="flaticon-shovel"></i>Construction Permits <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+								<li><a href="permit-Application.html"><i class="mdi mdi-sticker-plus"></i> New Application</a></li>
+								<li><a href="approved-constructions.html"><i class="mdi mdi-file-check-outline"></i>Approved Applications</a></li>
+                                <li><a href="new-constructions.html"><i class="mdi mdi-file-document-edit-outline"></i>Ongoing Applications</a></li>
+                                <li><a href="rejected-constructions.html"><i class="mdi mdi-file-cancel-outline"></i>Rejected Applications</a></li>
+                                
+                            </ul>
+                        </li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-worker"></i>Construction Professionals <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+								<li><a href="professional-application.html"><i class="mdi mdi-account-multiple-plus"></i>New Application</a></li>
+								<li><a href="new-professionals.html"><i class="mdi mdi-account-hard-hat"></i>Ongoing Applications</a></li>
+                                <li><a href="active-professionals.html"><i class="mdi mdi-account-key"></i>Active Professionals</a></li>
+                                <li><a href="inactive-professionals.html"><i class="mdi mdi-account-lock"></i>Inactive Professionals</a></li>
+                                <li><a href="rejected-professionals.html"><i class="mdi mdi-account-multiple-remove"></i>Rejected Applications</a></li>
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="flaticon-report"></i>Reports <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="new-amalgation.html">Permit applications</a></li>
+                                <li><a href="new-use.html">Approved Applications</a></li>
+                                <li><a href="#">Created Bills</a></li>
+                                <li><a href="#">Receipted bills</a></li>
+								<li><a href="#">Partially paid Bills</a></li>
+								<li><a href="#">Unpaid Bills</a></li>
+								<li><a  href="querries.html">Enforcement Queries</a></li>
+                            </ul>
+						</li>
+						
+						 <li class="navigation__active"><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="flaticon-police-badge-1"></i>Enforcers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="all-enforcers.html">Active Enforcers</a></li>
+                                <li><a href="new-enforcer.html">New Enforcers</a></li>
+                                <li><a href="inactive-enforcers.html">Inactive Enforcers</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="navigation__sub">
+                            <a href="#"><i class="zmdi zmdi-accounts-alt"></i>System Officers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="all-officers.html">Active Officers</a></li>
+                                <li><a href="new-user.html">New Officers</a></li>
+                                <li><a href="inactive-officers.html">Inactive Officers</a></li>
+
+                            </ul>
+						</li>
+						
+						<li class="navigation__sub">
+                            <a href="#"><i class="mdi mdi-map-marker"></i>Map<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <ul>
+                                <li><a href="nakuruMap.html"><i class="mdi mdi-map-marker-check"></i> Data Map</a></li>
+                                <li><a href="map.html"><i class="mdi mdi-map-clock"></i> Live Map</a></li>
+                            </ul>
+						</li>
+						
+                         <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
+                    </ul>
                 </div>
-
-                <ul class="navigation">
-                    <li class="navigation__active"><a href="index.html"><i class="zmdi zmdi-home"></i>Home</a></li>
-                    
-                     <li class="navigation__sub">
-                        <a href="#"><i class="flaticon-shovel"></i>Construction Permits <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul>
-                            <li><a href="permit-Application.html">New Application</a></li>
-                            <li><a href="new-constructions.html">Ongoing Applications</a></li>
-                            <li><a href="rejected-constructions.html">Rejected Applications</a></li>
-                            <li><a href="approved-constructions.html">Approved Applications</a></li>
-                        </ul>
-                    </li>
-                    
-                     <li class="navigation__sub d-none">
-                        <a href="#"><i class="flaticon-open-menu"></i>Other services <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul>
-                            <li><a href="new-amalgation.html">Land Amalgamation</a></li>
-                            <li><a href="new-use.html">Change of use</a></li>
-                            <li><a href="#">Lease Renewal</a></li>
-                            <li><a href="#">Domestic Building Alterationl</a></li>
-                            <li><a href="#">Renovation</a></li>
-                        </ul>
-                    </li>
-                    
-                    <li class="navigation__sub">
-                        <a href="#"><i class="flaticon-worker"></i>Construction Professionals <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul>
-                            <li><a href="active-professionals.html">Active Professionals</a></li>
-                            <li><a href="inactive-professionals.html">Inactive Professionals</a></li>
-                            <li><a href="new-professionals.html">New Requests</a></li>
-                            <li><a href="rejected-professionals.html">Rejected Applications</a></li>
-                        </ul>
-                    </li>
-                     <li class="navigation__active"><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
-
-                    <li class="navigation__sub">
-                        <a href="#"><i class="flaticon-police"></i>Enforcers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul>
-                            <li><a href="all-enforcers.html">Active Enforcers</a></li>
-                            <li><a href="new-enforcer.html">New Enforcers</a></li>
-                            <li><a href="inactive-enforcers.html">Inactive Enforcers</a></li>
-
-                        </ul>
-                    </li>
-
-                    <li class="navigation__sub">
-                        <a href="#"><i class="zmdi zmdi-accounts-alt"></i>System Officers <i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul>
-                            <li><a href="all-officers.html">Active Officers</a></li>
-                            <li><a href="new-user.html">New Officers</a></li>
-                            <li><a href="inactive-officers.html">Inactive Officers</a></li>
-
-                        </ul>
-                    </li>
-                    
-                    <li class="navigation__sub">
-                        <a href="#"><i class="mdi mdi-map-marker"></i>Map<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
-                        <ul>
-                            <li><a href="nakuruMap.html"><i class="mdi mdi-map-marker-check"></i> Data Map</a></li>
-                            <li><a href="map.html"><i class="mdi mdi-map-clock"></i> Live Map</a></li>
-                        </ul>
-                    </li>
-                    
-                     <li class="navigation__active mt-4"><a href="landing-page.html"><i class="zmdi zmdi-power"></i>Logout</a></li>
-                </ul>
-            </div>
-        </aside>
+            </aside>
         <section class="content custom-table-container">
             <header class="content__title px-0 border-0">
                 <div class="row">
@@ -1318,11 +1323,8 @@
             </div>
 
             <footer class="footer hidden-xs-down">
-                <center>
-                    <a class="nouveta-logoo" href="https://nouveta.tech/"><img src="demo/img/logo-files/logo2.png" target="new"></center>
-                </a>
-                </center>
-                <p>Powered by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
+                <p>Powered by RevenueSure</p>
+            </footer>d by<a href="https://nouveta.tech/" target="new"> Nouveta LTD</a></p>
             </footer>
         </section>
     </main>
