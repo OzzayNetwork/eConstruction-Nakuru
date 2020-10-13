@@ -33,6 +33,7 @@
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
+        <link rel="stylesheet" href="css/map.css">
     </head>
 
     <body data-ma-theme="green">
@@ -493,32 +494,51 @@
 											<p>6/May/2020</p>      
 										</div>
 										
-									</div>                      
-									<hr>
+                                    </div> 
+                                    
+                                    <hr>
+
+                                    <div> 
+                                        <div class="details-map row clearfix form-gen-information animated fadeInRight">
+                                            <div class="col-12 my-2">
+                                                <small class="text-muted">Construction Location on Map</small>
+                                            </div>
+                                            <div class="col-12" style="height: 338px"> 
+                                                <div class="row">
+                                                    <div class="col-12" style="height: 338px">
+                                                        <div class="main-map-form">
+                                                            <div class="application-map" style="height: 300px" id="map"> </div>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                       </div>
+                                    </div>
+
+                                    <hr>
 									<div class="contact-header">
 										<h4>Project Documents</h4>
 										<hr class="mb-0 mt-1">
 									</div>
 									
 									<div class="">
-											
-											<div  class="doc-container blue-print">
-												<a target="_blank" href="title.pdf" class="blue-print">
-													<img src="demo/img/attachments/blueprint.png">
-													<p><strong>Project Plan</strong></p>
-												</a>
-												
-												<a  target="_blank" href="amalgation.pdf" class="blue-print">
-													<img src="demo/img/attachments/ownership-docs.png">
-													<p><strong>Ownership Documents</strong></p>
-												</a>
-												
-												<a target="_blank" href="subdivision.pdf" class="blue-print">
-													<img src="demo/img/attachments/survay.png">
-													<p><strong>Survey Plan</strong></p>
-												</a>
-											</div>      
-										</div>
+                                        <div  class="doc-container blue-print">
+                                            <a target="_blank" href="title.pdf" class="blue-print">
+                                                <img src="demo/img/attachments/blueprint.png">
+                                                <p><strong>Project Plan</strong></p>
+                                            </a>
+                                            
+                                            <a  target="_blank" href="amalgation.pdf" class="blue-print">
+                                                <img src="demo/img/attachments/ownership-docs.png">
+                                                <p><strong>Ownership Documents</strong></p>
+                                            </a>
+                                            
+                                            <a target="_blank" href="subdivision.pdf" class="blue-print">
+                                                <img src="demo/img/attachments/survay.png">
+                                                <p><strong>Survey Plan</strong></p>
+                                            </a>
+                                        </div>      
+                                    </div>
 									
 									<div class="mt-3 w-100">
 										<button class="btn btn-success ">Inspected</button>
@@ -638,8 +658,15 @@
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>		
-    </body>
+        <script src="js/main.js"></script>
+        <script src="js/details-map.js"></script>
+
+        <script defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD34m46agTsMWCW5di6vROqM9fFFsxtdas&callback=initMap">
+        </script>
+        
+                
+</body>
 
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
 </html>
