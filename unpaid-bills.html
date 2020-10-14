@@ -361,230 +361,398 @@
                     </ul>
                 </div>
             </aside>
-            <section class="content custom-table-container">
-                <!--decline application-->
-                    <div class="modal fade" id="decline-application" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" id="decline-school-title">Decline Application</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <form>
-                                <div class="col-lg-12 p-0 col-md-12">
-                                    <div class=""> 
-                                        <label class="font-weight-bold">Whats the reson for declining this application?</label>
-                                        <textarea placeholder="Enter the reason for declining this application"  class="form-control"></textarea>
-                                    </div>
-                                </div>                  
 
-                            </form>
-                          </div>
-                          <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-danger">Decline Application</button>
-                          </div>
-                        </div>
-                      </div>
+            <!-- Modals -->
+            <!--decline application-->
+            <div class="modal fade" id="decline-application" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="decline-school-title">Decline Application</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
                     </div>
-                <!--decline application-->
-                
-                <!--Eng details-->
-                    <div class="modal fade" id="eng-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                      <div class="modal-dialog modal-dialog-centered" role="document">
-                        <div class="modal-content">
-                          <div class="modal-header">
-                            <h5 class="modal-title" >Endineer Details</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                              <span aria-hidden="true">&times;</span>
-                            </button>
-                          </div>
-                          <div class="modal-body">
-                            <div class="contact-header">
-                                        <h4>Personal Details</h4>
-                                        <hr class="mb-0 mt-1">
-                                        </div>
-                                        <small class="text-muted">Full Names</small>
-                                        <p>Kelvin Njuguna Ndungu</p>                            
-                                        <hr>
-                                        <small class="text-muted">Profession</small>
-                                        <p>Architect</p>
-                                        <hr>
-                                        <small class="text-muted">Joined on</small>
-                                        <p>22 Feb 2020</p>
-
-
-                                        <div class="contact-header mt-5">
-                                            <h4>Contact details</h4>
-                                            <hr class="mb-0 mt-1">
-                                        </div>
-
-                                        <small class="text-muted">Mobile phone number</small>
-                                        <p><a href="tel:0704549859">0704549859</a></p>
-                                        <hr>
-                                         <small class="text-muted">Email address</small>
-                                        <p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
-                              </div>
-                          
-                        </div>
-                      </div>
-                    </div>
-                <!--eng details-->
-                
-                <header class="content__title px-0 border-0">
-                    <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <span class="rev-title-container">
-                             <h1 class="text-capitalize stream_name m-0">Pending applications</h1>
-                            </span>
-                            <div class="">
-                                <ol class="breadcrumb border-0">
-                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
-                                    <li class="breadcrumb-item"><a href="new-constructions.html">Pending professionals applications</a></li>
-                                    <li class="breadcrumb-item active">Application Details</li>
-                                </ol>
-                            </div>
-                        </div>
-                    </div>
-                </header>
-                
-                <div class="row">
-                    <div class="col-12 p-0">
-                        <div class="card table-custom-bg">
-                            <div class="card-body">
-                                <div class="table-responsive">
-                                    <table class="table table-hover table-custom spacing8" id="data-table">
-                                        <thead>
-                                            <tr> 
-                                                <th>Applicant's name</th>
-                                                <th>Profession</th>
-                                                <th>Application type</th>
-                                                <th>Phone number</th>
-                                                <th>Email</th>
-                                                <th>Postal address</th>
-                                                <th>Application date</th>
-                                                <th>Status</th>
-                                                <th>Reason for rejection</th>
-                                                
-                                            </tr>
-                                        </thead>
-                                        <tbody>
-                                            <tr>
-                                                <td class="the_school">
-                                                    
-                                                    <p><strong><a data-toggle="modal" data-target="#eng-details">Ava strong</a></strong></p>
-                                                </td>
-                                                <td><strong><a href="#!">Engineer</a></strong></td>
-                                                <td><strong><a href="#!">Personal</a></strong></td>
-                                                <td><strong><a href="tel:0704549859"></a>0704549859</strong></td>
-                                                <td><strong>ava@engineers.co.ke</strong></td>
-                                                
-                                                <td><strong>14, 00100, GPO Nairobi</strong></td>
-                                                <td>12 May 2020</td>
-                                                <td>
-                                                    <p class="mb-0"><span class="text-black font-weight-bold">Application rejected</span></p>
-                                                    <span>By <strong class="font-weight-bold">John Njoroge</strong> on 23 May 2020</span>
-                                                </td>
-                                                <td>
-                                                    Document was not valid
-                                            
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="the_school">
-                                                    
-                                                    <p><strong><a data-toggle="modal" data-target="#eng-details">Ava strong</a></strong></p>
-                                                </td>
-                                                <td><strong><a href="#!">Engineer</a></strong></td>
-                                                <td><strong><a href="#!">Personal</a></strong></td>
-                                                <td><strong><a href="tel:0704549859"></a>0704549859</strong></td>
-                                                <td><strong>ava@engineers.co.ke</strong></td>
-                                                
-                                                <td><strong>14, 00100, GPO Nairobi</strong></td>
-                                                <td>12 May 2020</td>
-                                                <td>
-                                                    <p class="mb-0"><span class="text-black font-weight-bold">Application rejected</span></p>
-                                                    <span>By <strong class="font-weight-bold">John Njoroge</strong> on 23 May 2020</span>
-                                                </td>
-                                                <td>
-                                                    Document was not valid
-                                            
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="the_school">
-                                                    
-                                                    <p><strong><a data-toggle="modal" data-target="#eng-details">Ava strong</a></strong></p>
-                                                </td>
-                                                <td><strong><a href="#!">Engineer</a></strong></td>
-                                                <td><strong><a href="#!">Personal</a></strong></td>
-                                                <td><strong><a href="tel:0704549859"></a>0704549859</strong></td>
-                                                <td><strong>ava@engineers.co.ke</strong></td>
-                                                
-                                                <td><strong>14, 00100, GPO Nairobi</strong></td>
-                                                <td>12 May 2020</td>
-                                                <td>
-                                                    <p class="mb-0"><span class="text-black font-weight-bold">Application rejected</span></p>
-                                                    <span>By <strong class="font-weight-bold">John Njoroge</strong> on 23 May 2020</span>
-                                                </td>
-                                                <td>
-                                                    Document was not valid
-                                            
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="the_school">
-                                                    
-                                                    <p><strong><a data-toggle="modal" data-target="#eng-details">Ava strong</a></strong></p>
-                                                </td>
-                                                <td><strong><a href="#!">Engineer</a></strong></td>
-                                                <td><strong><a href="#!">Personal</a></strong></td>
-                                                <td><strong><a href="tel:0704549859"></a>0704549859</strong></td>
-                                                <td><strong>ava@engineers.co.ke</strong></td>
-                                                
-                                                <td><strong>14, 00100, GPO Nairobi</strong></td>
-                                                <td>12 May 2020</td>
-                                                <td>
-                                                    <p class="mb-0"><span class="text-black font-weight-bold">Application rejected</span></p>
-                                                    <span>By <strong class="font-weight-bold">John Njoroge</strong> on 23 May 2020</span>
-                                                </td>
-                                                <td>
-                                                    Document was not valid
-                                            
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="the_school">
-                                                    
-                                                    <p><strong><a data-toggle="modal" data-target="#eng-details">Ava strong</a></strong></p>
-                                                </td>
-                                                <td><strong><a href="#!">Engineer</a></strong></td>
-                                                <td><strong><a href="#!">Personal</a></strong></td>
-                                                <td><strong><a href="tel:0704549859"></a>0704549859</strong></td>
-                                                <td><strong>ava@engineers.co.ke</strong></td>
-                                                
-                                                <td><strong>14, 00100, GPO Nairobi</strong></td>
-                                                <td>12 May 2020</td>
-                                                <td>
-                                                    <p class="mb-0"><span class="text-black font-weight-bold">Application rejected</span></p>
-                                                    <span>By <strong class="font-weight-bold">John Njoroge</strong> on 23 May 2020</span>
-                                                </td>
-                                                <td>
-                                                    Document was not valid
-                                            
-                                                </td>
-                                            </tr>
-                                            
-                                        </tbody>
-                                    </table>
+                    <div class="modal-body">
+                        <form>
+                            <div class="col-lg-12 p-0 col-md-12">
+                                <div class=""> 
+                                    <label class="font-weight-bold">Whats the reson for declining this application?</label>
+                                    <textarea placeholder="Enter the reason for declining this application"  class="form-control"></textarea>
                                 </div>
-                            </div>
+                            </div>                  
+
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-danger">Decline Application</button>
+                    </div>
+                    </div>
+                </div>
+                </div>
+            <!--decline application-->
+            
+            <!--Eng details-->
+                <div class="modal fade" id="eng-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" >Endineer Details</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="contact-header">
+                                    <h4>Personal Details</h4>
+                                    <hr class="mb-0 mt-1">
+                                    </div>
+                                    <small class="text-muted">Full Names</small>
+                                    <p>Kelvin Njuguna Ndungu</p>                            
+                                    <hr>
+                                    <small class="text-muted">Profession</small>
+                                    <p>Architect</p>
+                                    <hr>
+                                    <small class="text-muted">Joined on</small>
+                                    <p>22 Feb 2020</p>
+
+
+                                    <div class="contact-header mt-5">
+                                        <h4>Contact details</h4>
+                                        <hr class="mb-0 mt-1">
+                                    </div>
+
+                                    <small class="text-muted">Mobile phone number</small>
+                                    <p><a href="tel:0704549859">0704549859</a></p>
+                                    <hr>
+                                    <small class="text-muted">Email address</small>
+                                    <p><a href="mailto:<nowiki> agentavery@sample.com">email@email.com</a></p>
+                        </div>
+                    
+                    </div>
+                </div>
+                </div>
+            <!--eng details-->
+            
+            <!-- Details Modals -->
+            <div class="modal fade" id="transaction-details" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">More details about the Bill</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div>
+                                <h6><strong>Bill No.</strong></h6>
+                                <p>The Bill No. goes here</p>
+                                <hr>
+
+                                <h6><strong>Served By.</strong></h6>
+                                <p><a title="" href="member-profile.html">Amos Wele</a></p>
+                                <hr>
+
+                                <h6><strong>Bill For</strong></h6>
+                                <p>Bill For</p>
+                                <hr>
+
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6><strong>Date Raised</strong></h6>
+                                        <p>14th Aug 2020</p>
+                                    </div>
+
+                                    <div class="col-6">
+                                        <h6><strong>Time</strong></h6>
+                                        <p>11:45:26 AM</p>
+                                    </div>
+                                </div>
+                                <hr>
+
+                                <h6><strong>Payment Status</strong></h6>
+                                <h5 class=""><strong class="text-capitalize"><span class="badge badge-pill badge-soft-danger px-3">UNPAID</span></strong></h5>
+                                <hr>
+
+                                <h6><strong>Brief Description</strong></h6>
+                                <p>Traditional heading elements are designed to work best in the meat of your page content. When you need a heading to stand out, consider using a display heading - a larger, slightly more opinionated heading style.</p>
+                            
+                                <hr>
+                                <div class="row">
+                                    <div class="col-6">
+                                        <h6 class="text-left"><strong>Amount</strong></h6>
+                                        <h3 class="text-left">KES 9,000</h3>
+                                    </div>
+                                    <div class="col-6">
+                                        <h6  class="text-right"><strong>Balance</strong></h6>
+                                        <h3 class="text-right">KES 1,230</h3>
+                                    </div>
+                                </div>
+                            </div>                       
+                        </div>
+                        <div class="modal-footer">
+                        
+                        <button type="button" data-dismiss="modal" class="btn btn-success btn--icon-text px-5">OK</button>
                         </div>
                     </div>
                 </div>
+            </div>  
+            <!-- Details Modals -->
+            <!-- Modals -->
+           
+                      
+            <!-- Main Body -->
+            <section class="content">
+                <header class="content__title px-0 border-0">
+				 	<div class="row" >
+						<div class="col-md-6 col-sm-12">
+							<span class="rev-title-container">
+							 <h1 class="text-capitalize stream_name m-0">Unpaid Bills</h1>
+							</span>
+							<div class="">
+								<ol class="breadcrumb border-0">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                    <li class="breadcrumb-item"><a href="index.html">Reports</a></li>
+									<li class="breadcrumb-item"><a href="index.html">Bills</a></li>
+									<li class="breadcrumb-item active">Unpaid Bills</li>
+								
+								</ol>
+								
+							</div>
+                        </div>
+                        
+                            <div class="col-md-6 col-sm-12 text-right">  
+                                <label class="text-right"><strong>Filter Data by:</strong></label>                             
+
+
+                                <div class="actions d-flex filter-table-options">
+
+                                    <div class="form-group mb-0 pb-0">
+                                        <select class="selectpicker show-tick" data-live-search="true">
+                                            <option data-tokens="select">Filter by E-construction Reason</option>
+                                            <option data-tokens="option 1">option 1</option>
+                                            <option data-tokens="option 2">option 2</option>
+                                            <option data-tokens="option 3">option 3</option>
+                                            <option data-tokens="option 4">option 4</option>
+                                            
+                                          </select>
+                                          
+                                    </div>
+                                    
+                                    <div id="reportrange" class="report-date-range ml-2">
+                                        <i class="ti-calendar"></i>&nbsp;
+                                        <span></span> <i class="fa fa-caret-down"></i>
+                                    </div>  
+                                    <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
+
+                            </div>
+                        </div>
+					</div>
+                </header>
+                
+
+				<div class="row with-custom-header">					
+					<div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="table-responsive">
+                                        <table class="table table-hover table-striped spacing8" id="data-table">
+                                            <thead class="thead-dark">
+                                                <tr>
+                                                    <th class="text-white">Bill No.</th>
+                                                    <th class="text-white">Served By</th>
+                                                    <th class="text-white">E-construction Reason</th>
+                                                    <th class="text-white">Date Raised</th>
+                                                    <th class="text-white">Amount</th>
+                                                    <th class="text-white">Actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95300</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Amos Wele</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="bill_details.html" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+                                                </tr>
+            
+                                                <tr>
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+                                                </tr>
+            
+                                                <tr>
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">cate kimotho</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">jane stones</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Gina Jean</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Jib Weso</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+
+                                                </tr>
+                                                <tr>
+
+                                                    <td class="w60"><a href="bill_details.html">MS-2020-95720</a></td>
+                                                    <td class="w60">
+                                                        <a title="" href="member-profile.html">Sharon Wambui</a>
+                                                    </td>
+                                                    <td>E-construction Reason</td>
+                                                    <td>Aug 1st 2020</td>
+                                                    <td class="text-capitalize">KES 10,230</td>
+                                                    <td>
+                                                        <a href="bill-raised.html" class="btn btn-success btn-sm btn--icon-text"><i class="zmdi zmdi-print"></i>Print</a>
+                                                        &nbsp;
+                                                        <a href="#" data-toggle="modal" data-target="#transaction-details" class="btn btn-primary btn-sm btn--icon-text"><i class="zmdi zmdi-eye"></i>View details</a>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+
+
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                  
+				</div>
+			
                 <footer class="footer hidden-xs-down">
                     <p>Powered by RevenueSure</p>
                 </footer>
