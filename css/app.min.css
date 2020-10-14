@@ -10216,7 +10216,7 @@ opacity:1
     border-radius: 2px
 }
 .navigation>li>a>i, .navigation__sub ul li i  {
-    vertical-align: top;
+    /* vertical-align: top; */
     font-size: 17px;
     position: relative;
     top: .1rem;
