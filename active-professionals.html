@@ -178,7 +178,7 @@
                 </ul>
             </header>
 
-            <aside class="sidebar">
+             <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
                         <div class="user__info" data-toggle="dropdown">
@@ -222,7 +222,7 @@
 						</li>
 
 						<li class="navigation__sub">
-                            <a href="#"><i class="flaticon-law"></i>Reports<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <a href="#"><i class="mdi mdi-file-document-multiple-outline"></i>Reports<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
 								<li class="navigation__sub">
 									<a href="#"><i class="mdi mdi-receipt"></i>Bills<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
@@ -257,6 +257,7 @@
 										<li><a href="blocked-users.html"><i class="mdi mdi-account-lock"></i>Blocked Users</a></li>
 									</ul>
 								</li>
+								<li class=""><a href="owners.html"><i class="mdi mdi-account-star"></i>Property Owners</a></li>
 								<li class=""><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
 
 
@@ -277,9 +278,9 @@
 									</ul>
 								</li>							
                                 
-								<li><a href="add_plate.html"><i class="flaticon-law"></i>Permits</a></li>	
-								<li><a href="add_plate.html"><i class="flaticon-worker"></i>Professionals</a></li>	
-								<li><a href="add_plate.html"><i class="mdi mdi-attachment"></i>Attachment docs</a></li>	
+								<li><a href="setup-application.html"><i class="flaticon-law"></i>Permits</a></li>	
+								<li><a href="setup-professionals.html"><i class="flaticon-worker"></i>Professionals</a></li>	
+								<li><a href="setup-attachment-docs.html"><i class="mdi mdi-attachment"></i>Attachment docs</a></li>	
 
 							</ul>
                         </li>
@@ -320,46 +321,18 @@
             </aside>
 			
             <section class="content custom-table-container">
-				<!--deactivate account-->
-					<div class="modal fade" id="deactivate-account" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="deactivate-parent-title">Deactivate Engineer account</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<form>
-								<div class="col-lg-12 p-0 col-md-12">
-									<div class="form-group mt-3"> 
-										<label class="font-weight-bold">Write reason</label>
-										<textarea class="form-control" placeholder="Enter other reason"></textarea>
-									</div>
-								</div>					
-
-							</form>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Block account</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--deactivate account modal-->
+				
 				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-12 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Active Engineers</h1>
+							 <h1 class="text-capitalize stream_name m-0">Active professionals</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Active engineers</li>
+									<li class="breadcrumb-item active">Active professionals</li>
 									
 								</ol>
 							</div>
@@ -376,88 +349,126 @@
 									<table class="table table-hover table-custom spacing8" id="data-table">
 										<thead>
 											<tr> 
-												<th></th>
-												<th>Engineer Particulars</th>
-												<th>Phone number</th>
+												
+                                                <th>Personnel Particulars</th>
+                                                <th>Governing Body</th>
+                                                <th>License No.</th>
+                                                <th>Exp Date</th>
+                                                <th>Phone number</th>
 												<th>Email</th>
+                                                <th>Registered By</th>
+                                                <th>Last Updated</th>
+												
 												<th>Actions</th>
 
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="w60">
-													<a title="" href="eng-profile.html"><div class="avatar-char">SO</div></a>
-												</td>
 												<td class="the_guardian">
 													<p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
 													<span>Architect</span>
-												</td>
+                                                </td>
+                                                <td>Ondieki Engs</td>
+                                                <td>4589582</td>
+                                                <td>23 Apr 2021</td>
 												<td>
 													<a href="tel:070235689" title="">070235689</a>
 												</td>
-												<td>scott@gmail.com</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>23 Aug 2020 by Cleophas Ndungu</td>
 												
 												<td>
-													<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button> 
+													<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Suspend Personnel</button> 
+                                                    <!--     -->												
+												</td>
+                                            </tr>
+                                            
+                                            <tr>
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
+													<span>Architect</span>
+                                                </td>
+                                                <td>Ondieki Engs</td>
+                                                <td>4589582</td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
+												</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>23 Aug 2020 by Cleophas Ndungu</td>
+												
+												<td>
+													<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Suspend Personnel</button> 
+                                                    <!--     -->												
+												</td>
+                                            </tr>
+                                            
+                                            <tr>
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
+													<span>Architect</span>
+                                                </td>
+                                                <td>Ondieki Engs</td>
+                                                <td>4589582</td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
+												</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>23 Aug 2020 by Cleophas Ndungu</td>
+												
+												<td>
+													<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Suspend Personnel</button> 
+                                                    <!--     -->												
+												</td>
+                                            </tr>
+                                            
+                                            <tr>
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
+													<span>Architect</span>
+                                                </td>
+                                                <td>Ondieki Engs</td>
+                                                <td>4589582</td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
+												</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>23 Aug 2020 by Cleophas Ndungu</td>
+												
+												<td>
+													<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Suspend Personnel</button> 
+                                                    <!--     -->												
+												</td>
+                                            </tr>
+                                            
+                                            <tr>
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
+													<span>Architect</span>
+                                                </td>
+                                                <td>Ondieki Engs</td>
+                                                <td>4589582</td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
+												</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>23 Aug 2020 by Cleophas Ndungu</td>
+												
+												<td>
+													<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Suspend Personnel</button> 
                                                     <!--     -->												
 												</td>
 											</tr>
-											<tr>
-                                                <td class="w60">
-                                                    <a title="" href="eng-profile.html"><div class="avatar-char">SO</div></a>
-                                                </td>
-                                                <td class="the_guardian">
-                                                    <p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
-                                                    <span>Structural Engineer</span>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:070235689" title="">070235689</a>
-                                                </td>
-                                                <td>scott@gmail.com</td>
-                                                <td>
-                                                <button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button> 
-                                                    <!-- <button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button> -->                                                   
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="w60">
-                                                    <a title="" href="eng-profile.html"><div class="avatar-char">SO</div></a>
-                                                </td>
-                                                <td class="the_guardian">
-                                                    <p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
-                                                    <span>Architect</span>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:070235689" title="">070235689</a>
-                                                </td>
-                                                <td>scott@gmail.com</td>
-                                                <td>
-                                                   <!--<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button>  -->
-                                                    <button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button>                                                 
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <td class="w60">
-
-                                                    <a title="" href="eng-profile.html"><div class="avatar-char">SO</div></a>
-                                                </td>
-                                                <td class="the_guardian">
-                                                    <p class="mb-0"><a href="eng-profile.html"><strong>Scott Ortega</strong></a></p>
-                                                    <span>Architect</span>
-                                                </td>
-                                                <td>
-                                                    <a href="tel:070235689" title="">070235689</a>
-                                                </td>
-                                                <td>scott@gmail.com</td>
-                                                
-                                                
-                                                
-                                                <td>
-                                                   <!--<button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button>  -->
-                                                    <button class="btn btn-danger btn--icon-text ml-2 disaprove-parent" title="deactvate this account"  data-toggle="modal" data-target="#deactivate-account"><i class="zmdi zmdi-close"></i>Deactivate This Account</button>                                                 
-                                                </td>
-                                            </tr>
+											
 										</tbody>
 									</table>
 								</div>
