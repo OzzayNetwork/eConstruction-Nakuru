@@ -14313,7 +14313,7 @@ header .section-header{
 }
 .table.table-custom tbody tr {
     background: white;
-    border-radius: .1875rem
+    border-radius: .1875rem;
 }
 .table.table-custom tbody tr:hover {
 /*    background-color: rgba(255, 255, 255, 0.05)*/
@@ -15675,4 +15675,8 @@ color: white
 }
 .opacity-0{
     opacity: 0 !important;
+}
+.dark-body{
+    height: 100% !important;
+    min-height: 100vh;
 }

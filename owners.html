@@ -71,57 +71,16 @@
 					</h1>
                 </div>
 
-                <form class="search">
+                <!-- <form class="search">
                     <div class="search__inner">
-                        <input type="text" class="search__text" placeholder="Search site">
+                        <input type="text" class="search__text" placeholder="Search for a blinker, tack shop owner or a guardian">
                         <i class="zmdi zmdi-search search__helper" data-ma-action="search-close"></i>
                     </div>
-                </form>
+                </form> -->
 				
-				<ul class="top-nav d-none">
+				<ul class="top-nav">
                     <li class="hidden-xl-up"><a href="#" data-ma-action="search-open"><i class="zmdi zmdi-search"></i></a></li>
-					<li   class="dropdown">
-						<a href="#" data-toggle="dropdown" data-toggle="tooltip" data-original-title="Create Accounts" class="px-4 py-3" ><strong>Create</strong></a>
-						<div class="dropdown-menu dropdown-menu-right dropdown-menu--block">
-                            <div class="listview listview--hover">
-                                <div class="listview__header">
-                                    Create an Account
-                                </div>
-
-                                <div class="listview__scroll scrollbar-inner">
-                                    <a href="new-parent.html" class="listview__item">
-                                        <img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Parents (Gurdian) Account</div>
-                                            <p>Create a new parent's account</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="new-student.html" class="listview__item">
-                                        <img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Student's Account (Blinker)</div>
-                                            <p>Create a student's Accountl</p>
-                                        </div>
-                                    </a>
-
-                                    <a href="new-shop.html" class="listview__item">
-                                        <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                                        <div class="listview__content">
-                                            <div class="listview__heading">Tack Shop</div>
-                                            <p>Create Tack Shop account</p>
-                                        </div>
-                                    </a>
-
-                                </div>
-
-                                <div class="p-1"></div>
-                            </div>
-                        </div>
-						
-					</li>
+					
 					<li data-toggle="tooltip" data-original-title="Notifications" class="dropdown top-nav__notifications">
                         <a href="#" data-toggle="dropdown"  class="top-nav__notify" >
                             <i class="zmdi zmdi-notifications"></i>
@@ -214,15 +173,10 @@
                             </div>
                         </div>
                     </li>
-                    <li class="" >
-                        <a href="new-parent.html" data-ma-action="aside-open" data-ma-target=".chat" data-toggle="tooltip" data-original-title="Associate Blinker Requests" class="top-nav__notify">
-                            <i class="zmdi zmdi-accounts-add"></i>
-                        </a>
-                    </li>
+                    
                 </ul>
-
-                
             </header>
+
              <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
@@ -364,50 +318,85 @@
                     </ul>
                 </div>
             </aside>
+			
             <section class="content custom-table-container">
-				<!--decline application-->
-					<div class="modal fade" id="decline-school" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="decline-school-title">Decline Application</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<form>
-								<div class="col-lg-12 p-0 col-md-12">
-									<div class=""> 
-										<label class="font-weight-bold">Whats the reson for declining this application?</label>
-										<textarea placeholder="Enter the reason for declining this application"  class="form-control"></textarea>
-									</div>
-								</div>					
-
-							</form>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Decline Application</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--decline application-->
+				<!-- Modal -->
+                <div class="modal fade" id="ownerProperty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Owner's Properties</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-sm-12">
+                                <p>The following are the properties registered under <strong>Kelvin Klevin</strong></p>
+                            </div>
+                            <div class="col-12">
+                                <ol class="list-group">
+                                    <li class="list-group-item pl-0">1.Property 1</li>
+                                    <li class="list-group-item pl-0">2.Property 2</li>
+                                    <li class="list-group-item pl-0">3.Property 3</li>
+                                    <li class="list-group-item pl-0">4.Property 4</li>
+                                    <li class="list-group-item pl-0">5.Property 5</li>
+                                  </ol>
+                            </div>
+                      
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                <div class="modal fade" id="ownerApplication" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Owner's Properties</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        </div>
+                        <div class="modal-body">
+                            <div class="col-sm-12">
+                                <p>The following are the Applications under <strong>Kelvin Klevin</strong></p>
+                            </div>
+                            <div class="col-12">
+                                <ol class="list-group">
+                                    <li class="list-group-item pl-0">1.Application 1</li>
+                                    <li class="list-group-item pl-0">2.Application 2</li>
+                                    <li class="list-group-item pl-0">3.Application 3</li>
+                                    <li class="list-group-item pl-0">4.Application 4</li>
+                                    <li class="list-group-item pl-0">5.Application 5</li>
+                                  </ol>
+                            </div>
+                      
+                        </div>
+                        <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
 				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-12 col-sm-12">
 							<span class="rev-title-container">
-							 <h1 class="text-capitalize stream_name m-0">Change of use applications </h1>
+							 <h1 class="text-capitalize stream_name m-0">Property owners</h1>
 							</span>
 							<div class="">
 								<ol class="breadcrumb border-0">
 									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active">Change of use applications </li>
+									<li class="breadcrumb-item active">Property owners</li>
+									
 								</ol>
 							</div>
 						</div>
+												
 					</div>
 				</header>
 				
@@ -419,91 +408,88 @@
 									<table class="table table-hover table-custom spacing8" id="data-table">
 										<thead>
 											<tr> 
-												<th>Applicant's name</th>
-												<th>Plot number</th>
-												<th>Location</th>
-												<th>New use</th>
-                                                <th>Application date</th>
-												<th>Actions</th>
+												
+                                                <th>Name</th>
+                                                <th>Properties</th>
+                                                <th>Date registered</th>
+                                                <th>Phone number</th>
+												<th>Email</th>
+                                                <th>Postal address</th>
+
+                                                <th>Applications</th>
+                                               
+												
+
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
-												<td class="the_school">
-													<p class="mb-0"><a href="student-profile.html" class="font-weight-bold">John Doe</a></p>
-													<!-- <a href="tel:070235689" title="">LR123/2134</a> -->
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Gina and Co</strong></a></p>
+													<span>Company</span>
+                                                </td>
+                                                <td>2 Properties <button class="btn btn-sm btn-primary ml-2 btn--icon-text" data-toggle="modal" data-target="#ownerProperty"><i class="zmdi zmdi-eye" ></i>View</button></td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
 												</td>
-												<td>LR123/2134</td>
-												<td><strong><a href="#!">Dandora</a></strong></td>
-												<td><strong><a href="#!">Residential</a></strong></td>
-												<td>12 May 2020</td>
-												<td><button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-eye"></i> <a href="application-details.html"> View application</a></button>
-													<button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-check-all"></i> Approve application</button>
-													
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>5 Applications <button class="btn btn-sm btn-primary ml-2 btn--icon-text" ><i class="zmdi zmdi-eye" data-toggle="modal" data-target="#ownerApplication"></i>View</button></td>
+												
+												
+                                            </tr>
+
+                                            <tr>
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Gina and Co</strong></a></p>
+													<span>Company</span>
+                                                </td>
+                                                <td>2 Properties <button class="btn btn-sm btn-primary ml-2 btn--icon-text" data-toggle="modal" data-target="#ownerProperty"><i class="zmdi zmdi-eye" ></i>View</button></td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
 												</td>
-											</tr>
-                                            <tr>
-                                                
-                                                <td class="the_school">
-                                                    <p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Jane Doe</a></p>
-                                                    <a href="tel:070235689" title=""><!-- LR123/2135 --></a>
-                                                </td>
-                                                <td>LR123/2135</td>
-                                                
-                                                <td><strong><a href="#!">Juja</a></strong></td>
-                                                <td><strong><a href="#!">Commercial</a></strong></td>
-                                                <td>12 May 2020</td>
-                                                <td><button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-eye"></i> <a href="application-details.html"> View application</a></button>
-                                                    <button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-check-all"></i> Approve application</button>
-                                                    
-                                                </td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>5 Applications <button class="btn btn-sm btn-primary ml-2 btn--icon-text" ><i class="zmdi zmdi-eye" data-toggle="modal" data-target="#ownerApplication"></i>View</button></td>
+												
+												
                                             </tr>
                                             <tr>
-                                                
-                                                <td class="the_school">
-                                                    <p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Jack Doe</a></p>
-                                                    <a href="tel:070235689" title=""><!-- LR123/2136 --></a>
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Gina and Co</strong></a></p>
+													<span>Company</span>
                                                 </td>
-                                                <td>LR123/2136</td>
-                                                <td><strong><a href="#!">Pipeline</a></strong></td>
-                                                <td><strong><a href="#!">Residential</a></strong></td>
-                                                <td>12 May 2020</td>
-                                                <td><button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-eye"></i> <a href="application-details.html"> View application</a></button>
-                                                    <button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-check-all"></i> Approve application</button>
-                                                    
-                                                </td>
+                                                <td>2 Properties <button class="btn btn-sm btn-primary ml-2 btn--icon-text" data-toggle="modal" data-target="#ownerProperty"><i class="zmdi zmdi-eye" ></i>View</button></td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
+												</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>5 Applications <button class="btn btn-sm btn-primary ml-2 btn--icon-text" ><i class="zmdi zmdi-eye" data-toggle="modal" data-target="#ownerApplication"></i>View</button></td>
+												
+												
                                             </tr>
                                             <tr>
-                                                
-                                                <td class="the_school">
-                                                    <p class="mb-0"><a href="student-profile.html" class="font-weight-bold">Jill Doe</a></p>
-                                                    <!-- <a href="tel:070235689" title=""></a> -->
+												<td class="the_guardian">
+													<p class="mb-0"><a href="eng-profile.html"><strong>Gina and Co</strong></a></p>
+													<span>Company</span>
                                                 </td>
-                                                <td>LR123/2137</td>
-                                                <td><strong><a href="#!">Starehe</a></strong></td>
-                                                <td><strong><a href="#!">Commercial</a></strong></td>
-                                                <td>12 May 2020</td>
-                                                <td><button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-eye"></i> <a href="application-details.html"> View application</a></button>
-                                                    <button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-check-all"></i> Approve application</button>
-                                                    
-                                                </td>
+                                                <td>2 Properties <button class="btn btn-sm btn-primary ml-2 btn--icon-text" data-toggle="modal" data-target="#ownerProperty"><i class="zmdi zmdi-eye" ></i>View</button></td>
+                                                <td>23 Apr 2021</td>
+												<td>
+													<a href="tel:070235689" title="">070235689</a>
+												</td>
+                                                <td>scott@gmail.com</td>
+                                                <td>Gina Wambui</td>
+                                                <td>5 Applications <button class="btn btn-sm btn-primary ml-2 btn--icon-text" ><i class="zmdi zmdi-eye" data-toggle="modal" data-target="#ownerApplication"></i>View</button></td>
+												
+												
                                             </tr>
-                                            <tr>
-                                                
-                                                <td class="the_school">
-                                                    <p class="mb-0"><a href="student-profile.html" class="font-weight-bold">John Doe</a></p>
-                                                    <!-- <a href="tel:070235689" title="">LR123/2134</a> -->
-                                                </td>
-                                                <td>LR123/2137</td>
-                                                <td><strong><a href="#!">Dandora</a></strong></td>
-                                                <td><strong><a href="#!">Residential</a></strong></td>
-                                                <td>12 May 2020</td>
-                                                <td><button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-eye"></i> <a href="application-details.html"> View application</a></button>
-                                                    <button class="btn btn-success btn--icon-text ml-2 decline-school" title="decline application"><i class="zmdi zmdi-check-all"></i> Approve application</button>
-                                                    
-                                                </td>
-                                            </tr>
-											
+                                            
+                                            
 											
 										</tbody>
 									</table>
@@ -607,15 +593,16 @@
 		<script src="vendors/highcharts/drilldown.js"></script>
 		<script src="vendors/highcharts/exporting.js"></script>
 		<script src="vendors/highcharts/export-data.js"></script>
-		<script src="vendors/highcharts/accesibility.js"></script>
+        <script src="vendors/highcharts/accesibility.js"></script>
+        
+        <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
-		<!-- App functions and actions -->
+		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>		
+        <script src="js/main.js"></script>
     </body>
 
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
