@@ -222,7 +222,8 @@ $(window).on('load', function(){
 //contractor type
 
 $('.payment-methods-radios input[name$="pay-method"]').on('change', function(){
-	alert('changed');
+	var theMethod=$(this).val();
+	// alert(theMethod);
 
 	
 	if(theMethod=="mpesa"){

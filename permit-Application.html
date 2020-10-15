@@ -1169,43 +1169,108 @@
 
                                         <div class="row clearfix form-attach animated fadeInRight d-none">
                                             <div class="col-12">
-                                                <h4 class="card-title">Attachments</h4>
-                                                <h6 class="card-subtitle">Attach documents related to the project being undertaken.</h6>
+                                                <h4 class="card-title">Project owner</h4>
+                                                <h6 class="card-subtitle">Enter the details of the project owner bellow</h6>
                                                 <hr>
 
                                             </div>
-                                            <label class="col-sm-12 col-md-4 form-attach" for="ownership-doc">
-												<div class="id-container img-container">
-													<span><img src="images/attachment-assets/001-certificate.svg"></span>
-													<h5>Land ownership document</h5>
-													<p>Eg Land's title deed</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- national id input box -->
-													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf"  id="ownership-doc" required class="form-control  form-control-lg   nat-id d-none">
-												</div>
-											</label>
 
-                                            <label class="col-sm-12 col-md-4" for="project-plan">
-												<div class="ownershipDoc img-container">
-													<span><img src="images/attachment-assets/005-plan-1.svg"></span>
-													<h5>Project's Plan</h5>
-													<p>Upload a project's plan</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- kra pin input -->
-													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf" required id="project-plan" class="form-control  form-control-lg  d-none">
-												</div>
-											</label>
+                                            <div class="col-12 mb-5">
+                                                <label><strong>Is the plot owner the owner of the project?</strong></label>
+                                                <div class="inline-form">
+                                                    <div class="radio radio--inline">
+                                                        <input type="radio" name="project-ownership" id="yes-owner">
+                                                        <label class="radio__label" for="yes-owner">Toggle this one</label>
+                                                    </div>
 
-                                            <label class="col-sm-12 col-md-4" for="survey-plan">
-												<div class="mpesa-statement-container img-container">
-													<span><img src="images/attachment-assets/006-map.svg"></span>
-													<h5>Survey Plan</h5>
-													<p>Upload survey plan</p>
-													<small class="text-danger"><strong>No file selected</strong></small>
-													<!-- mpesa statemetn -->
-													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf" required id="survey-plan" class="form-control  form-control-lg   mpesa-statement d-none">
-												</div>
-											</label>
+                                                    <div class="radio radio--inline">
+                                                        <input type="radio" name="project-ownership" id="no-owner">
+                                                        <label class="radio__label" for="no-owner">No</label>
+                                                    </div>
+    
+    
+                                                </div>
+
+                                               
+                                            </div>
+                                           <div class="col-sm-12 col-md-4">
+                                               <div class="form-group">
+                                                   <label>Owner type</label>
+                                                   <select class="selectpicker form-control" multiple title="Choose owner type">
+                                                    <option>Individual</option>
+                                                    <option>Company</option>
+                                                   
+                                                  </select>
+                                                  
+                                               </div>
+
+                                           </div>
+                                           <div class="col-md-8 col-sm-12">
+                                               <!-- show id=f its individual -->
+                                               <div class="row individual-application">
+                                                   <div class="col-md-6 col-sm-12">
+                                                       <div class="form-group">
+                                                           <label>Full Name</label>
+                                                           <input type="text" placeholder="Input the owner's full Name" class="form-control">
+                                                       </div>
+                                                   </div>
+
+                                                   <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>ID number</label>
+                                                            <input type="text" placeholder="Enter ID number" class="form-control">
+                                                        </div>
+                                                    </div>
+                                               </div>
+
+                                               <!-- show if its company -->
+                                               <div class="row individual-application d-none">
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>Company Name</label>
+                                                            <input type="text" placeholder="Enter company's name" class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-6 col-sm-12">
+                                                        <div class="form-group">
+                                                            <label>KRA number</label>
+                                                            <input type="text" placeholder="KRA number" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                           </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <div class="form-group">
+                                                    <label>Phone Number <span class="text-danger">*</span></label>
+                                                    <input type="text" placeholder="Enter phone number" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-3">
+                                                <div class="form-group">
+                                                    <label>Email address<span class="text-danger">*</span></label>
+                                                    <input type="email" placeholder="Enter email address" class="form-control">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-5">
+                                                <div class="row">
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <label><strong>Postal address <span class="text-danger">*</span></strong></label>
+                                                        <input type="text" class="form-control" placeholder="Enter postal Number">
+                                                    </div>
+
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <label><strong>Postal town <span class="text-danger">*</span></strong></label>
+                                                        <input type="text" class="form-control" placeholder="Enter postal Number">
+                                                    </div>
+
+                                                </div>
+                                                
+                                            </div>
+
 
                                             
 
@@ -1220,57 +1285,16 @@
 
                                         <div class="row clearfix form-save animated fadeInRight d-none">
                                             <div class="col-12">
-                                                <h4 class="card-title">Application Billing</h4>
+                                                
                                                 <h6 class="card-subtitle">
-                                                    Use this potion to make the first saving and enable account activation
+                                                  Select Mobile money for the applicant to make payment now via a mobile money wallet instantly or select <strong>print bill</strong> for the applicant to make payment using the bll number on a later date.
                                                 </h6>
                                                 <hr>
                                             </div>
 
                                             <div class="col-12 ">
                                                 <h5 class="mb-4"><strong>Applicant details</strong></h5>
-                                            </div>
-
-                                            <div class="col-6">
-                                                <div class="row">
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label><strong>First Name<strong class="text-danger">*</strong></strong></label>
-                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter applicant's first Name" required >
-                                                        </div>
-                                                    </div>
-        
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label><strong>Other Names<strong class="text-danger">*</strong></strong></label>
-                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter applicant's other Names" required >
-                                                        </div>
-                                                    </div>
-        
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label><strong>ID/PPT<strong class="text-danger">*</strong></strong></label>
-                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter ID or PP Num" required >
-                                                        </div>
-                                                    </div>
-        
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label><strong>Phone<strong class="text-danger">*</strong></strong></label>
-                                                            <input type="text" class="form-control  form-control-lg  " placeholder="Enter Phone Number" required >
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-6 col-sm-12">
-                                                        <div class="form-group">
-                                                            <label><strong>Email Address<strong class="text-danger">*</strong></strong></label>
-                                                            <input type="email" class="form-control  form-control-lg  " placeholder="Enter email address" required >
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
+                                            </div>                                         
 
                                            
                                             <div class="col-sm-12 col-md-6 radio-main-container">
