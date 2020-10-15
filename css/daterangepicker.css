@@ -1,9 +1,9 @@
 .daterangepicker {
   position: absolute;
   color: inherit;
-  background-color: #2C2F33;
+  background-color: white;
   border-radius: 4px;
-  color: white;
+  color: #2C2F33;
   border: 1px solid #ddd;
   width: 278px;
   max-width: none;

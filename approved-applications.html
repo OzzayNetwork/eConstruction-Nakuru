@@ -5,27 +5,28 @@
 <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-		
+        
 		<link rel='icon' href='demo/img/logo-files/nakuru-logo.png' type='image/x-icon'/ >
-
+    
 		<!-- icons -->
 		<link rel="stylesheet" href="//cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
 		<link rel="stylesheet" href="css/icon_fonts/css/icon_set_1.css">
+        
         <link rel="stylesheet" href="css/icon_fonts/css/icon_set_2.css">
         <link rel="stylesheet" href="css/icon_fonts/css/icon_set_3.css">
         <link rel="stylesheet" href="css/icon_fonts/css/icon_set_4.css">
 
-		<!-- Vendor styles -->
-		<link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
+        <!-- Vendor styles -->
+        <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.carousel.min.css">
         <link rel="stylesheet" href="vendors/OwlCarousel/assets/owl.theme.default.css">
         <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
         <link rel="stylesheet" href="css/flaticon-font/flaticon.css">
     
-
         <link rel="stylesheet" href="vendors/material-design-iconic-font/css/material-design-iconic-font.min.css">
         <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
         <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
         <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
         <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
         <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
@@ -36,8 +37,7 @@
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
-        <link rel="stylesheet" href="css/daterangepicker.css">
-
+        <link rel="stylesheet" href="css/daterangepicker.css">   
     </head>
     <body data-ma-theme="green">
         <main class="main">
@@ -489,33 +489,32 @@
 								
 							</div>
                         </div>
-                        
-                            <div class="col-md-6 col-sm-12 text-right">  
-                                <label class="text-right"><strong>Filter Data by:</strong></label>                             
+                    
+                        <div class="col-md-6 col-sm-12 text-right">  
+                            <label class="text-right"><strong>Filter Data by:</strong></label>                             
 
+                            <div class="actions d-flex filter-table-options">
 
-                                <div class="actions d-flex filter-table-options">
-
-                                    <div class="form-group mb-0 pb-0">
-                                        <select class="selectpicker show-tick" data-live-search="true">
-                                            <option data-tokens="select">Filter by Category</option>
-                                            <option data-tokens="option 1">option 1</option>
-                                            <option data-tokens="option 2">option 2</option>
-                                            <option data-tokens="option 3">option 3</option>
-                                            <option data-tokens="option 4">option 4</option>
-                                            
-                                          </select>
-                                          
-                                    </div>
+                                <div class="form-group filter-select m-0 p-0">
+                                    <select class="selectpicker show-tick" data-live-search="true">
+                                        <option data-tokens="select">Filter by Category</option>
+                                        <option data-tokens="option 1">option 1</option>
+                                        <option data-tokens="option 2">option 2</option>
+                                        <option data-tokens="option 3">option 3</option>
+                                        <option data-tokens="option 4">option 4</option>
+                                        
+                                    </select>
                                     
-                                    <div id="reportrange" class="report-date-range ml-2">
-                                        <i class="ti-calendar"></i>&nbsp;
-                                        <span></span> <i class="fa fa-caret-down"></i>
-                                    </div>  
-                                    <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
+                                </div>
+                                
+                                <div id="reportrange" class="report-date-range ml-2">
+                                    <i class="ti-calendar"></i>&nbsp;
+                                    <span></span> <i class="fa fa-caret-down"></i>
+                                </div>  
+                                <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
 
-                            </div>
                         </div>
+                    </div>
 					</div>
                 </header>
                 
@@ -760,6 +759,7 @@
         <script src="vendors/flot/jquery.flot.resize.js"></script>
         <script src="vendors/flot.curvedlines/curvedLines.js"></script>
         <script src="vendors/jqvmap/jquery.vmap.min.js"></script>
+        <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
         <script src="vendors/jqvmap/maps/jquery.vmap.world.js"></script>
         <script src="vendors/easy-pie-chart/jquery.easypiechart.min.js"></script>
         <script src="vendors/salvattore/salvattore.min.js"></script>
@@ -794,6 +794,11 @@
         <script src="demo/js/flot-charts/chart-tooltips.js"></script>
         <script src="demo/js/other-charts.js"></script>
         <script src="demo/js/jqvmap.js"></script>
+
+        <!-- App functions and actions -->
+        <script src="js/wow.js"></script>
+        <script src="js/app.min.js"></script>
+        <script src="js/main.js"></script>  
         
         <!--high chart-->
         

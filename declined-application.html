@@ -26,7 +26,8 @@
         <link rel="stylesheet" href="vendors/animate.css/animate.min.css">
         <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
         <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
-        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
+                <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
         <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
         <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
         <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
@@ -36,7 +37,7 @@
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
-    </head>
+        <link rel="stylesheet" href="css/daterangepicker.css">    </head>
     <body data-ma-theme="green">
         <main class="main">
             <div class="page-loader">
@@ -351,29 +352,27 @@
                                 <label class="text-right"><strong>Filter Data by:</strong></label>                             
 
 
-                                <div class="actions d-flex filter-table-options">
+                            <div class="actions d-flex filter-table-options">
 
-                                    <div class="form-group mb-0 pb-0">
-                                        <select class="selectpicker show-tick" data-live-search="true">
-                                            <option data-tokens="select">Filter by Category</option>
-                                            <option data-tokens="option 1">option 1</option>
-                                            <option data-tokens="option 2">option 2</option>
-                                            <option data-tokens="option 3">option 3</option>
-                                            <option data-tokens="option 4">option 4</option>
-                                            
-                                          </select>
-                                          
-                                    </div>
-                                    
-                                    <div id="reportrange" class="report-date-range ml-2">
-                                        <i class="ti-calendar"></i>&nbsp;
-                                        <span></span> <i class="fa fa-caret-down"></i>
-                                    </div>  
-                                    <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
+                                <div class="form-group filter-select m-0 p-0">
+                                    <select class="selectpicker show-tick" data-live-search="true">
+                                        <option data-tokens="select">Filter by Category</option>
+                                        <option data-tokens="option 1">option 1</option>
+                                        <option data-tokens="option 2">option 2</option>
+                                        <option data-tokens="option 3">option 3</option>
+                                        <option data-tokens="option 4">option 4</option>
+                                        
+                                      </select>
+                                      
+                                </div>
+                                
+                                <div id="reportrange" class="report-date-range ml-2">
+                                    <i class="ti-calendar"></i>&nbsp;
+                                    <span></span> <i class="fa fa-caret-down"></i>
+                                </div>  
+                                <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
 
-                                    <a href="add_plate.html" class="btn d-flex align-items-center btn-info ml-2 text-nowrap mr-2">Add Permit</a>
-
-                            </div>
+                        </div>
                         </div>
 					</div>
                 </header>

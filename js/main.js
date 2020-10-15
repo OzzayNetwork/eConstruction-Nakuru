@@ -127,11 +127,29 @@ $(window).on('load', function(){
 	function Expand(obj){
       if (!obj.savesize) obj.savesize=obj.size;
       obj.size=Math.max(obj.savesize,obj.value.length);
-     }
+	 }
+	 
 	
-	
-	
-//	date ranger functions
+		
+		
+	//	custom day time picker
+		$('#daily_date').on('change', function(){
+			var dated=$(this).val();
+			var dated=(moment(dated).format('LL'));
+			$('.the_day').text(dated);
+	//		alert(moment(dated).format('LL'));
+		});
+		$('.table-ranger').on('change', function(){
+			
+		});
+	//	increase wigdth when value changes
+		function Expand(obj){
+		  if (!obj.savesize) obj.savesize=obj.size;
+		  obj.size=Math.max(obj.savesize,obj.value.length);
+		 }
+		
+		
+	//	date ranger functions
 	
 	$(".date-range")[0] && $(".date-range").flatpickr({
       enableTime: !1,
@@ -440,4 +458,58 @@ $(document).ready(function(){
 	}
 
   }
+
+$(function() {
+
+	var start = moment();
+	var end = moment();
+
+	function cb(start, end) {
+		// $('#today').html(start.format('MMMM D, YYYY'));
+
+		if(end.format('MMMM D, YYYY') === start.format('MMMM D, YYYY')){			
+			$('#reportrange span').html(start.format('MMMM D, YYYY'));
+			$('#today').html(start.format('MMMM D, YYYY'));
+
+			if(moment().format('MMMM D, YYYY') === start.format('MMMM D, YYYY')){
+				// if todays date is today
+				$('#date-reset').addClass('d-none');
+			}
+			else{
+				$('#date-reset').removeClass('d-none');	
+			}
+
+			
+
+		} else {
+			$('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+			$('#today').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+			$('#date-reset').removeClass('d-none');	
+		}
+
+	}
+
+	$('#reportrange').daterangepicker({
+		startDate: start,
+		endDate: end,
+		ranges: {
+			'Today': [moment(), moment()],
+			'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+			'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+			'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+			'This Month': [moment().startOf('month'), moment().endOf('month')],
+			'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+		}
+	}, cb, );
+
+	cb(start, end);
+
+});
+	
+function reset_date(){
+	$('#reportrange span').html(moment().format('MMMM D, YYYY'));
+	// $('#today').html(moment().format('MMMM D, YYYY'));
+	$('#date-reset').addClass('d-none');	
+
+}
   
