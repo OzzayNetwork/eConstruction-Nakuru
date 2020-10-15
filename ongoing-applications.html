@@ -27,7 +27,7 @@
         <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
         <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
         <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
-                <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
         <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
         <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
         <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
@@ -37,7 +37,8 @@
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
-        <link rel="stylesheet" href="css/daterangepicker.css">    </head>
+        <link rel="stylesheet" href="css/daterangepicker.css">  
+    </head>
     <body data-ma-theme="green">
         <main class="main">
             <div class="page-loader">
@@ -263,6 +264,9 @@
 							</div>
                         </div>
                         
+                        <div class="col-md-6 col-sm-12 text-right">  
+                            <label class="text-right"><strong>Filter Data by:</strong></label>  
+
                             <div class="actions d-flex filter-table-options">
 
                                 <div class="form-group filter-select m-0 p-0">
@@ -273,8 +277,8 @@
                                         <option data-tokens="option 3">option 3</option>
                                         <option data-tokens="option 4">option 4</option>
                                         
-                                      </select>
-                                      
+                                    </select>
+                                    
                                 </div>
                                 
                                 <div id="reportrange" class="report-date-range ml-2">
@@ -283,6 +287,7 @@
                                 </div>  
                                 <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
 
+                         </div>
                         </div>
 					</div>
                 </header>
@@ -725,6 +730,7 @@
         <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
         <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
         <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+        <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
 
         <script src="vendors/flot/jquery.flot.js"></script>
         <script src="vendors/flot/jquery.flot.resize.js"></script>
@@ -773,6 +779,7 @@
         <script src="vendors/highcharts/exporting.js"></script>
         <script src="vendors/highcharts/export-data.js"></script>
         <script src="vendors/highcharts/accesibility.js"></script>
+        <script src="vendors/daterangepicker/daterangepicker.min.js"></script>
         
         <script src="js/highcharts/highcharts-more.js"></script>
         <!--owl corousel-->
