@@ -39,6 +39,8 @@
     <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
     <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
     <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+    <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
+
 
     <!-- App styles -->
     <link rel="stylesheet" href="css/app.min.css">
@@ -289,7 +291,7 @@
                 <div class="modal-dialog modal-dialog-centered" role="document">
                   <div class="modal-content">
                     <div class="modal-header">
-                      <h5 class="modal-title" id="exampleModalLongTitle">Register Contractor</h5>
+                      <h5 class="modal-title" id="exampleModalLongTitle">Register profession</h5>
                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                       </button>
@@ -297,62 +299,82 @@
                     <div class="modal-body">
                       <div class="row">
                           <div class="col-12">
-                              <h6>Fill in the form bellow to register the new contractor</h6>
+                              <h6>Fill in the form bellow to register the new professional</h6>
                           </div>
                           <div class="col-12">
                               <hr>
                           </div>
                           <div class="col-12">
                               <div class="row">
-                                  <div class="col-8">
+                                  <div class="col-md-6 col-sm-12">
                                       <div class="form-group">
                                           <label><strong>Contractor type</strong></label>
-                                          <select class="form-control contractorType">
-                                              <option value="0">-- Select type --</option>
-                                              <option value="individual" selected>Individual</option>
-                                              <option value="company">Company</option>
+                                          <select class="selectpicker form-control" data-live-search="true"  title="Select profession type">
+
+                                            <!-- data tokens contain the key words helps with seraching -->
+                                            <option data-tokens="Surveyors">Company</option>
+                                            <option data-tokens="Architect">Individual</option>
                                           </select>
                                       </div>
                                   </div>
+
+                                  <div class="col-md-6 col-sm-12">
+                                    <div class="form-group">
+                                        <label><strong>Profession</strong></label>
+                                        <select class="selectpicker form-control" data-live-search="true" title="Choose profession type">
+
+                                            <!-- data tokens contain the key words helps with seraching -->
+                                            <option data-tokens="Surveyors">Surveyors</option>
+                                            <option data-tokens="Architect">Architect</option>
+                                            <option data-tokens="Engineer">Engineer</option>
+                                          </select>
+                                    </div>
+                                </div>
+
                               </div>
                           </div>
                           <div class="col-12">
                               <div class="row">
                                 <div class="col-6 col-sm-12 col-md-6">
                                     <div class="form-group">
-                                        <label><strong>Contractor's Number</strong></label>
-                                        <input type="text" class="form-control" placeholder="Enter contractor's No.">
+                                        <label><strong>Surname</strong></label>
+                                        <input type="text" class="form-control" placeholder="Enter surname">
                                     </div>
                                 </div>
 
                                 <div class="col-6 col-sm-12 col-md-6">
-                                    <div class="form-group showPerson d-none animate fade-in-down">
-                                        <label><strong>Id number</strong></label>
-                                        <input type="text" class="form-control " placeholder="Enter contractor's ID/PPT No.">
+                                    <div class="form-group">
+                                        <label><strong>Other names</strong></label>
+                                        <input type="text" class="form-control" placeholder="Enter other name's">
                                     </div>
-                                    <div class="form-group showCompany d-none fade-in-down">
-                                        <label><strong>KRA Pin</strong></label>
-                                        <input type="text" class="form-control " placeholder="Enter company's KRA Pin">
-                                    </div>
-
-
                                 </div>
 
+                                <div class="col-6 col-sm-12 col-md-6">
+                                    <div class="form-group">
+                                        <label><strong>Certificate number</strong></label>
+                                        <input type="text" class="form-control" placeholder="Enter certificate No.">
+                                    </div>
+                                </div>
+
+                                <div class="col-6 col-sm-12 col-md-6">
+                                  <div class="form-group">
+                                      <label><strong>Governing body</strong></label>
+                                      <input type="text" class="form-control" placeholder="Enter governing body">
+                                  </div>
+                              </div>
+
+                              <div class="col-sm-12 col-md-6">
+                                <div class="form-group showPerson d-none animate fade-in-down">
+                                    <label><strong>Id number</strong></label>
+                                    <input type="text" class="form-control " placeholder="Enter contractor's ID/PPT No.">
+                                </div>
+                              </div>
+
+                                
                               </div>
                           </div>
 
-                          <div class="col-12">
-                            <div class="form-group showPerson d-none animate fade-in-down">
-                                <label><strong>Full Names</strong></label>
-                                <input type="text" class="form-control " placeholder="Enter Full Names">
-                            </div>
-
-                            <div class="form-group showCompany d-none animate fade-in-down">
-                                <label><strong>Company's Name</strong></label>
-                                <input type="text" class="form-control " placeholder="Enter company's Name">
-                            </div>
-
-                          </div>
+                         
 
                          
 
@@ -678,13 +700,13 @@
                                     <div class="mb-3">
                                         <ul class="nav nav-pills application-nav">
                                             <li class="nav-item">
-                                                <a class="nav-link active gen-info-link" href="#"><i class="mdi mdi-office-building-marker mr-2"></i>Plot Details</a>
+                                                <a class="nav-link active gen-info-link" href="#"><i class="mdi mdi-floor-plan mr-2"></i>Application</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link occupation-link" href="#"><i class="mdi mdi-briefcase-account-outline mr-2"></i>Project details</a>
+                                                <a class="nav-link occupation-link" href="#"><i class="mdi  mdi-office-building-marker  mr-2"></i>Plot Details</a>
                                             </li>
                                             <li class="nav-item">
-                                                <a class="nav-link ben-link" href="#"><i class="mdi mdi-attachment mr-2"></i>Attachments</a>
+                                                <a class="nav-link ben-link" href="#"><i class="mdi mdi-account-star mr-2"></i>Project Owner</a>
                                             </li>
                                             <li class="nav-item">
                                                 <a class="nav-link doc-link" href="#"><i class="mdi mdi-receipt mr-2"></i>Billing</a>
@@ -695,7 +717,182 @@
                                     <hr>
 
                                     <form class="membership-form">
-                                        <div class="row clearfix form-gen-information animated fadeInRight">
+
+                                        <div class="row clearfix form-occupation animated fadeInRight">
+                                            <div class="col-md-12">
+                                                <h4 class="card-title">Project details</h4>
+                                                <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>General project's details</strong></h5>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Application Type<span class="text-danger">*</span></strong></label>
+                                                    <select class="selectpicker form-control" data-live-search="true">
+
+                                                        <!-- the data tokens refer to search key words -->
+                                                        <option data-tokens="ketchup mustard">Option 1</option>
+                                                        <option data-tokens="mustard">Option 2</option>
+                                                        <option data-tokens="frosting">Option 3</option>
+                                                      </select>
+                                                      
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Project's title <span class="text-danger">*</span></strong></label>
+                                                    <input type="text" class="form-control form-control-lg" placeholder="Enter project's title">
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4 col-sm-12">
+                                                <div class="form-group">
+                                                    <label><strong>Project's Value<span class="text-danger">*</span></strong></label>
+                                                    <input type="text" class="form-control form-control-lg" placeholder="Enter project's value in KES">
+                                                </div>
+                                            </div>                                            
+
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Project Attachments</strong></h5>
+                                            </div>
+                                            <!-- this inputs are hidden but work. match IDs with their appropriate labels with the for attribute -->
+                                            <label class="col-sm-12 col-md-3 form-attach" for="input1">
+												<div class="id-container img-container">
+                                                    <span><img src="images/attachment-assets/001-certificate.svg"></span>
+                                                    <!-- document title -->
+													<h5>Land ownership document</h5>
+													
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- national id input box -->
+													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf"  id="input1" required class="form-control  form-control-lg   nat-id d-none">
+												</div>
+                                            </label>
+
+                                            <!-- match id to the for attribute on the label -->                                            
+                                            <label class="col-sm-12 col-md-3 form-attach" for="input2">
+												<div class="id-container img-container">
+                                                    <span><img src="images/attachment-assets/001-certificate.svg"></span>
+                                                    <!-- document title -->
+													<h5>Land ownership document</h5>
+													
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- match id to the for attribute on the label -->
+													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf"  id="input2" required class="form-control  form-control-lg   nat-id d-none">
+												</div>
+                                            </label>
+                                            
+                                            <!-- match id to the for attribute on the label -->                                            
+                                            <label class="col-sm-12 col-md-3 form-attach" for="input3">
+												<div class="id-container img-container">
+                                                    <span><img src="images/attachment-assets/001-certificate.svg"></span>
+                                                    <!-- document title -->
+													<h5>Land ownership document</h5>
+													
+													<small class="text-danger"><strong>No file selected</strong></small>
+													<!-- match id to the for attribute on the label -->
+													<input type="file" accept="image/png, .jpeg, .jpg, image/gif,.pdf"  id="input3" required class="form-control  form-control-lg   nat-id d-none">
+												</div>
+											</label>
+                                            
+                                            
+                                            
+
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+                                            <div class="col-12 ">
+                                                <h5 class="mb-4"><strong>Personnel In Charge </strong></h5>
+                                            </div>
+                                            <div class="col-12">
+                                                <p class="text-danger">Enter contractors identification number then search to confirm that they are registered into the system</p>
+
+                                            </div>
+                                            <div class="col-md-4 col-sm-12">
+                                                <label><strong>Profession</strong></label>
+                                                <select class="selectpicker form-control" multiple title="Select attachment document(s)">
+                                                    <option>Architect</option>
+                                                    <option>Engineer</option>
+                                                    <option>Surveyor</option>                                                   
+                                                  </select>
+                                            </div>
+                                            <div class="col-sm-12 col-md-4">
+                                                <div class="form-group">
+                                                    <label><strong>Certificate No.<strong class="text-danger">*</strong></strong></label>
+                                                    <div class="form-inline w-100 d-flex">
+                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Contractors identification number" required="">
+                                                        
+                                                    </div>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-sm-12 col-md-auto">
+                                                <div class="form-group">
+                                                    <label class="d-flex flex-row opacity-0">something</label>
+                                                    <button class="btn btn-primary btn--icon-text h-100" data-toggle="modal" data-target="#newContractor"><i class="zmdi zmdi-search"></i>Search</button>
+                                                </div>
+                                            </div>
+                                            <div class="col-12">
+                                                <hr>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <div class="row contractors-details d-non">
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Full Names</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Other Names</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Phone Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Email address</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
+                                                        <div class="form-group">
+                                                            <label><strong>Box Number</strong></label>
+                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                            </div>
+                                           
+                                           
+
+                                            <div class="col-12">
+                                                
+                                                <a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
+                                            </div>
+
+                                        </div>
+                                        <div class="row clearfix form-gen-information animated fadeInRight d-none">
                                             <div class="col-12">
                                                 <h4 class="card-title">Plot Details</h4>
                                                 <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
@@ -960,6 +1157,7 @@
                                             </div>
 
                                             <div class="col-12">
+                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
                                                 <a class="btn btn-primary occupation-next btn-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
                                             </div>
 
@@ -967,229 +1165,7 @@
 
                                         </div>
 
-                                        <div class="row clearfix form-occupation animated fadeInRight d-none">
-                                            <div class="col-md-12">
-                                                <h4 class="card-title">Project details</h4>
-                                                <h6 class="card-subtitle">Enter the form bellow. Fields with <strong class="text-danger">(*)</strong> are required.</h6>
-                                                <hr>
-                                            </div>
-
-                                            <div class="col-12 ">
-                                                <h5 class="mb-4"><strong>General project's details</strong></h5>
-                                            </div>
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label><strong>Project's title <span class="text-danger">*</span></strong></label>
-                                                    <input type="text" class="form-control form-control-lg" placeholder="Enter project's title">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label><strong>Project's Value<span class="text-danger">*</span></strong></label>
-                                                    <input type="text" class="form-control form-control-lg" placeholder="Enter project's value in KES">
-                                                </div>
-                                            </div>
-
-                                            <div class="col-md-4 col-sm-12">
-                                                <div class="form-group">
-                                                    <label><strong>Construction Type<strong class="text-danger">*</strong></strong></label>
-                                                    <select title="please select your source of income" class="form-control form-control-lg">
-														<option selected="selected" value="0">-- select construction type --</option>
-														<option  value="commercial">Commercial</option>
-														<option value="residential">Residential</option>
-														
-
-													</select>
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <hr>
-                                            </div>
-                                            <div class="col-12 ">
-                                                <h5 class="mb-4"><strong>Project Contractor</strong></h5>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label><strong>Contractors identification No.<strong class="text-danger">*</strong></strong></label>
-                                                    <p class="text-danger">Enter contractors identification number then search to confirm that they are registered into the system</p>
-                                                    <div class="form-inline w-100 d-flex">
-                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Contractors identification number" required="">
-                                                        <button class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg" data-toggle="modal" data-target="#newContractor"><i class="zmdi zmdi-search"></i>Search For Contractor</button>
-                                                    </div>
-
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <hr>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="row contractors-details d-non">
-                                                    <div class="col-md-4 col-lg-3 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong>Contractors Full Names</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong>Other Names</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong>Phone Number</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
-                                                        <div class="form-group">
-                                                            <label><strong>Email address</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
-                                                        <div class="form-group">
-                                                            <label><strong>Box Number</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <hr>
-                                            </div>
-
-                                            <div class="col-12 ">
-                                                <h5 class="mb-4"><strong>Project Architect</strong></h5>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label><strong>Architect's identification No.<strong class="text-danger">*</strong></strong></label>
-                                                    <p class="text-danger">Enter architect's identification number then search to confirm that they are registered into the system</p>
-                                                    <div class="form-inline w-100 d-flex">
-                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Architect's identification number" required="">
-                                                        <button class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg"><i class="zmdi zmdi-search"></i>Seacrh for architect</button>
-                                                    </div>
-
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <hr>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="row architects-details d-none animated fade-in-up">
-                                                    <div class="col-md-4 col-lg-4 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong>Architect's name</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong>Phone Number</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
-                                                        <div class="form-group">
-                                                            <label><strong>Email address</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
-                                                        <div class="form-group">
-                                                            <label><strong>Box Number</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <hr>
-                                            </div>
-
-                                            <div class="col-12 ">
-                                                <h5 class="mb-4"><strong>Project's Structural Engineer</strong></h5>
-                                            </div>
-                                            <div class="col-md-6 col-sm-12">
-                                                <div class="form-group">
-                                                    <label><strong>Structural Engineer identification No.<strong class="text-danger">*</strong></strong></label>
-                                                    <p class="text-danger">Enter Engineer's identification number then search to confirm that they are registered into the system</p>
-                                                    <div class="form-inline w-100 d-flex">
-                                                        <input type="text" class="form-control form-control  form-control-lg     validate flex-grow-1" minlength="2" autofocus="" placeholder="Engineer's identification number" required="">
-                                                        <button class="btn btn-primary mb-2 btn--icon-text ml-2 form-control-lg"><i class="zmdi zmdi-search"></i>Search for Engineer</button>
-                                                    </div>
-
-                                                    
-                                                </div>
-                                            </div>
-                                            <div class="col-12">
-                                                <hr>
-                                            </div>
-
-                                            <div class="col-12">
-                                                <div class="row engineer-details d-none">
-                                                    <div class="col-md-4 col-lg-4 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong> Engineer's</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4">
-                                                        <div class="form-group">
-                                                            <label><strong>Phone Number</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
-                                                        <div class="form-group">
-                                                            <label><strong>Email address</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                    <div class="col-md-4 col-lg-3 col-sm-4 ">
-                                                        <div class="form-group">
-                                                            <label><strong>Box Number</strong></label>
-                                                            <input type="text" class="form-control form-control-lg" placeholder="" readonly disabled value="Not searched">
-                                                        </div>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                            
-
-                                           
-
-                                            <div class="col-12">
-                                                <a class="btn btn-light btn-border mr-3 btn-outline btn-prev "><i class="mr-3 zmdi zmdi-arrow-left"></i>Previous </a>
-                                                <a class="btn btn-primary btn-next ben-next text-white">Next <i class="ml-3 zmdi zmdi-arrow-right"></i></a>
-                                            </div>
-
-                                        </div>
+                                        
 
                                         <div class="row clearfix form-attach animated fadeInRight d-none">
                                             <div class="col-12">
@@ -1477,6 +1453,7 @@
     <script src="js/highcharts/highcharts-more.js"></script>
     <!--owl corousel-->
     <script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+    <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
     <!-- App functions and actions -->
     <script src="js/wow.js"></script>
     <script src="js/app.min.js"></script>

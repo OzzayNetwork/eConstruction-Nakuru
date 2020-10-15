@@ -15648,6 +15648,7 @@ color: white
 .img-container h5 {
     font-weight: bold;
     text-transform: capitalize;
+    font-size: 13px;
 }
 
 .img-container p {
@@ -15672,4 +15673,6 @@ color: white
 .form-control.bootstrap-select{
     border: 1px solid #0000004f;
 }
-
+.opacity-0{
+    opacity: 0 !important;
+}
