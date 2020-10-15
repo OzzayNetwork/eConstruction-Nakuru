@@ -33,6 +33,8 @@
         <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
         <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
         <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
+
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
@@ -272,7 +274,7 @@
                                         <h6 class="card-subtitle">Fill in the form, the fields with a <strong class="text-danger">*</strong> are mandatory fields</h6>
                                         <hr>
                                         <div class="form-img">
-                                            <img class="img" src="demo/img/form-svgs/users.svg">
+                                            <img class="img" src="demo/img/form-svgs/professionals.svg">
                                         </div>
                                         
                                         <div class="notes">
@@ -294,60 +296,54 @@
                                             <h6 class="card-subtitle mb-0">Fill in the form below to register the new structural engineer</h6>
                                             <hr>
 
-                                            <div class="mb-3">
-
-                                                <form class="application-radio d-flex justify-content-between">
-                                                    <div>
-                                                        <input type="radio" name="optradio" id="structural-eng-link" onclick="prof_application_form()" che>
-                                                        <label class="radio-inline" for="structural-eng-link"><h6><strong>Structural Engineer</strong></h6></label>
-                                                    </div>
-
-                                                    <div>
-                                                        <input type="radio" name="optradio" id="architect-link" onclick="prof_application_form()">
-                                                        <label class="radio-inline" for="architect-link"><h6><strong>Architect</h6></strong></label>
-                                                    </div>
-
-                                                    <div>
-                                                        <input type="radio" name="optradio" id="contractor-link" onclick="prof_application_form()">
-                                                        <label class="radio-inline" for="contractor-link"><h6><strong>Contractor</strong></h6></label>
-                                                    </div>
-
-                                                    <div>
-                                                        <input type="radio" name="optradio" id="analytical-surv-link" onclick="prof_application_form()">
-                                                        <label class="radio-inline" for="analytical-surv-link"><h6><strong>Analytical Surveyors</h6></strong></label>
-                                                    </div>
-                                                  </form>
-                                            </div>
-
-                                            <!-- Structural Eng -->
+                                            
                                             <div class="row structural-eng-form animate slideInRight">
-                                                <div class="col-12">
-                                                    <div class="row">
-                                                        <div class="col-8">
-                                                            <div class="form-group">
-                                                                <label><strong>Structural Engineer type</strong></label>
-                                                                <select class="form-control contractorType">
-                                                                    <option value="0">-- Select type --</option>
-                                                                    <option value="individual">Individual</option>
-                                                                    <option value="company">Company</option>
-                                                                </select>
-                                                            </div>
-                                                        </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Profession</label>
+                                                        <select class="selectpicker form-control" data-live-search="true">
+
+                                                            <!-- data tokens contain the key words helps with seraching -->
+                                                            <option data-tokens="Surveyors">Surveyors</option>
+                                                            <option data-tokens="Architect">Architect</option>
+                                                            <option data-tokens="Engineer">Engineer</option>
+                                                          </select>
+                                                          
+                                                    </div>
+                                                </div>
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Type of applicant</label>
+                                                        <select class="selectpicker form-control" data-live-search="true">
+
+                                                            <!-- data tokens contain the key words helps with seraching -->
+                                                            <option data-tokens="Surveyors">Individual</option>
+                                                            <option data-tokens="Architect">Company</option>
+                                                           
+                                                          </select>
                                                     </div>
                                                 </div>
                                                 <div class="col-12">
                                                     <div class="row">
-                                                      <div class="col-6 col-sm-12 col-md-6">
+                                                      <div class="col-6 col-sm-12 col-md-4">
                                                           <div class="form-group">
-                                                              <label><strong>Structural Engineer's Number</strong></label>
-                                                              <input type="text" class="form-control" placeholder="Enter Structural Engineer's No.">
+                                                              <label><strong>Certificate number</strong></label>
+                                                              <input type="text" class="form-control" placeholder="Enter certificate No.">
                                                           </div>
                                                       </div>
+
+                                                      <div class="col-6 col-sm-12 col-md-4">
+                                                        <div class="form-group">
+                                                            <label><strong>Governing body</strong></label>
+                                                            <input type="text" class="form-control" placeholder="Enter governing body">
+                                                        </div>
+                                                    </div>
                       
-                                                      <div class="col-6 col-sm-12 col-md-6">
-                                                          <div class="form-group showPerson d-none animate fade-in-down">
-                                                              <label><strong>Id number</strong></label>
-                                                              <input type="text" class="form-control " placeholder="Enter Structural Engineer's ID/PPT No.">
+                                                      <div class="col-6 col-sm-12 col-md-4">
+                                                          <div class="form-group showPerson  animate fade-in-down">
+                                                              <label class=""><strong>Expiry Date</strong></label>
+                                                              <input type="text" class="form-control date-picker hidden-sm-down" placeholder="Select the date of expiry">
+                                                              <p><small>Certificate's date of expiry</small></p>
                                                           </div>
                                                           <div class="form-group showCompany d-none fade-in-down">
                                                               <label><strong>KRA Pin</strong></label>
@@ -361,25 +357,61 @@
                                                 </div>
                       
                                                 <div class="col-12">
-                                                  <div class="form-group showPerson d-none animate fade-in-down">
-                                                      <label><strong>Full Names</strong></label>
-                                                      <input type="text" class="form-control " placeholder="Enter Full Names">
+                                                  <div class="row">
+
+                                                    <div class="col-sm-12 col-md-6">
+                                                        <div class="form-group showPerson animate fade-in-down">
+                                                            <label><strong>Surname</strong></label>
+                                                            <input type="text" class="form-control " placeholder="Enter applicant's surname">
+                                                        </div>
+                                                      </div>
+
+
+                                                      <div class="col-sm-12 col-md-6">
+                                                        <div class="form-group showPerson animate fade-in-down">
+                                                            <label><strong>Other Names</strong></label>
+                                                            <input type="text" class="form-control " placeholder="Enter applicant's other names">
+                                                        </div>
+                                                      </div>
+
                                                   </div>
-                      
-                                                  <div class="form-group showCompany d-none animate fade-in-down">
-                                                      <label><strong>Company's Name</strong></label>
-                                                      <input type="text" class="form-control " placeholder="Enter company's Name">
+                                                </div> 
+                                                 <!-- to be shown if they have selected company -->
+                                                 <div class="col-sm-12">
+                                                    <div class="form-group showCompany d-none animate fade-in-down">
+                                                        <label><strong>Company's Name</strong></label>
+                                                        <input type="text" class="form-control " placeholder="Enter company's Name">
+                                                    </div>
                                                   </div>
-                      
-                                                </div>                                                        
+                                                
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Identification Documents</label>
+                                                        <select class="selectpicker form-control" data-live-search="true" title="Select an identification document">
+
+                                                            <!-- data tokens contain the key words helps with seraching -->
+                                                            <option data-tokens="Surveyors">Individual</option>
+                                                            <option data-tokens="Architect">Company</option>
+                                                           
+                                                          </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Identification number</label>
+                                                        <input type="text" class="form-control" placeholder="Enter ID number document number">
+                                                    </div>
+                                                </div>
+
+                                                <div class="col-sm-12 col-md-6">
+                                                    <div class="form-group">
+                                                        <label>Phone Number</label>
+                                                        <input type="text" class="form-control" placeholder="Enter phone number">
+                                                    </div>
+                                                </div>
                     
-                                                <div class="col-6 col-sm-12 col-md-6">
-                                                  <div class="form-group">
-                                                      <label><strong>Phone Number</strong></label>
-                                                      <input type="text" class="form-control" placeholder="Enter phone number">
-                                                  </div>
-                                              </div>
-                      
+                                               
                                               <div class="col-6 col-sm-12 col-md-6">
                                                   <div class="form-group">
                                                       <label><strong>Email Address</strong></label>
@@ -395,15 +427,17 @@
                                               </div>
                       
                                               <div class="col-6 col-sm-12 col-md-6">
-                                                  <div class="form-group">
-                                                      <label><strong>Town</strong></label>
-                                                      <select class="form-control">
-                                                          <option>-- Select type --</option>
-                                                          <option>Individual</option>
-                                                          <option>Company</option>
-                                                      </select>
-                                                  </div>
-                                              </div>
+                                                <div class="form-group">
+                                                    <label><strong>Postal Town</strong></label>
+                                                    <select class="selectpicker form-control" data-live-search="true">
+
+                                                      <!-- data tokens contain the key words helps with seraching -->
+                                                      <option data-tokens="Surveyors">Mombasa</option>
+                                                      <option data-tokens="Architect">Nairobi</option>
+                                                     
+                                                    </select>
+                                                </div>
+                                            </div>
                       
                                               <div class="col-12">
                                                   <label><strong>Attachments</strong></label>
@@ -840,7 +874,8 @@
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
-		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+        <script src="vendors/OwlCarousel/owl.carousel.min.js"></script>
+        <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
 
 
         <!-- App functions and actions -->

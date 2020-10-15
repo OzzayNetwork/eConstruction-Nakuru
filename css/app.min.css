@@ -15658,3 +15658,18 @@ color: white
     padding: 0.3rem 1.2rem;
 }
 
+.form-group label{
+    font-weight: bold;;
+}
+
+.form-control, .form-control.selectpicker {
+    font-size: 12px;
+    padding: 17px;
+    border-radius: 1px;
+    border-color: #BDBDBD;
+}
+
+.form-control.bootstrap-select{
+    border: 1px solid #0000004f;
+}
+

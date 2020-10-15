@@ -33,6 +33,8 @@
         <link rel="stylesheet" href="vendors/flatpickr/flatpickr.min.css" />
         <link rel="stylesheet" href="vendors/rateyo/jquery.rateyo.min.css">
         <link rel="stylesheet" href="vendors/bootstrap-colorpicker/css/bootstrap-colorpicker.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
+
 
         <!-- App styles -->
         <link rel="stylesheet" href="css/app.min.css">
@@ -315,78 +317,7 @@
                     </ul>
                 </div>
             </aside>
-			<aside class="chat">
-                <div class="chat__header">
-                    <h2 class="chat__title"><strong>Associations Requests</strong><small>You have 20 notifications yet to be addressed</small></h2>
-
-                    <div class="chat__search">
-                        <div class="form-group">
-                            <input type="text" class="form-control" placeholder="Search...">
-                            <i class="form-group__bar"></i>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="scrollbar-inner">
-                    <div class="listview listview--hover chat__buddies">
-                        <a class="listview__item chat__available" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/7.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__available"  data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__away" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item " data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/8.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/6.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-
-                        <a class="listview__item chat__busy" data-toggle="modal" data-target="#associate">
-                            <img src="demo/img/profile-pics/9.jpg" class="listview__img" alt="">
-
-                            <div class="listview__content">
-                                <div class="listview__heading">Jeannette Lawson</div>
-                                <p>Kindly add <strong>John Doe</strong> to my list of Blinkers</p>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <a href="messages.html" class="btn btn--action btn-danger d-none"><i class="zmdi zmdi-plus"></i></a>
-            </aside>
+			
 			
 			<!--associate blinker modal-->
 			<div class="modal" id="associate" tabindex="-1" role="dialog">
@@ -449,109 +380,8 @@
             
 
             <section class="content custom-table-container">
-				<!--deactivate account-->
-					<div class="modal fade" id="deactivate-parent" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="deactivate-parent-title">Block guardian account</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							<form>
-								<h6 class="font-weight-bold mb-3">Whats the reason for blocking this account?</h6>
-								<div class="radio">
-									<input type="radio" name="reason" id="lost">
-									<label class="radio__label" for="lost">They are no longer a gurdian at the school</label>
-								</div>
-								<div class="radio">
-									<input type="radio" name="reason" id="defective">
-									<label class="radio__label" for="defective">some other reason</label>
-								</div>
-								<div class="col-lg-12 p-0 col-md-12">
-									<div class="form-group mt-3"> 
-										<label class="font-weight-bold">Write other reason</label>
-										<input type="email" class="form-control" placeholder="Enter email address">
-									</div>
-								</div>					
-
-							</form>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-							<button type="button" class="btn btn-primary">Block account</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--deactivate account modal-->
-				<!--list of my blinkers-->
-					<div class="modal fade" id="MyBlinkers" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-					  <div class="modal-dialog modal-dialog-centered" role="document">
-						<div class="modal-content">
-						  <div class="modal-header">
-							<h5 class="modal-title" id="MyBlinkers_title">My list Of blinkers</h5>
-							<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-							  <span aria-hidden="true">&times;</span>
-							</button>
-						  </div>
-						  <div class="modal-body">
-							  <div class="listview listview--hover">
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/1.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Jeannette Lawson</div>
-											<p>Card is active</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/2.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">David Villa Jacobs</div>
-											<p>Card is pending</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/3.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Candice Barnes</div>
-											<p>Has no funds</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/4.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Darla Mckinney</div>
-											<p>Waiting for card to be processed</p>
-										</div>
-									</a>
-
-									<a class="listview__item">
-										<img src="demo/img/profile-pics/5.jpg" class="listview__img" alt="">
-
-										<div class="listview__content">
-											<div class="listview__heading">Rudolph Perez</div>
-											<p>Card deactivated</p>
-										</div>
-									</a>
-							</div>
-						  </div>
-						  <div class="modal-footer">
-							<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-						  </div>
-						</div>
-					  </div>
-					</div>
-				<!--list of my blinkers-->
+				
+				
                 <header class="content__title px-0 border-0">
 				 	<div class="row">
 						<div class="col-md-12 col-sm-12">
@@ -568,7 +398,7 @@
 						</div>
 												
 					</div>
-                </header
+                </header>
 				
 				<div class="row">
 					<div class="col-12 p-0">
@@ -733,14 +563,16 @@
 		<script src="vendors/highcharts/drilldown.js"></script>
 		<script src="vendors/highcharts/exporting.js"></script>
 		<script src="vendors/highcharts/export-data.js"></script>
-		<script src="vendors/highcharts/accesibility.js"></script>
+        <script src="vendors/highcharts/accesibility.js"></script>
+        
+        <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
 		
 		<script src="js/highcharts/highcharts-more.js"></script>
 		<!--owl corousel-->
 		<script src="vendors/OwlCarousel/owl.carousel.min.js"></script><!-- App functions and actions -->
 		<script src="js/wow.js"></script>
         <script src="js/app.min.js"></script>
-        <script src="js/main.js"></script>		
+        <script src="js/main.js"></script>
     </body>
 
 <!-- Mirrored from byrushan.com/projects/material-admin/app/2.6/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 26 Jul 2019 11:34:43 GMT -->
