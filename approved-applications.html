@@ -27,6 +27,7 @@
         <link rel="stylesheet" href="vendors/jquery-scrollbar/jquery.scrollbar.css">
         <link rel="stylesheet" href="vendors/fullcalendar/fullcalendar.min.css">
         <link rel="stylesheet" href="vendors/select2/css/select2.min.css">
+        <link rel="stylesheet" href="vendors/bootstrap-select/css/bootstrap-select.min.css">
         <link rel="stylesheet" href="vendors/dropzone/dropzone.css">
         <link rel="stylesheet" href="vendors/nouislider/nouislider.min.css">
         <link rel="stylesheet" href="vendors/trumbowyg/ui/trumbowyg.min.css">
@@ -102,7 +103,7 @@
                 
             </header>
 
-             <aside class="sidebar">
+            <aside class="sidebar">
                 <div class="scrollbar-inner">
                     <div class="user">
                         <div class="user__info" data-toggle="dropdown">
@@ -146,7 +147,7 @@
 						</li>
 
 						<li class="navigation__sub">
-                            <a href="#"><i class="mdi mdi-file-document-multiple-outline"></i>Reports<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
+                            <a href="#"><i class="flaticon-law"></i>Reports<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
                             <ul>
 								<li class="navigation__sub">
 									<a href="#"><i class="mdi mdi-receipt"></i>Bills<i class="zmdi zmdi-caret-down drop-down-icon"></i></a>
@@ -181,7 +182,6 @@
 										<li><a href="blocked-users.html"><i class="mdi mdi-account-lock"></i>Blocked Users</a></li>
 									</ul>
 								</li>
-								<li class=""><a href="owners.html"><i class="mdi mdi-account-star"></i>Property Owners</a></li>
 								<li class=""><a href="querries.html"><i class="zmdi zmdi-portable-wifi"></i>Enforcement Queries</a></li>
 
 
@@ -202,9 +202,9 @@
 									</ul>
 								</li>							
                                 
-								<li><a href="setup-application.html"><i class="flaticon-law"></i>Permits</a></li>	
-								<li><a href="setup-professionals.html"><i class="flaticon-worker"></i>Professionals</a></li>	
-								<li><a href="setup-attachment-docs.html"><i class="mdi mdi-attachment"></i>Attachment docs</a></li>	
+								<li><a href="add_plate.html"><i class="flaticon-law"></i>Permits</a></li>	
+								<li><a href="add_plate.html"><i class="flaticon-worker"></i>Professionals</a></li>	
+								<li><a href="add_plate.html"><i class="mdi mdi-attachment"></i>Attachment docs</a></li>	
 
 							</ul>
                         </li>
@@ -490,34 +490,34 @@
 								
 							</div>
                         </div>
-                        
-                            <div class="col-md-6 col-sm-12 text-right">  
-                                <label class="text-right"><strong>Filter Data by:</strong></label>                             
+                    
+                        <div class="col-md-6 col-sm-12 text-right">  
+                            <label class="text-right"><strong>Filter Data by:</strong></label>                             
 
 
-                                <div class="actions d-flex filter-table-options">
+                            <div class="actions d-flex filter-table-options">
 
-                                    <div class="form-group mb-0 pb-0">
-                                        <select class="selectpicker show-tick" data-live-search="true">
-                                            <option data-tokens="select">Filter by Category</option>
-                                            <option data-tokens="option 1">option 1</option>
-                                            <option data-tokens="option 2">option 2</option>
-                                            <option data-tokens="option 3">option 3</option>
-                                            <option data-tokens="option 4">option 4</option>
-                                            
-                                          </select>
-                                          
-                                    </div>
+                                <div class="form-group filter-select m-0 p-0">
+                                    <select class="selectpicker show-tick" data-live-search="true">
+                                        <option data-tokens="select">Filter by Category</option>
+                                        <option data-tokens="option 1">option 1</option>
+                                        <option data-tokens="option 2">option 2</option>
+                                        <option data-tokens="option 3">option 3</option>
+                                        <option data-tokens="option 4">option 4</option>
+                                        
+                                    </select>
                                     
-                                    <div id="reportrange" class="report-date-range ml-2">
-                                        <i class="ti-calendar"></i>&nbsp;
-                                        <span></span> <i class="fa fa-caret-down"></i>
-                                    </div>  
-                                    <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
+                                </div>
+                                
+                                <div id="reportrange" class="report-date-range ml-2">
+                                    <i class="ti-calendar"></i>&nbsp;
+                                    <span></span> <i class="fa fa-caret-down"></i>
+                                </div>  
+                                <button class="btn btn-success d-none text-nowrap mr-2" id="date-reset" onclick="reset_date()">Reset Date</button>
 
-                            </div>
                         </div>
-					</div>
+                        </div>
+                    </div>
                 </header>
                 
 
@@ -756,6 +756,7 @@
         <script src="vendors/bootstrap/js/bootstrap.min.js"></script>
         <script src="vendors/jquery-scrollbar/jquery.scrollbar.min.js"></script>
         <script src="vendors/jquery-scrollLock/jquery-scrollLock.min.js"></script>
+        <script src="vendors/bootstrap-select/js/bootstrap-select.min.js"></script>
 
         <script src="vendors/flot/jquery.flot.js"></script>
         <script src="vendors/flot/jquery.flot.resize.js"></script>

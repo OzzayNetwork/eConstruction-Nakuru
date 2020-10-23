@@ -15676,7 +15676,33 @@ color: white
 .opacity-0{
     opacity: 0 !important;
 }
+
+/* put your styles right here */
+.report-date-range{
+    background: #f3f3f3;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #bdbdbd;
+    width: 100%; 
+    color: #525a62;
+}
+
+
+.filter-select{
+    background: #f3f3f3;
+    cursor: pointer;
+    padding: 10px 15px;
+    border: 1px solid #bdbdbd;
+    width: 100%; 
+    color: #525a62;
+    display: flex;
+    align-items: center;
+}
 .dark-body{
     height: 100% !important;
     min-height: 100vh;
+}
+
+.filter-table-options{
+    top: 22px !important;
 }
