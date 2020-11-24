@@ -9667,7 +9667,7 @@ button, input, optgroup, select, textarea {
 .header__logo p{
     color: white;
     font-weight: 200;
-    font-size: 12px;
+    font-size: 15px;
 }
 
 .header {
@@ -14707,9 +14707,9 @@ color: white
     right: -23px;
     transform: rotate(-45deg);
 }
-.blue-print [class^="flaticon-"]:before{
-	font-size: 45px !important;
-}
+    .blue-print [class^="flaticon-"]:before{
+        font-size: 45px !important;
+    }
 .rounded-circle [class^="flaticon-"]:before{
 	font-size: 33px;
 }
